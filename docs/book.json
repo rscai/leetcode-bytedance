@@ -1,0 +1,21 @@
+{
+  "gitbook": "3.x.x",
+  "plugins": [
+    "include-codeblock",
+    "ace",
+    "uml",
+    "mathjax-update-cdn",
+    "collapsible-menu-ex"
+  ],
+  "pluginsConfig": {
+    "uml": {
+      "format": "png",
+      "nailgun": false
+    },
+    "include-codeblock": {
+      "template": "ace",
+      "unindent": true,
+      "theme": "monokai"
+    }
+  }
+}
