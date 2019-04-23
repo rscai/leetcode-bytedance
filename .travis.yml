@@ -1,0 +1,40 @@
+language: java
+jdk:
+  - openjdk8
+node_js: "7"
+dist: xenial
+before_install:
+  - pyenv global 3.7
+install:
+  - sudo apt-get install graphviz
+  - pip install hanziconv
+  - npm install gitbook-cli -g
+  - cd docs
+  - npm install safe-buffer
+  - cd ..
+  - gitbook install docs
+before_cache:
+- rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+- rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+cache:
+  directories:
+  - $HOME/.gradle/caches/
+  - $HOME/.gradle/wrapper/
+jobs:
+  include:
+    - stage: test
+      install: skip
+      script: ./gradlew check
+    - stage: build_docs
+      script:
+      - cp -r docs/zh_TR/* docs/zh_CN/ && python .travis/generate-zh_CN.py -o docs/zh_CN -s docs/zh_TR && gitbook build docs
+      deploy:
+        provider: pages
+        skip-cleanup: true
+        github-token: $GITHUB_TOKEN
+        keep-history: true
+        local-dir: docs/_book
+stages:
+  - test
+  - name: build_docs
+    if: branch = master
