@@ -29,8 +29,6 @@ jobs:
       script:
       - cp -r docs/zh_TR/* docs/zh_CN/ && python .travis/generate-zh_CN.py -o docs/zh_CN -s docs/zh_TR && gitbook build docs
       deploy:
-        edge:
-          branch: v1.8.47
         provider: pages
         skip-cleanup: true
         github-token: $GITHUB_TOKEN
