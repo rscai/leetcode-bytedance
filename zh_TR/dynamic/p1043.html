@@ -1,0 +1,446 @@
+
+<!DOCTYPE HTML>
+<html lang="zh_TR" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>買賣股票的最佳時機 II · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="p1042.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介紹
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../dynamic.html">
+            
+                <a href="../dynamic.html">
+            
+                    
+                    動態規劃
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="p1042.html">
+            
+                <a href="p1042.html">
+            
+                    
+                    買賣股票的最佳時機
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.2" data-path="p1043.html">
+            
+                <a href="p1043.html">
+            
+                    
+                    買賣股票的最佳時機 II
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >買賣股票的最佳時機 II</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x8CB7;&#x8CE3;&#x80A1;&#x7968;&#x7684;&#x6700;&#x4F73;&#x6642;&#x6A5F;-ii">&#x8CB7;&#x8CE3;&#x80A1;&#x7968;&#x7684;&#x6700;&#x4F73;&#x6642;&#x6A5F; II</h1>
+<h2 id="&#x984C;&#x76EE;">&#x984C;&#x76EE;</h2>
+<blockquote>
+<p>&#x7D66;&#x5B9A;&#x4E00;&#x500B;&#x6578;&#x7D44;&#xFF0C;&#x5B83;&#x7684;&#x7B2C; i &#x500B;&#x5143;&#x7D20;&#x662F;&#x4E00;&#x652F;&#x7D66;&#x5B9A;&#x80A1;&#x7968;&#x7B2C; i &#x5929;&#x7684;&#x50F9;&#x683C;&#x3002;</p>
+<p>&#x8A2D;&#x8A08;&#x4E00;&#x500B;&#x7B97;&#x6CD5;&#x4F86;&#x8A08;&#x7B97;&#x4F60;&#x6240;&#x80FD;&#x7372;&#x53D6;&#x7684;&#x6700;&#x5927;&#x5229;&#x6F64;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x76E1;&#x53EF;&#x80FD;&#x5730;&#x5B8C;&#x6210;&#x66F4;&#x591A;&#x7684;&#x4EA4;&#x6613;&#xFF08;&#x591A;&#x6B21;&#x8CB7;&#x8CE3;&#x4E00;&#x652F;&#x80A1;&#x7968;&#xFF09;&#x3002;</p>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x4F60;&#x4E0D;&#x80FD;&#x540C;&#x6642;&#x53C3;&#x8207;&#x591A;&#x7B46;&#x4EA4;&#x6613;&#xFF08;&#x4F60;&#x5FC5;&#x9808;&#x5728;&#x518D;&#x6B21;&#x8CFC;&#x8CB7;&#x524D;&#x51FA;&#x552E;&#x6389;&#x4E4B;&#x524D;&#x7684;&#x80A1;&#x7968;&#xFF09;&#x3002;</p>
+<p><strong>&#x793A;&#x4F8B;1&#xFF1A;</strong></p>
+<pre><code>&#x8F38;&#x5165;: [7,1,5,3,6,4]
+&#x8F38;&#x51FA;: 7
+&#x89E3;&#x91CB;: &#x5728;&#x7B2C; 2 &#x5929;&#xFF08;&#x80A1;&#x7968;&#x50F9;&#x683C; = 1&#xFF09;&#x7684;&#x6642;&#x5019;&#x8CB7;&#x5165;&#xFF0C;&#x5728;&#x7B2C; 3 &#x5929;&#xFF08;&#x80A1;&#x7968;&#x50F9;&#x683C; = 5&#xFF09;&#x7684;&#x6642;&#x5019;&#x8CE3;&#x51FA;, &#x9019;&#x7B46;&#x4EA4;&#x6613;&#x6240;&#x80FD;&#x7372;&#x5F97;&#x5229;&#x6F64; = 5-1 = 4 &#x3002;
+    &#x96A8;&#x5F8C;&#xFF0C;&#x5728;&#x7B2C; 4 &#x5929;&#xFF08;&#x80A1;&#x7968;&#x50F9;&#x683C; = 3&#xFF09;&#x7684;&#x6642;&#x5019;&#x8CB7;&#x5165;&#xFF0C;&#x5728;&#x7B2C; 5 &#x5929;&#xFF08;&#x80A1;&#x7968;&#x50F9;&#x683C; = 6&#xFF09;&#x7684;&#x6642;&#x5019;&#x8CE3;&#x51FA;, &#x9019;&#x7B46;&#x4EA4;&#x6613;&#x6240;&#x80FD;&#x7372;&#x5F97;&#x5229;&#x6F64; = 6-3 = 3 &#x3002;
+</code></pre><p><strong>&#x793A;&#x4F8B;2&#xFF1A;</strong></p>
+<pre><code>&#x8F38;&#x5165;: [1,2,3,4,5]
+&#x8F38;&#x51FA;: 4
+&#x89E3;&#x91CB;: &#x5728;&#x7B2C; 1 &#x5929;&#xFF08;&#x80A1;&#x7968;&#x50F9;&#x683C; = 1&#xFF09;&#x7684;&#x6642;&#x5019;&#x8CB7;&#x5165;&#xFF0C;&#x5728;&#x7B2C; 5 &#x5929; &#xFF08;&#x80A1;&#x7968;&#x50F9;&#x683C; = 5&#xFF09;&#x7684;&#x6642;&#x5019;&#x8CE3;&#x51FA;, &#x9019;&#x7B46;&#x4EA4;&#x6613;&#x6240;&#x80FD;&#x7372;&#x5F97;&#x5229;&#x6F64; = 5-1 = 4 &#x3002;
+    &#x6CE8;&#x610F;&#x4F60;&#x4E0D;&#x80FD;&#x5728;&#x7B2C; 1 &#x5929;&#x548C;&#x7B2C; 2 &#x5929;&#x63A5;&#x9023;&#x8CFC;&#x8CB7;&#x80A1;&#x7968;&#xFF0C;&#x4E4B;&#x5F8C;&#x518D;&#x5C07;&#x5B83;&#x5011;&#x8CE3;&#x51FA;&#x3002;
+    &#x56E0;&#x70BA;&#x9019;&#x6A23;&#x5C6C;&#x65BC;&#x540C;&#x6642;&#x53C3;&#x8207;&#x4E86;&#x591A;&#x7B46;&#x4EA4;&#x6613;&#xFF0C;&#x4F60;&#x5FC5;&#x9808;&#x5728;&#x518D;&#x6B21;&#x8CFC;&#x8CB7;&#x524D;&#x51FA;&#x552E;&#x6389;&#x4E4B;&#x524D;&#x7684;&#x80A1;&#x7968;&#x3002;
+</code></pre><p><strong>&#x793A;&#x4F8B;3&#xFF1A;</strong></p>
+<pre><code>&#x8F38;&#x5165;: [7,6,4,3,1]
+&#x8F38;&#x51FA;: 0
+&#x89E3;&#x91CB;: &#x5728;&#x9019;&#x7A2E;&#x60C5;&#x6CC1;&#x4E0B;, &#x6C92;&#x6709;&#x4EA4;&#x6613;&#x5B8C;&#x6210;, &#x6240;&#x4EE5;&#x6700;&#x5927;&#x5229;&#x6F64;&#x70BA; 0&#x3002;
+</code></pre></blockquote>
+<h2 id="&#x7AAE;&#x8209;&#x6CD5;">&#x7AAE;&#x8209;&#x6CD5;</h2>
+<p>&#x7F85;&#x5217;&#x6240;&#x6709;&#x7684;&#x8CB7;&#x8CE3;&#x7D44;&#x5408;&#xFF0C;&#x518D;&#x8A08;&#x7B97;&#x5176;&#x4E2D;&#x5229;&#x6F64;&#x6700;&#x5927;&#x7684;&#x7D44;&#x5408;&#x3002;&#x591A;&#x6B21;&#x8CB7;&#x8CE3;&#x7531;&#x7B2C;&#x4E00;&#x6B21;&#x8CB7;&#x8CE3;&#x548C;&#x5F8C;&#x7E8C;&#x8CB7;&#x8CE3;&#x7D44;&#x6210;&#xFF0C;&#x5F8C;&#x7E8C;&#x8CB7;&#x8CE3;&#x53EA;&#x80FD;&#x5728;&#x7B2C;&#x4E00;&#x6B21;&#x8CE3;&#x51FA;&#x9EDE;&#x4E4B;&#x5F8C;&#x767C;&#x751F;&#x3002;&#x7528;&#x6A39;&#x8868;&#x793A;&#x6240;&#x6709;&#x8CB7;&#x8CE3;&#x7D44;&#x5408;&#xFF0C;&#x7B2C;&#x4E00;&#x5C64;&#x70BA;&#x53EF;&#x9078;&#x7684;&#x7B2C;&#x4E00;&#x6B21;&#x8CB7;&#x8CE3;&#x7D44;&#x5408;&#xFF08;&#x6839;&#x7BC0;&#x9EDE;&#x70BA;&#x7B2C;&#x96F6;&#x5C64;&#xFF0C;&#x540C;&#x4E00;&#x5929;&#x8CB7;&#x8CE3;&#x7B49;&#x540C;&#x65BC;&#x7576;&#x5929;&#x4E0D;&#x8CB7;&#x8CE3;&#xFF09;&#xFF0C;&#x7B2C;N&#x5C64;&#x70BA;&#x7B2C;N&#x6B21;&#x8CB7;&#x8CE3;&#x3002;</p>
+<p>&#x8209;&#x500B;&#x4F8B;&#x5B50;&#xFF0C;&#x7D66;&#x5B9A;&#x50F9;&#x683C;&#x5E8F;&#x5217;<code>[7, 1, 5, 3, 6, 4]</code>&#x3002;&#x7B2C;&#x4E00;&#x6B21;&#x8CB7;&#x8CE3;&#x6709;&#x516D;&#x7A2E;&#x9078;&#x64C7;&#xFF1A;</p>
+<ol>
+<li>&#x4EE5;7&#x7684;&#x50F9;&#x683C;&#x8CB7;&#x5165;&#xFF0C;&#x4EE5;7&#x7684;&#x50F9;&#x683C;&#x8CE3;&#x51FA;&#x3002;&#x7B49;&#x540C;&#x65BC;&#x7B2C;&#x4E00;&#x5929;&#x4E0D;&#x8CB7;&#x8CE3;&#x3002;</li>
+<li>&#x4EE5;7&#x7684;&#x50F9;&#x683C;&#x8CB7;&#x5165;&#xFF0C;&#x4EE5;1&#x7684;&#x50F9;&#x683C;&#x8CE3;&#x51FA;&#x3002;</li>
+<li>&#x4EE5;7&#x7684;&#x50F9;&#x683C;&#x8CB7;&#x5165;&#xFF0C;&#x4EE5;5&#x7684;&#x50F9;&#x683C;&#x8CE3;&#x51FA;&#x3002;</li>
+<li>&#x4EE5;7&#x7684;&#x50F9;&#x683C;&#x8CB7;&#x5165;&#xFF0C;&#x4EE5;3&#x7684;&#x50F9;&#x683C;&#x8CE3;&#x51FA;&#x3002;</li>
+<li>&#x4EE5;7&#x7684;&#x50F9;&#x683C;&#x8CB7;&#x5165;&#xFF0C;&#x4EE5;6&#x7684;&#x50F9;&#x683C;&#x8CE3;&#x51FA;&#x3002;</li>
+<li>&#x4EE5;7&#x7684;&#x50F9;&#x683C;&#x8CB7;&#x5165;&#xFF0C;&#x4EE5;4&#x7684;&#x50F9;&#x683C;&#x8CE3;&#x51FA;&#x3002;</li>
+</ol>
+<p>&#x7B2C;&#x4E8C;&#x6B21;&#x8CB7;&#x8CE3;&#x53EF;&#x884C;&#x7684;&#x9078;&#x64C7;&#x7531;&#x7B2C;&#x4E00;&#x6B21;&#x8CB7;&#x8CE3;&#x6C7A;&#x5B9A;&#x3002;&#x7B2C;&#x4E8C;&#x6B21;&#x8CB7;&#x8CE3;&#x7684;&#x8CB7;&#x5165;&#x9EDE;&#x4E00;&#x5B9A;&#x662F;&#x7B2C;&#x4E00;&#x6B21;&#x8CB7;&#x8CE3;&#x7684;&#x8CE3;&#x51FA;&#x9EDE;&#x5F8C;&#x4E00;&#x5929;&#x3002;&#x4F9D;&#x6B64;&#x985E;&#x63A8;&#x3002;</p>
+<p><img src="../assets/images/uml/dcfc425b4f1b06e0a36fbde82abb9d98912f9523.png"></p>
+<h3 id="&#x4EE3;&#x78BC;">&#x4EE3;&#x78BC;</h3>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;java&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">package io.github.rscai.leetcode.bytedance.dynamic;
+
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+
+public class Solution1043A {
+
+  public int maxProfit(int[] prices) {
+    Stream&lt;IntStream&gt; allProfitSeqs = profitSeqs(prices, 0);
+
+    return allProfitSeqs.map(profitSeq -&gt; profitSeq.sum()).mapToInt(Integer::valueOf).max()
+        .orElse(0);
+
+  }
+
+  private Stream&lt;IntStream&gt; profitSeqs(int[] prices, int start) {
+    if (start &gt;= prices.length) {
+      return Stream.of(IntStream.empty());
+    }
+    Stream&lt;IntStream&gt; profitSeqs = Stream.empty();
+    int buyAt = start;
+    for (int sellAt = buyAt; sellAt &lt; prices.length; sellAt++) {
+      int profit = prices[sellAt] - prices[buyAt];
+      Stream&lt;IntStream&gt; remainProfitSeqs = profitSeqs(prices, sellAt + 1);
+      profitSeqs = Stream.concat(profitSeqs, remainProfitSeqs
+          .map(remainProfitSeq -&gt; IntStream.concat(IntStream.of(profit), remainProfitSeq)));
+    }
+
+    return profitSeqs;
+  }
+}<br></div></div>
+
+
+
+<p>&#x9996;&#x5148;&#xFF0C;&#x5728;&#x7B2C;&#x4E00;&#x5929;&#x8CB7;&#x9032;&#xFF0C;&#x7F85;&#x5217;&#x51FA;&#x6240;&#x6709;&#x7684;&#x8CE3;&#x51FA;&#x9078;&#x64C7;&#x3000;&#x5305;&#x62EC;&#x7576;&#x5929;&#x8CE3;&#x51FA;&#x3002;</p>
+<p><img src="p1043.figure/debug-A1.png" alt="debug-A1"></p>
+<p>&#x7136;&#x5F8C;&#xFF0C;&#x7F85;&#x5217;&#x51FA;&#x5728;&#x5269;&#x9918;&#x50F9;&#x683C;&#x5E8F;&#x5217;&#x4E2D;&#x7684;&#x8CB7;&#x8CE3;&#x5E8F;&#x5217;&#x7D44;&#x5408;&#x3002;&#x5269;&#x9918;&#x50F9;&#x683C;&#x5E8F;&#x5217;&#x7531;&#x9019;&#x4E00;&#x6B21;&#x8CE3;&#x51FA;&#x9EDE;&#x6C7A;&#x5B9A;&#x3002;&#x6240;&#x4EE5;&#x4E0D;&#x540C;&#x7684;&#x7576;&#x6B21;&#x8CB7;&#x8CE3;&#x7522;&#x751F;&#x4E0D;&#x540C;&#x7684;&#x5269;&#x9918;&#x50F9;&#x683C;&#x5E8F;&#x5217;&#xFF0C;&#x4E5F;&#x7522;&#x4E86;&#x4E0D;&#x540C;&#x7684;&#x5269;&#x9918;&#x8CB7;&#x8CE3;&#x5E8F;&#x5217;&#x7D44;&#x5408;&#x3002;</p>
+<p><img src="p1043.figure/debug-A2.png" alt="debug-A2"></p>
+<p>&#x518D;&#x7136;&#x5F8C;&#xFF0C;&#x7D44;&#x5408;&#x7576;&#x6B21;&#x8CB7;&#x8CE3;&#x8207;&#x5269;&#x9918;&#x8CB7;&#x8CE3;&#x5E8F;&#x5217;&#x7D44;&#x5408;&#xFF0C;&#x69CB;&#x6210;&#x65B0;&#x7684;&#x8CB7;&#x8CE3;&#x5E8F;&#x5217;&#x7D44;&#x5408;&#x3002;</p>
+<p><img src="p1043.figure/debug-A3.png" alt="debug-A3"></p>
+<p>&#x6700;&#x5F8C;&#xFF0C;&#x5408;&#x8A08;&#x6240;&#x6709;&#x7684;&#x8CB7;&#x8CE3;&#x5E8F;&#x5217;&#x7522;&#x751F;&#x7684;&#x5229;&#x6F64;&#xFF0C;&#x5F9E;&#x4E2D;&#x53D6;&#x6700;&#x5927;&#x503C;&#x3002;</p>
+<p><img src="p1043.figure/debug-A4.png" alt="debug-A4"></p>
+<h3 id="&#x8907;&#x96DC;&#x5EA6;&#x5206;&#x6790;">&#x8907;&#x96DC;&#x5EA6;&#x5206;&#x6790;</h3>
+<h4 id="&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;">&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;</h4>
+<p>&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;&#x70BA;&#xFF1A;</p>
+<p><script type="math/tex; mode=display">
+\begin{aligned}
+C_{time} &= \mathcal{O}(\sum_{i=1}^{n}(\sum_{a=1}^{i}a)) \\
+&=\mathcal{O}(n^2)
+\end{aligned}
+</script></p>
+<h4 id="&#x7A7A;&#x9593;&#x8907;&#x96DC;&#x5EA6;">&#x7A7A;&#x9593;&#x8907;&#x96DC;&#x5EA6;</h4>
+<p>&#x7A7A;&#x9593;&#x8907;&#x96DC;&#x5EA6;&#x7B49;&#x65BC;&#x6A39;&#x7684;&#x6700;&#x5927;&#x6DF1;&#x5EA6;&#xFF0C;&#x70BA;</p>
+<p><script type="math/tex; mode=display">
+C_{space} = \mathcal{O}(n)
+</script></p>
+<h2 id="&#x8CAA;&#x5A6A;&#x7B97;&#x6CD5;">&#x8CAA;&#x5A6A;&#x7B97;&#x6CD5;</h2>
+<p>&#x5728;&#x7B2C;&#x4E00;&#x5929;&#x8CB7;&#x5165;&#xFF0C;&#x5982;&#x679C;&#x5229;&#x6F64;&#x6301;&#x7E8C;&#x589E;&#x52A0;&#xFF08;&#x7B2C;&#x4E8C;&#x5929;&#x7684;&#x50F9;&#x683C;&#x5927;&#x65BC;&#x4ECA;&#x5929;&#xFF09;&#x5247;&#x6301;&#x6709;&#x3002;&#x82E5;&#x5229;&#x6F64;&#x4E0B;&#x964D;&#xFF08;&#x7B2C;&#x4E8C;&#x5929;&#x50F9;&#x683C;&#x4F4E;&#x65BC;&#x7576;&#x5929;&#xFF09;&#x5247;&#x8CE3;&#x51FA;&#x3002;&#xFF08;&#x53EF;&#x540C;&#x4E00;&#x5929;&#x8CB7;&#x8CE3;&#xFF0C;&#x7B49;&#x540C;&#x65BC;&#x7576;&#x5929;&#x4E0D;&#x4EA4;&#x6613;&#xFF09;&#x3002;&#x7136;&#x5F8C;&#xFF0C;&#x5728;&#x5269;&#x9918;&#x50F9;&#x683C;&#x5E8F;&#x5217;&#x4E2D;&#x91CD;&#x5FA9;&#x76F8;&#x540C;&#x7684;&#x64CD;&#x4F5C;&#x3002;</p>
+<p>&#x8209;&#x500B;&#x4F8B;&#x5B50;&#xFF0C;&#x7D66;&#x5B9A;&#x50F9;&#x683C;&#x5E8F;&#x5217;<code>[7, 1, 5, 3, 6, 4]</code>&#x3002;</p>
+<ul>
+<li>&#x7B2C;&#x4E00;&#x6B21;&#xFF0C;&#x5728;7&#x8CB7;&#x5165;&#xFF0C;&#x5728;7&#x8CE3;&#x51FA;&#x3002;&#x7B49;&#x540C;&#x65BC;&#x4E0D;&#x4EA4;&#x6613;&#x3002;&#x5269;&#x9918;&#x50F9;&#x683C;&#x5E8F;&#x5217;<code>[1, 5, 3, 6, 4]</code></li>
+<li>&#x7B2C;&#x4E8C;&#x6B21;&#xFF0C;&#x5728;1&#x8CB7;&#x5165;&#xFF0C;&#x5728;5&#x8CE3;&#x51FA;&#x3002;&#x5269;&#x9918;&#x50F9;&#x683C;&#x5E8F;&#x5217;<code>[3, 6, 4]</code></li>
+<li>&#x7B2C;&#x4E09;&#x6B21;&#xFF0C;&#x5728;3&#x8CB7;&#x5165;&#xFF0C;&#x5728;6&#x8CE3;&#x51FA;&#x3002;&#x5269;&#x9918;&#x50F9;&#x683C;&#x5E8F;&#x5217;<code>[4]</code></li>
+<li>&#x7B2C;&#x56DB;&#x6B21;&#xFF0C;&#x5728;4&#x8CB7;&#x5165;&#xFF0C;&#x5728;4&#x8CE3;&#x51FA;&#x3002;&#x7B49;&#x540C;&#x65BC;&#x4EA4;&#x6613;&#x3002;</li>
+</ul>
+<p><img src="../assets/images/uml/e0832ea1b6e9efb3c0910ee3d1b4364bf3092482.png"></p>
+<h3 id="&#x4EE3;&#x78BC;">&#x4EE3;&#x78BC;</h3>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;java&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">package io.github.rscai.leetcode.bytedance.dynamic;
+
+public class Solution1043B {
+
+  public int maxProfit(int[] prices) {
+    int maxProfit = 0;
+    int remainStart = 0;
+    while (remainStart &lt; prices.length) {
+      int[] profitAndRemainStart = profit(prices, remainStart);
+      maxProfit = maxProfit + profitAndRemainStart[0];
+      remainStart = profitAndRemainStart[1];
+    }
+    return maxProfit;
+  }
+
+  private int[] profit(int[] prices, int start) {
+    int profit = 0;
+    for (int sellAt = start + 1; sellAt &lt; prices.length; sellAt++) {
+      if (prices[sellAt] - prices[sellAt - 1] &lt; 0) {
+        return new int[]{profit, sellAt};
+      } else {
+        profit = profit + prices[sellAt] - prices[sellAt - 1];
+      }
+    }
+    return new int[]{profit, prices.length};
+  }
+}<br></div></div>
+
+
+
+<p>&#x9996;&#x5148;&#xFF0C;&#x5728;&#x7B2C;&#x4E00;&#x5929;&#x8CB7;&#x5165;&#xFF0C;&#x5728;&#x5229;&#x6F64;&#x958B;&#x59CB;&#x4E0B;&#x964D;&#x524D;&#x8CE3;&#x51FA;&#xFF08;&#x540C;&#x5929;&#x8CB7;&#x8CE3;&#x7B49;&#x540C;&#x65BC;&#x4E0D;&#x4EA4;&#x6613;&#xFF09;&#x3002;&#x5F97;&#x5230;&#x5229;&#x6F64;&#x548C;&#x5269;&#x9918;&#x50F9;&#x683C;&#x5E8F;&#x5217;&#xFF08;&#x9019;&#x25683;&#x7528;&#x5269;&#x9918;&#x50F9;&#x683C;&#x5E8F;&#x5217;&#x958B;&#x59CB;&#x4E0B;&#x6A19;&#xFF09;&#x3002;</p>
+<p><img src="p1043.figure/debug-B1.png" alt="debug-B1"></p>
+<p>&#x7136;&#x5F8C;&#xFF0C;&#x5982;&#x679C;&#x5269;&#x9918;&#x50F9;&#x683C;&#x5217;&#x8868;&#x4E0D;&#x7A7A;&#xFF0C;&#x5247;&#x7E7C;&#x7E8C;&#x5728;&#x7B2C;&#x4E00;&#x5929;&#xFF08;&#x5269;&#x9918;&#x5E8F;&#x5217;&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x5929;&#xFF09;&#x8CB7;&#x5165;&#xFF0C;&#x5728;&#x5229;&#x6F64;&#x958B;&#x59CB;&#x4E0B;&#x964D;&#x524D;&#x8CE3;&#x51FA;&#x3002;&#x5F97;&#x5230;&#x5229;&#x6F64;&#x548C;&#x5269;&#x9918;&#x50F9;&#x683C;&#x5E8F;&#x5217;&#x3002;</p>
+<p><img src="p1043.figure/debug-B2.png" alt="debug-B2"></p>
+<p>&#x5728;&#x7B2C;&#x4E00;&#x5929;&#x8CB7;&#x5165;&#xFF0C;&#x5982;&#x679C;&#x50F9;&#x683C;&#x5728;&#x4E0A;&#x5347;&#x610F;&#x5473;&#x7740;&#x5229;&#x6F64;&#x589E;&#x52A0;&#xFF0C;&#x61C9;&#x7E7C;&#x7E8C;&#x6301;&#x6709;&#x3002;&#x5982;&#x679C;&#x50F9;&#x683C;&#x4E0B;&#x964D;&#x5247;&#x610F;&#x5473;&#x7740;&#x5229;&#x6F64;&#x4E0B;&#x964D;&#xFF0C;&#x61C9;&#x5728;&#x50F9;&#x683C;&#x4E0B;&#x964D;&#x524D;&#x8CE3;&#x51FA;&#x3002;</p>
+<p><img src="p1043.figure/debug-B3.png" alt="debug-B3"></p>
+<h3 id="&#x8907;&#x96DC;&#x5EA6;&#x5206;&#x6790;">&#x8907;&#x96DC;&#x5EA6;&#x5206;&#x6790;</h3>
+<h4 id="&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;">&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;</h4>
+<p>&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;&#x7B49;&#x65BC;<code>profit</code>&#x88AB;&#x8ABF;&#x7528;&#x7684;&#x6B21;&#x6578;&#x53CA;&#x6BCF;&#x6B21;<code>profit</code>&#x4E2D;&#x904D;&#x6B77;&#x50F9;&#x683C;&#x5E8F;&#x5217;&#x7684;&#x9577;&#x5EA6;&#xFF0C;&#x5176;&#x7B49;&#x65BC;&#x6574;&#x500B;&#x50F9;&#x683C;&#x5E8F;&#x5217;&#x7684;&#x9577;&#x5EA6;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;&#x70BA;&#xFF1A;</p>
+<p><script type="math/tex; mode=display">
+\begin{aligned}
+C_{time} &= \mathcal{O}(n)
+\end{aligned}
+</script></p>
+<h4 id="&#x7A7A;&#x9593;&#x8907;&#x96DC;&#x5EA6;">&#x7A7A;&#x9593;&#x8907;&#x96DC;&#x5EA6;</h4>
+<p>&#x53EA;&#x6709;&#x4E09;&#x6BCE;&#x8B8A;&#x91CF;<code>maxProfit</code>, <code>remainStart</code>&#x548C;<code>profit</code>&#x3002;</p>
+<p><script type="math/tex; mode=display">
+\begin{aligned}
+C_{space} &=\mathcal{O}(1)
+\end{aligned}
+</script></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="p1042.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 買賣股票的最佳時機">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"買賣股票的最佳時機 II","level":"1.2.2","depth":2,"previous":{"title":"買賣股票的最佳時機","level":"1.2.1","depth":2,"path":"dynamic/p1042.md","ref":"dynamic/p1042.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock","ace","uml","mathjax-update-cdn","collapsible-menu-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ace":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"uml":{"format":"png","nailgun":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"monokai","unindent":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"mathjax-update-cdn":{"forceSVG":false,"version":"2.7.1"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"collapsible-menu-ex":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh_TR","gitbook":"*"},"file":{"path":"dynamic/p1043.md","mtime":"2019-04-27T09:22:21.801Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-27T09:23:54.835Z"},"basePath":"..","book":{"language":"zh_TR"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mathjax-update-cdn/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-collapsible-menu-ex/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
