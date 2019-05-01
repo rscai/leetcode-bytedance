@@ -1,0 +1,429 @@
+
+<!DOCTYPE HTML>
+<html lang="zh_CN" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>最大子序和 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="p1028.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../dynamic.html">
+            
+                <a href="../dynamic.html">
+            
+                    
+                    动态规划
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="p1042.html">
+            
+                <a href="p1042.html">
+            
+                    
+                    买卖股票的最佳时机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="p1043.html">
+            
+                <a href="p1043.html">
+            
+                    
+                    买卖股票的最佳时机 II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="p1028.html">
+            
+                <a href="p1028.html">
+            
+                    
+                    最大正方形
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.4" data-path="p1029.html">
+            
+                <a href="p1029.html">
+            
+                    
+                    最大子序和
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >最大子序和</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6700;&#x5927;&#x5B50;&#x5E8F;&#x548C;">&#x6700;&#x5927;&#x5B50;&#x5E8F;&#x548C;</h1>
+<h2 id="&#x9898;&#x76EE;">&#x9898;&#x76EE;</h2>
+<blockquote>
+<p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x6570;&#x7EC4; nums &#xFF0C;&#x627E;&#x5230;&#x4E00;&#x4E2A;&#x5177;&#x6709;&#x6700;&#x5927;&#x548C;&#x7684;&#x8FDE;&#x7EED;&#x5B50;&#x6570;&#x7EC4;&#xFF08;&#x5B50;&#x6570;&#x7EC4;&#x6700;&#x5C11;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF09;&#xFF0C;&#x8FD4;&#x56DE;&#x5176;&#x6700;&#x5927;&#x548C;&#x3002;</p>
+<p><strong>&#x793A;&#x4F8B;&#xFF1A;</strong></p>
+<pre><code>&#x8F93;&#x5165;: [-2,1,-3,4,-1,2,1,-5,4],
+&#x8F93;&#x51FA;: 6
+&#x89E3;&#x91CA;: &#x8FDE;&#x7EED;&#x5B50;&#x6570;&#x7EC4; [4,-1,2,1] &#x7684;&#x548C;&#x6700;&#x5927;&#xFF0C;&#x4E3A; 6&#x3002;
+</code></pre><p><strong>&#x8FDB;&#x9636;&#xFF1A;</strong></p>
+<p>&#x5982;&#x679C;&#x4F60;&#x5DF2;&#x7ECF;&#x5B9E;&#x73B0;&#x590D;&#x6742;&#x5EA6;&#x4E3A; O(n) &#x7684;&#x89E3;&#x6CD5;&#xFF0C;&#x5C1D;&#x8BD5;&#x4F7F;&#x7528;&#x66F4;&#x4E3A;&#x7CBE;&#x5999;&#x7684;&#x5206;&#x6CBB;&#x6CD5;&#x6C42;&#x89E3;&#x3002;</p>
+</blockquote>
+<h2 id="&#x7A77;&#x4E3E;&#x6CD5;">&#x7A77;&#x4E3E;&#x6CD5;</h2>
+<p>&#x8FDE;&#x7EED;&#x5B50;&#x6570;&#x7EC4;&#x7531;&#x8D77;&#x6B62;&#x70B9;&#x786E;&#x5B9A;&#x3002;&#x8D77;&#x59CB;&#x70B9;&#x4ECE;&#x7B2C;&#x4E00;&#x4E2A;&#x5230;&#x6700;&#x540E;&#x90FD;&#x53EF;&#xFF0C;&#x7EC8;&#x6B62;&#x70B9;&#x4ECE;&#x8D77;&#x59CB;&#x70B9;&#xFF08;&#x53EA;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF09;&#x5230;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x7686;&#x53EF;&#x3002;</p>
+<p>&#x5C06;&#x6240;&#x6709;&#x5B50;&#x6570;&#x7EC4;&#x7EC4;&#x5408;&#x4EE5;&#x6811;&#x7684;&#x5F62;&#x5F0F;&#x5C55;&#x73B0;&#x3002;&#x4ECE;&#x6839;&#x5230;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x7684;&#x8DEF;&#x5F84;&#x6240;&#x5305;&#x542B;&#x7684;&#x8282;&#x70B9;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x5B50;&#x6570;&#x7EC4;&#x3002;&#x6BD4;&#x5982;&#xFF0C;<code>root -&gt; -2 -&gt; NIL</code>&#x8868;&#x793A;&#x5B50;&#x6570;&#x7EC4;<code>[-2]</code>; <code>root -&gt; -2 -&gt; 1 -&gt; NIL</code>&#x8868;&#x793A;&#x5B50;&#x6570;&#x7EC4;<code>[-2, 1]</code>&#x3002;</p>
+<p><img src="../assets/images/uml/9721b262019e19d98c81dd4435ba4e7f8c6994cd.png"></p>
+<h3 id="&#x4EE3;&#x7801;">&#x4EE3;&#x7801;</h3>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;java&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">package io.github.rscai.leetcode.bytedance.dynamic;
+
+public class Solution1029A {
+
+  public int maxSubArray(int[] nums) {
+    int max = Integer.MIN_VALUE;
+    for (int start = 0; start &lt; nums.length; start++) {
+      int accum = nums[start];
+      if (accum &gt; max) {
+        max = accum;
+      }
+      for (int end = start + 1; end &lt; nums.length; end++) {
+        accum += nums[end];
+        if (accum &gt; max) {
+          max = accum;
+        }
+      }
+    }
+    return max;
+  }
+}<br></div></div>
+
+
+
+<p>&#x9996;&#x5148;&#xFF0C;&#x9009;&#x62E9;&#x8D77;&#x59CB;&#x70B9;&#x3002;&#x4EFB;&#x4E00;&#x4F4D;&#x7F6E;&#x90FD;&#x53EF;&#x4EE5;&#x662F;&#x8D77;&#x59CB;&#x70B9;&#x3002;</p>
+<p><img src="p1029.figure/debug-A1.png" alt="debug-A1"></p>
+<p>&#x7136;&#x540E;&#xFF0C;&#x6BD4;&#x8F83;&#x5355;&#x4E00;&#x5143;&#x7D20;&#x503C;&#x4E0E;&#x5F53;&#x524D;&#x6700;&#x5927;&#x503C;&#xFF0C;&#x4EE5;&#x8986;&#x76D6;&#x4EC5;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x5B50;&#x6570;&#x7EC4;&#x3002;</p>
+<p><img src="p1029.figure/debug-A2.png" alt="debug-A2"></p>
+<p>&#x518D;&#x7136;&#x540E;&#xFF0C;&#x9009;&#x62E9;&#x7EC8;&#x6B62;&#x70B9;&#x3002;&#x8D77;&#x59CB;&#x70B9;&#x5F80;&#x540E;&#x4EFB;&#x4E00;&#x4F4D;&#x7F6E;&#x90FD;&#x53EF;&#x4EE5;&#x662F;&#x7EC8;&#x6B62;&#x70B9;&#x3002;</p>
+<p><img src="p1029.figure/debug-A3.png" alt="debug-A3"></p>
+<p>&#x6700;&#x540E;&#xFF0C;&#x7D2F;&#x52A0;&#x8D77;&#x6B62;&#x70B9;&#x4E4B;&#x95F4;&#x7684;&#x5143;&#x7D20;&#x503C;&#xFF0C;&#x5E76;&#x4E0E;&#x5F53;&#x524D;&#x6700;&#x5927;&#x503C;&#x6BD4;&#x8F83;&#x3002;</p>
+<p><img src="p1029.figure/debug-A4.png" alt="debug-A4"></p>
+<h3 id="&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;">&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;</h3>
+<h4 id="&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;">&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;</h4>
+<p>&#x5176;&#x5171;&#x6709;&#x4E24;&#x5C42;&#x5FAA;&#x73AF;&#xFF0C;&#x5185;&#x5C42;&#x5FAA;&#x73AF;&#x6B21;&#x6570;&#x4E0E;&#x5916;&#x5C42;&#x53D6;&#x503C;&#x6709;&#x5173;&#x3002;&#x5047;&#x8BBE;&#x5916;&#x5C42;&#x53D6;&#x503C;&#x4E3A;<script type="math/tex; ">i</script>&#xFF0C;&#x5219;&#x5185;&#x5C42;&#x5FAA;&#x73AF;&#x6B21;&#x6570;&#x4E3A;<script type="math/tex; ">n - i</script>&#x3002;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A;&#xFF1A;</p>
+<p><script type="math/tex; mode=display">
+\begin{aligned}
+C_{time} &= \mathcal{O}(\sum_{i=1}^{n}(n-i)) \\
+&= \mathcal{O}(\frac{1}{2} \times n \times (n + 1)) \\
+&= \mathcal{O}(n^2)
+
+\end{aligned}
+</script></p>
+<h4 id="&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;">&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;</h4>
+<p>&#x4F7F;&#x7528;&#x4E24;&#x4E2A;&#x53D8;&#x91CF;<code>max</code>&#x548C;<code>accum</code>&#x3002;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A;&#xFF1A;</p>
+<p><script type="math/tex; mode=display">
+C_{space} = \mathcal{O}(1)
+</script></p>
+<h2 id="&#x52A8;&#x6001;&#x89C4;&#x5212;&#x6CD5;">&#x52A8;&#x6001;&#x89C4;&#x5212;&#x6CD5;</h2>
+<p>&#x5C06;&#x5B50;&#x6570;&#x7EC4;&#x7EC4;&#x5408;&#x4EE5;&#x6811;&#x7684;&#x5F62;&#x5F0F;&#x5C55;&#x73B0;&#xFF0C;&#x53EF;&#x4EE5;&#x53D1;&#x73B0;&#x6709;&#x5F88;&#x591A;&#x5B50;&#x6811;&#x662F;&#x91CD;&#x590D;&#x7684;&#x3002;&#x7B2C;&#x4E00;&#x5C42;&#xFF08;&#x6839;&#x8282;&#x70B9;&#x4E3A;&#x7B2C;0&#x5C42;&#xFF09;&#x8282;&#x70B9;&#x7684;&#x5DE6;&#x5B50;&#x6811;&#x5B8C;&#x5168;&#x7B49;&#x4E8E;&#x4EE5;&#x53F3;&#x4FA7;&#x5144;&#x5F1F;&#x8282;&#x70B9;&#x4E3A;&#x6839;&#x7684;&#x5B50;&#x6811;&#x3002;</p>
+<p><img src="../assets/images/uml/67530b4fd58d13d9cc7507e36aad655a8e5beabf.png"></p>
+<p>&#x800C;&#x4E14;&#xFF0C;&#x8FDE;&#x7EED;&#x5B50;&#x6570;&#x7EC4;&#x7684;&#x548C;&#x6709;&#x4E00;&#x4E2A;&#x7279;&#x6027;&#x3002;&#x5047;&#x8BBE;&#x4E00;&#x4E2A;&#x8FDE;&#x7EED;&#x5B50;&#x6570;&#x7EC4;&#x6709;a&#x548C;b&#x4E24;&#x4E2A;&#x5B50;&#x6570;&#x7EC4;&#x7EC4;&#x6210;&#x3002;&#x5982;&#x679C;a&#x7684;&#x548C;&#x5C0F;&#x4E8E;&#x96F6;&#xFF0C;&#x5219;a&#x548C;b&#x7EC4;&#x6210;&#x7684;&#x5B50;&#x6570;&#x7EC4;&#x548C;&#x80AF;&#x5B9A;&#x5C0F;&#x4E8E;b&#x7684;&#x548C;&#x3002;&#x518D;&#x7ED3;&#x5408;&#x5B50;&#x6811;&#x91CD;&#x590D;&#x6027;&#xFF0C;&#x53EF;&#x4EE5;&#x5F97;&#x51FA;&#x4EE5;&#x4E0B;&#x8BBA;&#x65AD;&#xFF1A;</p>
+<ul>
+<li>&#x5982;&#x679C;&#x67D0;&#x4E2A;&#x8282;&#x70B9;&#x5230;&#x6839;&#x8282;&#x70B9;&#x8DEF;&#x5F84;&#x4E0A;&#x6240;&#x6709;&#x8282;&#x70B9;&#x503C;&#x7684;&#x548C;&#x5C0F;&#x4E8E;&#x6216;&#x7B49;&#x4E8E;0&#xFF0C;&#x5219;&#x65E0;&#x9700;&#x63A2;&#x7D22;&#x5176;&#x5B50;&#x6811;&#x3002;&#x56E0;&#x4E3A;&#xFF0C;&#x4ECE;&#x6839;&#x8282;&#x70B9;&#x5230;&#x5176;&#x4EFB;&#x610F;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x8DEF;&#x5F84;&#x4E0A;&#x503C;&#x7684;&#x548C;&#x7EDD;&#x4E0D;&#x4F1A;&#x5927;&#x4E8E;&#x4ECE;&#x5176;&#x5B50;&#x8282;&#x70B9;&#x5230;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x8DEF;&#x5F84;&#x4E0A;&#x503C;&#x7684;&#x548C;&#x3002;&#x4E14;&#x5176;&#x53F3;&#x4FA7;&#x5144;&#x5F1F;&#x5B50;&#x6811;&#x8986;&#x76D6;&#x4E86;&#x5176;&#x5B50;&#x6811;&#x3002;</li>
+</ul>
+<h3 id="&#x4EE3;&#x7801;">&#x4EE3;&#x7801;</h3>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;java&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">package io.github.rscai.leetcode.bytedance.dynamic;
+
+public class Solution1029B {
+
+  public int maxSubArray(int[] nums) {
+    int max = Integer.MIN_VALUE;
+    int accum = 0;
+    for (int index = 0; index &lt; nums.length; index++) {
+      accum += nums[index];
+      if (accum &gt; max) {
+        max = accum;
+      }
+      if (accum &lt; 0) {
+        accum = 0;
+      }
+    }
+    return max;
+  }
+}<br></div></div>
+
+
+
+<p>&#x4E00;&#x6B21;&#x904D;&#x5386;&#x6574;&#x4E2A;&#x6570;&#x7EC4;&#x3002;</p>
+<p><img src="p1029.figure/debug-B1.png" alt="debug-B1"></p>
+<p>&#x6BD4;&#x8F83;&#x4ECE;&#x6839;&#x8282;&#x70B9;&#x81F3;&#x4ECA;&#x7684;&#x7D2F;&#x52A0;&#x503C;&#x548C;&#x5F53;&#x524D;&#x6700;&#x5927;&#x503C;&#x3002;&#x5982;&#x679C;&#x5927;&#x4E8E;&#x5F53;&#x524D;&#x6700;&#x5927;&#x503C;&#xFF0C;&#x5219;&#x8868;&#x660E;&#x627E;&#x5230;&#x4E86;&#x4E00;&#x4E2A;&#x548C;&#x66F4;&#x5927;&#x7684;&#x8FDE;&#x7EED;&#x5B50;&#x6570;&#x7EC4;&#x3002;</p>
+<p><img src="p1029.figure/debug-B2.png" alt="debug-B2"></p>
+<p>&#x5982;&#x679C;&#x4ECE;&#x6839;&#x8282;&#x70B9;&#x5230;&#x4ECA;&#x7684;&#x7D2F;&#x52A0;&#x503C;&#x5C0F;&#x4E8E;0&#xFF0C;&#x5219;&#x8868;&#x660E;&#x65E0;&#x9700;&#x518D;&#x63A2;&#x7D22;&#x5176;&#x5B50;&#x6811;&#x4E86;&#x3002;&#x76F4;&#x63A5;&#x6E05;&#x96F6;&#x7D2F;&#x52A0;&#x503C;&#xFF0C;&#x7B49;&#x540C;&#x4E8E;&#x4ECE;&#x4E0B;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;&#xFF08;&#x5728;&#x6811;&#x7ED3;&#x6784;&#x4E2D;&#xFF0C;&#x5219;&#x662F;&#x53F3;&#x4FA7;&#x5144;&#x5F1F;&#x8282;&#x70B9;&#xFF09;&#x518D;&#x5F00;&#x59CB;&#x7D2F;&#x52A0;&#x3002;</p>
+<p><img src="p1029.figure/debug-B3.png" alt="debug-B3"></p>
+<h3 id="&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;">&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;</h3>
+<h4 id="&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;">&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;</h4>
+<p>&#x53EA;&#x904D;&#x5386;&#x4E86;&#x6570;&#x7EC4;&#x4E00;&#x6B21;&#xFF0C;&#x6240;&#x4EE5;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x4E3A;&#xFF1A;</p>
+<p><script type="math/tex; mode=display">
+C_{time} = \mathcal{O}(n)
+</script></p>
+<h4 id="&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;">&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;</h4>
+<p>&#x4F7F;&#x7528;&#x4E86;&#x4E24;&#x4E2A;&#x53D8;&#x91CF;<code>max</code>&#x548C;<code>accum</code>&#x3002;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A;&#xFF1A;</p>
+<p><script type="math/tex; mode=display">
+C_{space} = \mathcal{O}(1)
+</script></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="p1028.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 最大正方形">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"最大子序和","level":"1.2.4","depth":2,"previous":{"title":"最大正方形","level":"1.2.3","depth":2,"path":"dynamic/p1028.md","ref":"dynamic/p1028.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock","ace","uml","mathjax-update-cdn","collapsible-menu-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ace":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"uml":{"format":"png","nailgun":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"monokai","unindent":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"mathjax-update-cdn":{"forceSVG":false,"version":"2.7.1"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"collapsible-menu-ex":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh_CN","gitbook":"*"},"file":{"path":"dynamic/p1029.md","mtime":"2019-05-01T09:55:26.723Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-01T09:55:27.866Z"},"basePath":"..","book":{"language":"zh_CN"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mathjax-update-cdn/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-collapsible-menu-ex/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
