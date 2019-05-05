@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>合併兩個有序鏈表 · GitBook</title>
+        <title>兩數相加 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,8 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="p1038.html" />
     
-    
-    <link rel="prev" href="../linktree.html" />
+    <link rel="prev" href="p1038.html" />
     
 
     </head>
@@ -217,7 +215,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.3.1" data-path="p1048.html">
+        <li class="chapter " data-level="1.3.1" data-path="p1048.html">
             
                 <a href="p1048.html">
             
@@ -243,7 +241,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="p1022.html">
+        <li class="chapter active" data-level="1.3.3" data-path="p1022.html">
             
                 <a href="p1022.html">
             
@@ -291,7 +289,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >合併兩個有序鏈表</a>
+        <a href=".." >兩數相加</a>
     </h1>
 </div>
 
@@ -306,78 +304,69 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x5408;&#x4F75;&#x5169;&#x500B;&#x6709;&#x5E8F;&#x93C8;&#x8868;">&#x5408;&#x4F75;&#x5169;&#x500B;&#x6709;&#x5E8F;&#x93C8;&#x8868;</h1>
+                                <h1 id="&#x5169;&#x6578;&#x76F8;&#x52A0;">&#x5169;&#x6578;&#x76F8;&#x52A0;</h1>
 <h2 id="&#x984C;&#x76EE;">&#x984C;&#x76EE;</h2>
 <blockquote>
-<p>&#x5C07;&#x5169;&#x500B;&#x6709;&#x5E8F;&#x934A;&#x9336;&#x5408;&#x4F75;&#x70BA;&#x4E00;&#x500B;&#x65B0;&#x7684;&#x6709;&#x5E8F;&#x934A;&#x9336;&#x4E26;&#x8FD4;&#x56DE;&#x3002;&#x65B0;&#x934A;&#x9336;&#x662F;&#x901A;&#x904E;&#x62FC;&#x63A5;&#x7D66;&#x5B9A;&#x7684;&#x5169;&#x500B;&#x934A;&#x9336;&#x7684;&#x6240;&#x6709;&#x7BC0;&#x9EDE;&#x7D44;&#x6210;&#x7684;&#x3002;</p>
+<p>&#x7D66;&#x51FA;&#x5169;&#x500B;<strong>&#x975E;&#x7A7A;</strong>&#x7684;&#x934A;&#x9336;&#x7528;&#x4F86;&#x8868;&#x793A;&#x5169;&#x500B;&#x975E;&#x8CA0;&#x7684;&#x6574;&#x6578;&#x3002;&#x5176;&#x4E2D;&#xFF0C;&#x5B83;&#x5011;&#x5404;&#x81EA;&#x7684;&#x4F4D;&#x6578;&#x662F;&#x6309;&#x7167;<strong>&#x9006;&#x5E8F;</strong>&#x7684;&#x65B9;&#x5F0F;&#x5B58;&#x5132;&#x7684;&#xFF0C;&#x4E26;&#x4E14;&#x5B83;&#x5011;&#x7684;&#x6BCF;&#x500B;&#x7BC0;&#x9EDE;&#x53EA;&#x80FD;&#x5B58;&#x5132;<strong>&#x4E00;&#x4F4D;</strong>&#x6578;&#x5B57;&#x3002;</p>
+<p>&#x5982;&#x679C;&#xFF0C;&#x6211;&#x5011;&#x5C07;&#x9019;&#x5169;&#x500B;&#x6578;&#x76F8;&#x52A0;&#x8D77;&#x4F86;&#xFF0C;&#x5247;&#x6703;&#x8FD4;&#x56DE;&#x4E00;&#x500B;&#x65B0;&#x7684;&#x93C8;&#x8868;&#x4F86;&#x8868;&#x793A;&#x5B83;&#x5011;&#x7684;&#x548C;&#x3002;</p>
+<p>&#x60A8;&#x53EF;&#x4EE5;&#x5047;&#x8A2D;&#x9664;&#x4E86;&#x6578;&#x5B57; 0 &#x4E4B;&#x5916;&#xFF0C;&#x9019;&#x5169;&#x500B;&#x6578;&#x90FD;&#x4E0D;&#x6703;&#x4EE5; 0 &#x958B;&#x982D;&#x3002;</p>
 <p><strong>&#x793A;&#x4F8B;&#xFF1A;</strong></p>
-<pre><code>&#x8F38;&#x5165;&#xFF1A;1-&gt;2-&gt;4, 1-&gt;3-&gt;4
-&#x8F38;&#x51FA;&#xFF1A;1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4
+<pre><code>&#x8F38;&#x5165;&#xFF1A;(2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)
+&#x8F38;&#x51FA;&#xFF1A;7 -&gt; 0 -&gt; 8
+&#x539F;&#x56E0;&#xFF1A;342 + 465 = 807
 </code></pre></blockquote>
-<h2 id="&#x5408;&#x4F75;&#x6392;&#x5E8F;">&#x5408;&#x4F75;&#x6392;&#x5E8F;</h2>
-<p>&#x9019;&#x984C;&#x7B49;&#x50F9;&#x65BC;&#x5408;&#x4F75;&#x6392;&#x5E8F;&#x7684;&#x4E00;&#x90E8;&#x4EFD;-&#x5408;&#x4F75;&#x5169;&#x500B;&#x6709;&#x5E8F;&#x7684;&#x5E8F;&#x5217;&#xFF0C;&#x5408;&#x4F75;&#x5F8C;&#x7684;&#x7D50;&#x679C;&#x4F9D;&#x820A;&#x6709;&#x5E8F;&#x3002;</p>
-<p>&#x6B65;&#x9A5F;&#xFF1A;</p>
-<ol>
-<li>&#x6BD4;&#x8F03;&#x5169;&#x500B;&#x5E8F;&#x5217;&#x7684;&#x982D;&#x5143;&#x7D20;&#xFF0C;&#x53D6;&#x5176;&#x4E2D;&#x8F03;&#x5C0F;&#x7684;&#x5143;&#x7D20;&#x653E;&#x5165;&#x65B0;&#x5E8F;&#x5217;</li>
-<li>&#x88AB;&#x9078;&#x7528;&#x7684;&#x5E8F;&#x5217;&#x628A;&#x982D;&#x6307;&#x91DD;&#x5411;&#x5F8C;&#x79FB;&#x4E00;&#x4F4D;</li>
-<li>&#x91CD;&#x8907;1&#x548C;2&#xFF0C;&#x76F4;&#x81F3;&#x5169;&#x500B;&#x5E8F;&#x5217;&#x90FD;&#x7A7A;</li>
-</ol>
-<p>&#x8209;&#x500B;&#x4F8B;&#x5B50;&#xFF0C;&#x7D66;&#x5B9A;&#x5169;&#x500B;&#x6709;&#x5E8F;&#x5E8F;&#x5217;a&#x548C;b&#xFF1A;</p>
-<p><img src="../assets/images/uml/3e8e4f9f736cf2c70758c8efb6141cfce82e33d9.png"></p>
-<p>&#x6BD4;&#x8F03;&#x5169;&#x500B;&#x5E8F;&#x5217;&#x7684;&#x982D;&#x5143;&#x7D20;&#xFF0C;&#x53D6;&#x8F03;&#x5C0F;&#x7684;&#xFF08;&#x76F8;&#x7B49;&#x7684;&#x60C5;&#x6CC1;&#x4E0B;&#x4EFB;&#x9078;&#x5176;&#x4E2D;&#xFF09;&#x3002;&#x88AB;&#x9078;&#x53D6;&#x7684;&#x5E8F;&#x5217;&#x982D;&#x6307;&#x91DD;&#x5411;&#x5F8C;&#x79FB;&#x4E00;&#x4F4D;&#x3002;</p>
-<p><img src="../assets/images/uml/72d44471a275f8152147d3017d0ea64ee33ff056.png"></p>
-<p>&#x7E7C;&#x7E8C;&#x6BD4;&#x8F03;&#x5169;&#x500B;&#x5E8F;&#x5217;&#x982D;&#x5143;&#x7D20;&#xFF0C;&#x53D6;&#x8F03;&#x5C0F;&#x7684;&#x3002;&#x9019;&#x25683;b&#x7684;&#x982D;&#x5143;&#x7D20;&#x66F4;&#x5C0F;&#xFF0C;&#x6240;&#x4EE5;&#x53D6;&#x5176;&#x52A0;&#x5165;&#x65B0;&#x5E8F;&#x5217;&#x3002;</p>
-<p><img src="../assets/images/uml/c33bc2b85ec6322f1d968dc2c196fae2c1d7f2fa.png"></p>
-<p>&#x7E7C;&#x7E8C;&#x6BD4;&#x8F03;&#x5169;&#x500B;&#x5E8F;&#x5217;&#x982D;&#x5143;&#x7D20;&#xFF0C;&#x53D6;&#x8F03;&#x5C0F;&#x7684;&#x3002;&#x9019;&#x6642;a&#x7684;&#x982D;&#x5143;&#x7D20;&#x66F4;&#x5C0F;&#xFF0C;&#x6240;&#x4EE5;&#x53D6;&#x5176;&#x52A0;&#x5165;&#x65B0;&#x5E8F;&#x5217;&#x3002;</p>
-<p><img src="../assets/images/uml/d460ffd763d1cbaf305e20d52486387c93f3be1c.png"></p>
-<p>&#x7E7C;&#x7E8C;&#x6BD4;&#x8F03;&#x5169;&#x500B;&#x5E8F;&#x5217;&#x982D;&#x5143;&#x7D20;&#xFF0C;&#x53D6;&#x8F03;&#x5C0F;&#x7684;&#x3002;&#x9019;&#x6642;b&#x7684;&#x982D;&#x5143;&#x7D20;&#x66F4;&#x5C0F;&#xFF0C;&#x6240;&#x4EE5;&#x5C45;&#x5176;&#x52A0;&#x5165;&#x65B0;&#x5E8F;&#x5217;&#x3002;</p>
-<p><img src="../assets/images/uml/d7fbec43668f465c60ffeed682b464bd41c2a4bf.png"></p>
-<p>&#x7E7C;&#x7E8C;&#x6BD4;&#x8F03;&#x5169;&#x500B;&#x5E8F;&#x5217;&#x982D;&#x5143;&#x7D20;&#xFF0C;&#x53D6;&#x8F03;&#x5C0F;&#x7684;&#x3002;&#x9019;&#x6642;&#x5169;&#x500B;&#x982D;&#x5143;&#x7D20;&#x76F8;&#x7B49;&#xFF0C;&#x4EFB;&#x9078;&#x5176;&#x4E00;&#x3002;</p>
-<p><img src="../assets/images/uml/ef397e4bb327523de1f5a132322dd74da89cc257.png"></p>
-<p>&#x7E7C;&#x7E8C;&#x6BD4;&#x8F03;&#x5169;&#x500B;&#x5E8F;&#x5217;&#x982D;&#x5143;&#x7D20;&#x3002;&#x6B64;&#x6642;&#xFF0C;a&#x5E8F;&#x5217;&#x5DF2;&#x7A7A;&#x3002;&#x6240;&#x4EE5;&#x76F4;&#x63A5;&#x5F9E;b&#x5E8F;&#x5217;&#x4E2D;&#x53D6;&#x5143;&#x7D20;&#x653E;&#x5165;&#x65B0;&#x5E8F;&#x5217;&#x3002;</p>
-<p><img src="../assets/images/uml/5f9d9f12e6a59835a5124120994e935cab7f0199.png"></p>
-<p>&#x81F3;&#x6B64;&#xFF0C;&#x5169;&#x500B;&#x5E8F;&#x5217;&#x5DF2;&#x7A7A;&#xFF0C;&#x5408;&#x4F75;&#x5B8C;&#x6210;&#x3002;</p>
+<h2 id="&#x9010;&#x4F4D;&#x76F8;&#x52A0;&#x6CD5;">&#x9010;&#x4F4D;&#x76F8;&#x52A0;&#x6CD5;</h2>
+<p>&#x6574;&#x6578;&#x52A0;&#x6CD5;&#x53EF;&#x4EE5;&#x5206;&#x89E3;&#x70BA;&#x9010;&#x4F4D;&#x76F8;&#x52A0;&#x3002;</p>
+<p>&#x8209;&#x500B;&#x4F8B;&#x5B50;&#xFF0C;&#x6574;&#x6578;<code>342</code>&#x548C;<code>465</code>&#x7528;&#x93C8;&#x8868;&#x8868;&#x793A;&#x70BA;&#xFF1A;</p>
+<p><img src="../assets/images/uml/46e525e228048e9364ebcfa01170bda595ee38d7.png"></p>
+<p>&#x93C8;&#x8868;&#x4E2D;&#x6BCF;&#x500B;&#x7BC0;&#x9EDE;&#x53EA;&#x5B58;&#x5132;&#x6574;&#x6578;&#x4E2D;&#x7684;&#x4E00;&#x4F4D;&#xFF0C;&#x4E14;&#x4F4E;&#x4F4D;&#x5728;&#x524D;&#x9AD8;&#x4F4D;&#x5728;&#x5F8C;&#x3002;</p>
+<p>&#x5169;&#x500B;&#x93C8;&#x8868;&#x4E2D;&#x76F8;&#x540C;&#x4F4D;&#x7F6E;&#x7684;&#x7BC0;&#x9EDE;&#x4E2D;&#x5B58;&#x5132;&#x7684;&#x503C;&#xFF0C;&#x5728;&#x5404;&#x81EA;&#x6574;&#x6578;&#x4E2D;&#x6240;&#x8655;&#x7684;&#x4F4D;&#x6578;&#x4E5F;&#x76F8;&#x540C;&#x3002;&#x5C07;&#x93C8;&#x8868;&#x4E2D;&#x76F8;&#x540C;&#x4F4D;&#x7F6E;&#x7BC0;&#x9EDE;&#x4E2D;&#x7684;&#x503C;&#x76F8;&#x52A0;&#xFF0C;&#x7B49;&#x540C;&#x65BC;&#x6574;&#x6578;&#x9010;&#x4F4D;&#x76F8;&#x540C;&#x3002;</p>
+<p><img src="../assets/images/uml/fe3d98b4ef8d190207006e3aa59f9333e4b28846.png"></p>
+<p><code>2</code>&#x52A0;<code>5</code>&#x5F97;<code>7</code>&#xFF0C;<code>4</code>&#x52A0;<code>6</code>&#x5F97;<code>0</code>&#x9032;<code>1</code>&#xFF0C;<code>3</code>&#x52A0;<code>4</code>&#x518D;&#x52A0;&#x9032;<code>1</code>&#x5F97;<code>8</code>&#x3002;</p>
 <h3 id="&#x4EE3;&#x78BC;">&#x4EE3;&#x78BC;</h3>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;java&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">package io.github.rscai.leetcode.bytedance.linktree;
 
-public class Solution1048A {
+public class Solution1022A {
 
-  public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+  public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
     ListNode la = l1;
     ListNode lb = l2;
+    int carry = 0;
     ListNode head = null;
-    ListNode currentNode = head;
+    ListNode tail = null;
     while (la != null || lb != null) {
-      if (la == null) {
-        ListNode newNode = new ListNode(lb.val);
-        lb = lb.next;
-        currentNode = addTo(currentNode, newNode);
-      } else if (lb == null) {
-        ListNode newNode = new ListNode(la.val);
+      int aValue = 0;
+      if (la != null) {
+        aValue = la.val;
         la = la.next;
-        currentNode = addTo(currentNode, newNode);
-      } else if (la.val &lt; lb.val) {
-        ListNode newNode = new ListNode(la.val);
-        la = la.next;
-        currentNode = addTo(currentNode, newNode);
-      } else {
-        ListNode newNode = new ListNode(lb.val);
-        lb = lb.next;
-        currentNode = addTo(currentNode, newNode);
       }
-      if (head == null) {
-        head = currentNode;
+      int bValue = 0;
+      if (lb != null) {
+        bValue = lb.val;
+        lb = lb.next;
+      }
+      int sum = aValue + bValue + carry;
+      carry = Math.floorDiv(sum, 10);
+      ListNode newNode = new ListNode(sum % 10);
+      if (tail == null) {
+        head = newNode;
+        tail = head;
+      } else {
+        tail.next = newNode;
+        tail = newNode;
+      }
+    }
+    if (carry != 0) {
+      ListNode newNode = new ListNode(carry);
+      if (tail == null) {
+        head = newNode;
+        tail = head;
+      } else {
+        tail.next = newNode;
+        tail = newNode;
       }
     }
     return head;
-  }
-
-  private ListNode addTo(ListNode currentNode, ListNode newNode) {
-    if (currentNode == null) {
-      return newNode;
-    }
-    currentNode.next = newNode;
-    return newNode;
   }
 }<br></div></div>
 
@@ -385,12 +374,12 @@ public class Solution1048A {
 
 <h3 id="&#x8907;&#x96DC;&#x5EA6;&#x5206;&#x6790;">&#x8907;&#x96DC;&#x5EA6;&#x5206;&#x6790;</h3>
 <h4 id="&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;">&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;</h4>
-<p>&#x672C;&#x6F14;&#x7B97;&#x6CD5;&#x5C0D;&#x5169;&#x500B;&#x5E8F;&#x5217;&#x90FD;&#x53EA;&#x4F5C;&#x4E86;&#x4E00;&#x6B21;&#x904D;&#x6B77;&#xFF0C;&#x6240;&#x4EE5;&#x6642;&#x9593;&#x4E2D;&#x65E5;&#x4EBA;&#x6C34;&#x96DC;&#x5EA6;&#x662F;&#xFF1A;</p>
+<p>&#x672C;&#x6F14;&#x7B97;&#x6CD5;&#x540C;&#x6642;&#x904D;&#x6B77;&#x5169;&#x500B;&#x93C8;&#x8868;&#xFF0C;&#x4E14;&#x50C5;&#x904D;&#x6B77;&#x4E00;&#x6B21;&#x3002;&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;&#x70BA;&#xFF1A;</p>
 <p><script type="math/tex; mode=display">
 C_{time} = \mathcal{O}(n)
 </script></p>
 <h4 id="&#x7A7A;&#x9593;&#x8907;&#x96DC;&#x5EA6;">&#x7A7A;&#x9593;&#x8907;&#x96DC;&#x5EA6;</h4>
-<p>&#x4F7F;&#x7528;&#x5169;&#x500B;&#x8B8A;&#x91CF;<code>head</code>&#x548C;<code>currentNode</code>&#x3002;</p>
+<p>&#x4F7F;&#x7528;&#x4E86;&#x4E94;&#x500B;&#x8B8A;&#x91CF;&#x3002;&#x7A7A;&#x9593;&#x8907;&#x96DC;&#x5EA6;&#x70BA;&#xFF1A;</p>
 <p><script type="math/tex; mode=display">
 C_{space} = \mathcal{O}(1)
 </script></p>
@@ -421,14 +410,10 @@ C_{space} = \mathcal{O}(1)
 
             
                 
-                <a href="../linktree.html" class="navigation navigation-prev " aria-label="Previous page: 鏈表與樹">
+                <a href="p1038.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 反轉鏈表">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="p1038.html" class="navigation navigation-next " aria-label="Next page: 反轉鏈表">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -437,7 +422,7 @@ C_{space} = \mathcal{O}(1)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"合併兩個有序鏈表","level":"1.3.1","depth":2,"next":{"title":"反轉鏈表","level":"1.3.2","depth":2,"path":"linktree/p1038.md","ref":"linktree/p1038.md","articles":[]},"previous":{"title":"鏈表與樹","level":"1.3","depth":1,"path":"linktree.md","ref":"linktree.md","articles":[{"title":"合併兩個有序鏈表","level":"1.3.1","depth":2,"path":"linktree/p1048.md","ref":"linktree/p1048.md","articles":[]},{"title":"反轉鏈表","level":"1.3.2","depth":2,"path":"linktree/p1038.md","ref":"linktree/p1038.md","articles":[]},{"title":"兩數相加","level":"1.3.3","depth":2,"path":"linktree/p1022.md","ref":"linktree/p1022.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["include-codeblock","ace","uml","mathjax-update-cdn","collapsible-menu-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ace":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"uml":{"format":"png","nailgun":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"monokai","unindent":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"mathjax-update-cdn":{"forceSVG":false,"version":"2.7.1"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"collapsible-menu-ex":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh_TR","gitbook":"*"},"file":{"path":"linktree/p1048.md","mtime":"2019-05-05T13:39:32.707Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-05T13:41:11.074Z"},"basePath":"..","book":{"language":"zh_TR"}});
+            gitbook.page.hasChanged({"page":{"title":"兩數相加","level":"1.3.3","depth":2,"previous":{"title":"反轉鏈表","level":"1.3.2","depth":2,"path":"linktree/p1038.md","ref":"linktree/p1038.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock","ace","uml","mathjax-update-cdn","collapsible-menu-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ace":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"uml":{"format":"png","nailgun":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"monokai","unindent":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"mathjax-update-cdn":{"forceSVG":false,"version":"2.7.1"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"collapsible-menu-ex":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh_TR","gitbook":"*"},"file":{"path":"linktree/p1022.md","mtime":"2019-05-05T13:39:32.707Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-05T13:41:11.074Z"},"basePath":"..","book":{"language":"zh_TR"}});
         });
     </script>
 </div>
