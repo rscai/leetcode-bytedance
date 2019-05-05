@@ -8,3 +8,5 @@
     * [最大子序和](dynamic/p1029.md)
     * [三⻆形最小路徑和](dynamic/p1030.md)
     * [俄羅斯套娃信封問題](dynamic/p1031.md)
+* [鏈表與樹](linktree.md)
+    * [合併兩個有序鏈表](linktree/p1048.md)

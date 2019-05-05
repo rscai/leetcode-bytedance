@@ -1,0 +1,7 @@
+package io.github.rscai.leetcode.bytedance.linktree;
+
+public class ListNode {
+      int val;
+      ListNode next;
+      ListNode(int x) { val = x; }
+}
