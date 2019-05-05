@@ -7,3 +7,4 @@
     * [最大正方形](dynamic/p1028.md)
     * [最大子序和](dynamic/p1029.md)
     * [三⻆形最小路徑和](dynamic/p1030.md)
+    * [俄羅斯套娃信封問題](dynamic/p1031.md)
