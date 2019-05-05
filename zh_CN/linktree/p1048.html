@@ -1,0 +1,483 @@
+
+<!DOCTYPE HTML>
+<html lang="zh_CN" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>合併两个有序链表 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="p1038.html" />
+    
+    
+    <link rel="prev" href="../linktree.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../dynamic.html">
+            
+                <a href="../dynamic.html">
+            
+                    
+                    动态规划
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../dynamic/p1042.html">
+            
+                <a href="../dynamic/p1042.html">
+            
+                    
+                    买卖股票的最佳时机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../dynamic/p1043.html">
+            
+                <a href="../dynamic/p1043.html">
+            
+                    
+                    买卖股票的最佳时机 II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../dynamic/p1028.html">
+            
+                <a href="../dynamic/p1028.html">
+            
+                    
+                    最大正方形
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../dynamic/p1029.html">
+            
+                <a href="../dynamic/p1029.html">
+            
+                    
+                    最大子序和
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../dynamic/p1030.html">
+            
+                <a href="../dynamic/p1030.html">
+            
+                    
+                    三⻆形最小路径和
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../dynamic/p1031.html">
+            
+                <a href="../dynamic/p1031.html">
+            
+                    
+                    俄罗斯套娃信封问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../linktree.html">
+            
+                <a href="../linktree.html">
+            
+                    
+                    链表与树
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.1" data-path="p1048.html">
+            
+                <a href="p1048.html">
+            
+                    
+                    合併两个有序链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="p1038.html">
+            
+                <a href="p1038.html">
+            
+                    
+                    反转链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >合併两个有序链表</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5408;&#x4F75;&#x4E24;&#x4E2A;&#x6709;&#x5E8F;&#x94FE;&#x8868;">&#x5408;&#x4F75;&#x4E24;&#x4E2A;&#x6709;&#x5E8F;&#x94FE;&#x8868;</h1>
+<h2 id="&#x9898;&#x76EE;">&#x9898;&#x76EE;</h2>
+<blockquote>
+<p>&#x5C06;&#x4E24;&#x4E2A;&#x6709;&#x5E8F;&#x934A;&#x8868;&#x5408;&#x4F75;&#x4E3A;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x6709;&#x5E8F;&#x934A;&#x8868;&#x5E76;&#x8FD4;&#x56DE;&#x3002;&#x65B0;&#x934A;&#x8868;&#x662F;&#x901A;&#x8FC7;&#x62FC;&#x63A5;&#x7ED9;&#x5B9A;&#x7684;&#x4E24;&#x4E2A;&#x934A;&#x8868;&#x7684;&#x6240;&#x6709;&#x8282;&#x70B9;&#x7EC4;&#x6210;&#x7684;&#x3002;</p>
+<p><strong>&#x793A;&#x4F8B;&#xFF1A;</strong></p>
+<pre><code>&#x8F93;&#x5165;&#xFF1A;1-&gt;2-&gt;4, 1-&gt;3-&gt;4
+&#x8F93;&#x51FA;&#xFF1A;1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4
+</code></pre></blockquote>
+<h2 id="&#x5408;&#x4F75;&#x6392;&#x5E8F;">&#x5408;&#x4F75;&#x6392;&#x5E8F;</h2>
+<p>&#x8FD9;&#x9898;&#x7B49;&#x4EF7;&#x4E8E;&#x5408;&#x4F75;&#x6392;&#x5E8F;&#x7684;&#x4E00;&#x90E8;&#x4EFD;-&#x5408;&#x4F75;&#x4E24;&#x4E2A;&#x6709;&#x5E8F;&#x7684;&#x5E8F;&#x5217;&#xFF0C;&#x5408;&#x4F75;&#x540E;&#x7684;&#x7ED3;&#x679C;&#x4F9D;&#x65E7;&#x6709;&#x5E8F;&#x3002;</p>
+<p>&#x6B65;&#x9AA4;&#xFF1A;</p>
+<ol>
+<li>&#x6BD4;&#x8F83;&#x4E24;&#x4E2A;&#x5E8F;&#x5217;&#x7684;&#x5934;&#x5143;&#x7D20;&#xFF0C;&#x53D6;&#x5176;&#x4E2D;&#x8F83;&#x5C0F;&#x7684;&#x5143;&#x7D20;&#x653E;&#x5165;&#x65B0;&#x5E8F;&#x5217;</li>
+<li>&#x88AB;&#x9009;&#x7528;&#x7684;&#x5E8F;&#x5217;&#x628A;&#x5934;&#x6307;&#x9488;&#x5411;&#x540E;&#x79FB;&#x4E00;&#x4F4D;</li>
+<li>&#x91CD;&#x590D;1&#x548C;2&#xFF0C;&#x76F4;&#x81F3;&#x4E24;&#x4E2A;&#x5E8F;&#x5217;&#x90FD;&#x7A7A;</li>
+</ol>
+<p>&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x7ED9;&#x5B9A;&#x4E24;&#x4E2A;&#x6709;&#x5E8F;&#x5E8F;&#x5217;a&#x548C;b&#xFF1A;</p>
+<p><img src="../assets/images/uml/3e8e4f9f736cf2c70758c8efb6141cfce82e33d9.png"></p>
+<p>&#x6BD4;&#x8F83;&#x4E24;&#x4E2A;&#x5E8F;&#x5217;&#x7684;&#x5934;&#x5143;&#x7D20;&#xFF0C;&#x53D6;&#x8F83;&#x5C0F;&#x7684;&#xFF08;&#x76F8;&#x7B49;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x4EFB;&#x9009;&#x5176;&#x4E2D;&#xFF09;&#x3002;&#x88AB;&#x9009;&#x53D6;&#x7684;&#x5E8F;&#x5217;&#x5934;&#x6307;&#x9488;&#x5411;&#x540E;&#x79FB;&#x4E00;&#x4F4D;&#x3002;</p>
+<p><img src="../assets/images/uml/72d44471a275f8152147d3017d0ea64ee33ff056.png"></p>
+<p>&#x7EE7;&#x7EED;&#x6BD4;&#x8F83;&#x4E24;&#x4E2A;&#x5E8F;&#x5217;&#x5934;&#x5143;&#x7D20;&#xFF0C;&#x53D6;&#x8F83;&#x5C0F;&#x7684;&#x3002;&#x8FD9;&#x25683;b&#x7684;&#x5934;&#x5143;&#x7D20;&#x66F4;&#x5C0F;&#xFF0C;&#x6240;&#x4EE5;&#x53D6;&#x5176;&#x52A0;&#x5165;&#x65B0;&#x5E8F;&#x5217;&#x3002;</p>
+<p><img src="../assets/images/uml/c33bc2b85ec6322f1d968dc2c196fae2c1d7f2fa.png"></p>
+<p>&#x7EE7;&#x7EED;&#x6BD4;&#x8F83;&#x4E24;&#x4E2A;&#x5E8F;&#x5217;&#x5934;&#x5143;&#x7D20;&#xFF0C;&#x53D6;&#x8F83;&#x5C0F;&#x7684;&#x3002;&#x8FD9;&#x65F6;a&#x7684;&#x5934;&#x5143;&#x7D20;&#x66F4;&#x5C0F;&#xFF0C;&#x6240;&#x4EE5;&#x53D6;&#x5176;&#x52A0;&#x5165;&#x65B0;&#x5E8F;&#x5217;&#x3002;</p>
+<p><img src="../assets/images/uml/d460ffd763d1cbaf305e20d52486387c93f3be1c.png"></p>
+<p>&#x7EE7;&#x7EED;&#x6BD4;&#x8F83;&#x4E24;&#x4E2A;&#x5E8F;&#x5217;&#x5934;&#x5143;&#x7D20;&#xFF0C;&#x53D6;&#x8F83;&#x5C0F;&#x7684;&#x3002;&#x8FD9;&#x65F6;b&#x7684;&#x5934;&#x5143;&#x7D20;&#x66F4;&#x5C0F;&#xFF0C;&#x6240;&#x4EE5;&#x5C45;&#x5176;&#x52A0;&#x5165;&#x65B0;&#x5E8F;&#x5217;&#x3002;</p>
+<p><img src="../assets/images/uml/d7fbec43668f465c60ffeed682b464bd41c2a4bf.png"></p>
+<p>&#x7EE7;&#x7EED;&#x6BD4;&#x8F83;&#x4E24;&#x4E2A;&#x5E8F;&#x5217;&#x5934;&#x5143;&#x7D20;&#xFF0C;&#x53D6;&#x8F83;&#x5C0F;&#x7684;&#x3002;&#x8FD9;&#x65F6;&#x4E24;&#x4E2A;&#x5934;&#x5143;&#x7D20;&#x76F8;&#x7B49;&#xFF0C;&#x4EFB;&#x9009;&#x5176;&#x4E00;&#x3002;</p>
+<p><img src="../assets/images/uml/ef397e4bb327523de1f5a132322dd74da89cc257.png"></p>
+<p>&#x7EE7;&#x7EED;&#x6BD4;&#x8F83;&#x4E24;&#x4E2A;&#x5E8F;&#x5217;&#x5934;&#x5143;&#x7D20;&#x3002;&#x6B64;&#x65F6;&#xFF0C;a&#x5E8F;&#x5217;&#x5DF2;&#x7A7A;&#x3002;&#x6240;&#x4EE5;&#x76F4;&#x63A5;&#x4ECE;b&#x5E8F;&#x5217;&#x4E2D;&#x53D6;&#x5143;&#x7D20;&#x653E;&#x5165;&#x65B0;&#x5E8F;&#x5217;&#x3002;</p>
+<p><img src="../assets/images/uml/5f9d9f12e6a59835a5124120994e935cab7f0199.png"></p>
+<p>&#x81F3;&#x6B64;&#xFF0C;&#x4E24;&#x4E2A;&#x5E8F;&#x5217;&#x5DF2;&#x7A7A;&#xFF0C;&#x5408;&#x4F75;&#x5B8C;&#x6210;&#x3002;</p>
+<h3 id="&#x4EE3;&#x7801;">&#x4EE3;&#x7801;</h3>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;java&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">package io.github.rscai.leetcode.bytedance.linktree;
+
+public class Solution1048A {
+
+  public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+    ListNode la = l1;
+    ListNode lb = l2;
+    ListNode head = null;
+    ListNode currentNode = head;
+    while (la != null || lb != null) {
+      if (la == null) {
+        ListNode newNode = new ListNode(lb.val);
+        lb = lb.next;
+        currentNode = addTo(currentNode, newNode);
+      } else if (lb == null) {
+        ListNode newNode = new ListNode(la.val);
+        la = la.next;
+        currentNode = addTo(currentNode, newNode);
+      } else if (la.val &lt; lb.val) {
+        ListNode newNode = new ListNode(la.val);
+        la = la.next;
+        currentNode = addTo(currentNode, newNode);
+      } else {
+        ListNode newNode = new ListNode(lb.val);
+        lb = lb.next;
+        currentNode = addTo(currentNode, newNode);
+      }
+      if (head == null) {
+        head = currentNode;
+      }
+    }
+    return head;
+  }
+
+  private ListNode addTo(ListNode currentNode, ListNode newNode) {
+    if (currentNode == null) {
+      return newNode;
+    }
+    currentNode.next = newNode;
+    return newNode;
+  }
+}<br></div></div>
+
+
+
+<h3 id="&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;">&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;</h3>
+<h4 id="&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;">&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;</h4>
+<p>&#x672C;&#x6F14;&#x7B97;&#x6CD5;&#x5BF9;&#x4E24;&#x4E2A;&#x5E8F;&#x5217;&#x90FD;&#x53EA;&#x4F5C;&#x4E86;&#x4E00;&#x6B21;&#x904D;&#x5386;&#xFF0C;&#x6240;&#x4EE5;&#x65F6;&#x95F4;&#x4E2D;&#x65E5;&#x4EBA;&#x6C34;&#x6742;&#x5EA6;&#x662F;&#xFF1A;</p>
+<p><script type="math/tex; mode=display">
+C_{time} = \mathcal{O}(n)
+</script></p>
+<h4 id="&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;">&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;</h4>
+<p>&#x4F7F;&#x7528;&#x4E24;&#x4E2A;&#x53D8;&#x91CF;<code>head</code>&#x548C;<code>currentNode</code>&#x3002;</p>
+<p><script type="math/tex; mode=display">
+C_{space} = \mathcal{O}(1)
+</script></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../linktree.html" class="navigation navigation-prev " aria-label="Previous page: 链表与树">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="p1038.html" class="navigation navigation-next " aria-label="Next page: 反转链表">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"合併两个有序链表","level":"1.3.1","depth":2,"next":{"title":"反转链表","level":"1.3.2","depth":2,"path":"linktree/p1038.md","ref":"linktree/p1038.md","articles":[]},"previous":{"title":"链表与树","level":"1.3","depth":1,"path":"linktree.md","ref":"linktree.md","articles":[{"title":"合併两个有序链表","level":"1.3.1","depth":2,"path":"linktree/p1048.md","ref":"linktree/p1048.md","articles":[]},{"title":"反转链表","level":"1.3.2","depth":2,"path":"linktree/p1038.md","ref":"linktree/p1038.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["include-codeblock","ace","uml","mathjax-update-cdn","collapsible-menu-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ace":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"uml":{"format":"png","nailgun":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"monokai","unindent":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"mathjax-update-cdn":{"forceSVG":false,"version":"2.7.1"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"collapsible-menu-ex":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh_CN","gitbook":"*"},"file":{"path":"linktree/p1048.md","mtime":"2019-05-05T10:55:50.834Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-05T10:55:52.059Z"},"basePath":"..","book":{"language":"zh_CN"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mathjax-update-cdn/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-collapsible-menu-ex/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
