@@ -6,6 +6,7 @@
     * [反轉鏈表](linktree/p1038.md)
     * [兩數相加](linktree/p1022.md)
     * [排序鏈表](linktree/p1040.md)
+    * [環形鏈表](linktree/p1023.md)
 * [動態規劃](dynamic.md)
     * [買賣股票的最佳時機](dynamic/p1042.md)
     * [買賣股票的最佳時機 II](dynamic/p1043.md)
