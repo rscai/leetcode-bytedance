@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>环形链表 · GitBook</title>
+        <title>相交链表 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="p1024.html" />
+    <link rel="next" href="../dynamic.html" />
     
     
-    <link rel="prev" href="p1040.html" />
+    <link rel="prev" href="p1023.html" />
     
 
     </head>
@@ -172,7 +172,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.5" data-path="p1023.html">
+        <li class="chapter " data-level="1.2.5" data-path="p1023.html">
             
                 <a href="p1023.html">
             
@@ -185,7 +185,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.6" data-path="p1024.html">
+        <li class="chapter active" data-level="1.2.6" data-path="p1024.html">
             
                 <a href="p1024.html">
             
@@ -330,7 +330,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >环形链表</a>
+        <a href=".." >相交链表</a>
     </h1>
 </div>
 
@@ -345,37 +345,39 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x73AF;&#x5F62;&#x94FE;&#x8868;-ii">&#x73AF;&#x5F62;&#x94FE;&#x8868; II</h1>
+                                <h1 id="&#x76F8;&#x4EA4;&#x94FE;&#x8868;">&#x76F8;&#x4EA4;&#x94FE;&#x8868;</h1>
 <h2 id="&#x9898;&#x76EE;">&#x9898;&#x76EE;</h2>
 <blockquote>
-<p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x94FE;&#x8868;&#xFF0C;&#x8FD4;&#x56DE;&#x94FE;&#x8868;&#x5F00;&#x59CB;&#x5165;&#x73AF;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x3002;&#x5982;&#x679C;&#x94FE;&#x8868;&#x65E0;&#x73AF;&#xFF0C;&#x5219;&#x8FD4;&#x56DE; null&#x3002;</p>
-<p>&#x4E3A;&#x4E86;&#x8868;&#x793A;&#x7ED9;&#x5B9A;&#x94FE;&#x8868;&#x4E2D;&#x7684;&#x73AF;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x6574;&#x6570; pos &#x6765;&#x8868;&#x793A;&#x94FE;&#x8868;&#x5C3E;&#x8FDE;&#x63A5;&#x5230;&#x94FE;&#x8868;&#x4E2D;&#x7684;&#x4F4D;&#x7F6E;&#xFF08;&#x7D22;&#x5F15;&#x4ECE; 0 &#x5F00;&#x59CB;&#xFF09;&#x3002;&#x5982;&#x679C; pos &#x662F; -1&#xFF0C;&#x5219;&#x5728;&#x8BE5;&#x94FE;&#x8868;&#x4E2D;&#x6CA1;&#x6709;&#x73AF;&#x3002;</p>
-<p><strong>&#x8BF4;&#x660E;&#xFF1A;</strong>&#x4E0D;&#x5141;&#x8BB8;&#x4FEE;&#x6539;&#x7ED9;&#x5B9A;&#x7684;&#x94FE;&#x8868;&#x3002;</p>
-<p><strong>&#x793A;&#x4F8B;1&#xFF1A;</strong></p>
-<pre><code>&#x8F93;&#x5165;&#xFF1A;head = [3,2,0,-4], pos = 1
-&#x8F93;&#x51FA;&#xFF1A;tail connects to node index 1
-&#x89E3;&#x91CA;&#xFF1A;&#x94FE;&#x8868;&#x4E2D;&#x6709;&#x4E00;&#x4E2A;&#x73AF;&#xFF0C;&#x5176;&#x5C3E;&#x90E8;&#x8FDE;&#x63A5;&#x5230;&#x7B2C;&#x4E8C;&#x4E2A;&#x8282;&#x70B9;&#x3002;
-</code></pre><p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/07/circularlinkedlist.png" alt=""></p>
-<p><strong>&#x793A;&#x4F8B;2&#xFF1A;</strong></p>
-<pre><code>&#x8F93;&#x5165;&#xFF1A;head = [1,2], pos = 0
-&#x8F93;&#x51FA;&#xFF1A;tail connects to node index 0
-&#x89E3;&#x91CA;&#xFF1A;&#x94FE;&#x8868;&#x4E2D;&#x6709;&#x4E00;&#x4E2A;&#x73AF;&#xFF0C;&#x5176;&#x5C3E;&#x90E8;&#x8FDE;&#x63A5;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x3002;
-</code></pre><p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/07/circularlinkedlist_test2.png" alt=""></p>
-<p><strong>&#x793A;&#x4F8B;3&#xFF1A;</strong></p>
-<pre><code>&#x8F93;&#x5165;&#xFF1A;head = [1], pos = -1
-&#x8F93;&#x51FA;&#xFF1A;no cycle
-&#x89E3;&#x91CA;&#xFF1A;&#x94FE;&#x8868;&#x4E2D;&#x6CA1;&#x6709;&#x73AF;&#x3002;
-</code></pre><p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/07/circularlinkedlist_test3.png" alt=""></p>
-<p><strong>&#x8FDB;&#x9636;&#xFF1A;</strong></p>
-<p>&#x4F60;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x4E0D;&#x7528;&#x989D;&#x5916;&#x7A7A;&#x95F4;&#x89E3;&#x51B3;&#x6B64;&#x9898;&#xFF1F;</p>
+<p>&#x7F16;&#x5199;&#x4E00;&#x4E2A;&#x7A0B;&#x5E8F;&#xFF0C;&#x627E;&#x5230;&#x4E24;&#x4E2A;&#x5355;&#x94FE;&#x8868;&#x76F8;&#x4EA4;&#x7684;&#x8D77;&#x59CB;&#x8282;&#x70B9;&#x3002;</p>
+<p>&#x5982;&#x4E0B;&#x9762;&#x7684;&#x4E24;&#x4E2A;&#x94FE;&#x8868;&#xFF1A;</p>
+<p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/14/160_statement.png" alt="">
+&#x5728;&#x8282;&#x70B9; c1 &#x5F00;&#x59CB;&#x76F8;&#x4EA4;&#x3002;</p>
+<p><strong>&#x793A;&#x4F8B; 1&#xFF1A;</strong></p>
+<p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/14/160_example_1.png" alt=""></p>
+<pre><code>&#x8F93;&#x5165;&#xFF1A;intersectVal = 8, listA = [4,1,8,4,5], listB = [5,0,1,8,4,5], skipA = 2, skipB = 3
+&#x8F93;&#x51FA;&#xFF1A;Reference of the node with value = 8
+&#x8F93;&#x5165;&#x89E3;&#x91CA;&#xFF1A;&#x76F8;&#x4EA4;&#x8282;&#x70B9;&#x7684;&#x503C;&#x4E3A; 8 &#xFF08;&#x6CE8;&#x610F;&#xFF0C;&#x5982;&#x679C;&#x4E24;&#x4E2A;&#x5217;&#x8868;&#x76F8;&#x4EA4;&#x5219;&#x4E0D;&#x80FD;&#x4E3A; 0&#xFF09;&#x3002;&#x4ECE;&#x5404;&#x81EA;&#x7684;&#x8868;&#x5934;&#x5F00;&#x59CB;&#x7B97;&#x8D77;&#xFF0C;&#x94FE;&#x8868; A &#x4E3A; [4,1,8,4,5]&#xFF0C;&#x94FE;&#x8868; B &#x4E3A; [5,0,1,8,4,5]&#x3002;&#x5728; A &#x4E2D;&#xFF0C;&#x76F8;&#x4EA4;&#x8282;&#x70B9;&#x524D;&#x6709; 2 &#x4E2A;&#x8282;&#x70B9;&#xFF1B;&#x5728; B &#x4E2D;&#xFF0C;&#x76F8;&#x4EA4;&#x8282;&#x70B9;&#x524D;&#x6709; 3 &#x4E2A;&#x8282;&#x70B9;&#x3002;
+</code></pre><p><strong>&#x793A;&#x4F8B;2&#xFF1A;</strong></p>
+<p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/14/160_example_2.png" alt=""></p>
+<pre><code>&#x8F93;&#x5165;&#xFF1A;intersectVal = 2, listA = [0,9,1,2,4], listB = [3,2,4], skipA = 3, skipB = 1
+&#x8F93;&#x51FA;&#xFF1A;Reference of the node with value = 2
+&#x8F93;&#x5165;&#x89E3;&#x91CA;&#xFF1A;&#x76F8;&#x4EA4;&#x8282;&#x70B9;&#x7684;&#x503C;&#x4E3A; 2 &#xFF08;&#x6CE8;&#x610F;&#xFF0C;&#x5982;&#x679C;&#x4E24;&#x4E2A;&#x5217;&#x8868;&#x76F8;&#x4EA4;&#x5219;&#x4E0D;&#x80FD;&#x4E3A; 0&#xFF09;&#x3002;&#x4ECE;&#x5404;&#x81EA;&#x7684;&#x8868;&#x5934;&#x5F00;&#x59CB;&#x7B97;&#x8D77;&#xFF0C;&#x94FE;&#x8868; A &#x4E3A; [0,9,1,2,4]&#xFF0C;&#x94FE;&#x8868; B &#x4E3A; [3,2,4]&#x3002;&#x5728; A &#x4E2D;&#xFF0C;&#x76F8;&#x4EA4;&#x8282;&#x70B9;&#x524D;&#x6709; 3 &#x4E2A;&#x8282;&#x70B9;&#xFF1B;&#x5728; B &#x4E2D;&#xFF0C;&#x76F8;&#x4EA4;&#x8282;&#x70B9;&#x524D;&#x6709; 1 &#x4E2A;&#x8282;&#x70B9;&#x3002;
+</code></pre><p><strong>&#x793A;&#x4F8B;3&#xFF1A;</strong></p>
+<p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/14/160_example_3.png" alt=""></p>
+<pre><code>&#x8F93;&#x5165;&#xFF1A;intersectVal = 0, listA = [2,6,4], listB = [1,5], skipA = 3, skipB = 2
+&#x8F93;&#x51FA;&#xFF1A;null
+&#x8F93;&#x5165;&#x89E3;&#x91CA;&#xFF1A;&#x4ECE;&#x5404;&#x81EA;&#x7684;&#x8868;&#x5934;&#x5F00;&#x59CB;&#x7B97;&#x8D77;&#xFF0C;&#x94FE;&#x8868; A &#x4E3A; [2,6,4]&#xFF0C;&#x94FE;&#x8868; B &#x4E3A; [1,5]&#x3002;&#x7531;&#x4E8E;&#x8FD9;&#x4E24;&#x4E2A;&#x934A;&#x8868;&#x4E0D;&#x76F8;&#x4EA4;&#xFF0C;&#x6240;&#x4EE5; intersectVal &#x5FC5;&#x987B;&#x4E3A; 0&#xFF0C;&#x800C; skipA &#x548C; skipB &#x53EF;&#x4EE5;&#x662F;&#x4EFB;&#x610F;&#x503C;&#x3002;
+&#x89E3;&#x91CA;&#xFF1A;&#x8FD9;&#x4E24;&#x4E2A;&#x94FE;&#x8868;&#x4E0D;&#x76F8;&#x4EA4;&#xFF0C;&#x56E0;&#x6B64;&#x8FD4;&#x56DE; null&#x3002;
+</code></pre><p><strong>&#x6CE8;&#x610F;&#xFF1A;</strong></p>
+<ul>
+<li>&#x5982;&#x679C;&#x4E24;&#x4E2A;&#x934A;&#x8868;&#x6CA1;&#x6709;&#x4EA4;&#x70B9;&#xFF0C;&#x8FD4;&#x56DE; null.</li>
+<li>&#x5728;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x540E;&#xFF0C;&#x4E24;&#x4E2A;&#x934A;&#x8868;&#x4ECD;&#x987B;&#x4FDD;&#x6301;&#x539F;&#x6709;&#x7684;&#x7ED3;&#x6784;&#x3002;</li>
+<li>&#x53EF;&#x5047;&#x5B9A;&#x6574;&#x4E2A;&#x934A;&#x8868;&#x7ED3;&#x6784;&#x4E2D;&#x6CA1;&#x6709;&#x5FAA;&#x73AF;&#x3002;</li>
+<li>&#x7A0B;&#x5E8F;&#x5C3D;&#x91CF;&#x6EE1;&#x8DB3; O(n) &#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF0C;&#x4E14;&#x4EC5;&#x7528; O(1) &#x5185;&#x5B58;&#x3002;</li>
+</ul>
 </blockquote>
 <h2 id="&#x8BB0;&#x5F55;&#x8BBF;&#x95EE;&#x5386;&#x53F2;&#x6CD5;">&#x8BB0;&#x5F55;&#x8BBF;&#x95EE;&#x5386;&#x53F2;&#x6CD5;</h2>
-<p>&#x5C06;&#x8BBF;&#x95EE;&#x8FC7;&#x7684;&#x8282;&#x70B9;&#x653E;&#x5165;&#x4E00;&#x4E2A;&#x96C6;&#x5408;&#x4E2D;&#x3002;&#x6BCF;&#x6B21;&#x8BBF;&#x95EE;&#x8282;&#x70B9;&#x65F6;&#xFF0C;&#x90FD;&#x68C0;&#x67E5;&#x662F;&#x5426;&#x5DF2;&#x88AB;&#x8BBF;&#x95EE;&#x8FC7;&#xFF08;&#x5DF2;&#x5728;&#x96C6;&#x5408;&#x4E2D;&#xFF09;&#x3002;&#x82E5;&#x662F;&#xFF0C;&#x5219;&#x5176;&#x4E3A;&#x73AF;&#x7684;&#x5165;&#x53E3;&#x70B9;&#x3002;</p>
-<p>&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x7ED9;&#x5B9A;&#x5982;&#x4E0B;&#x94FE;&#x8868;&#xFF1A;</p>
-<p><img src="../assets/images/uml/45fa3399253cf284192390399ea368011081d441.png"></p>
-<p>&#x4ECE;&#x5934;&#x5F00;&#x59CB;&#x904D;&#x5386;&#xFF0C;&#x5E76;&#x5C06;&#x8BBF;&#x95EE;&#x8FC7;&#x7684;&#x8282;&#x70B9;&#x52A0;&#x5165;&#x96C6;&#x5408;&#x3002;</p>
-<p><img src="../assets/images/uml/8d53dfd8932db5093a6d0a7b663333a95726560d.png"></p>
-<p>&#x5F53;&#x46C0;&#x8BBF;&#x95EE;<code>-4</code>&#x7684;<code>&#x540E;&#x7EE7;&#x65F6;&#xFF0C;&#x53D1;&#x73B0;&#x5176;&#x540E;&#x7EE7;</code>2<code>&#x5DF2;&#x88AB;&#x8BBF;&#x95EE;&#x8FC7;&#x3002;&#x6240;&#x4EE5;</code>2`&#x5C31;&#x662F;&#x5165;&#x73AF;&#x70B9;&#x3002;</p>
+<p>&#x5148;&#x904D;&#x5386;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x94FE;&#x8868;&#xFF0C;&#x5E76;&#x628A;&#x8BBF;&#x95EE;&#x8FC7;&#x7684;&#x8282;&#x70B9;&#x90FD;&#x8BB0;&#x5F55;&#x5230;&#x4E00;&#x4E2A;&#x96C6;&#x5408;&#x4E2D;&#x3002;&#x7136;&#x540E;&#xFF0C;&#x518D;&#x904D;&#x5386;&#x53E6;&#x4E00;&#x4E2A;&#x94FE;&#x8868;&#x3002;&#x904D;&#x5386;&#x7B2C;&#x4E8C;&#x4E2A;&#x94FE;&#x8868;&#x65F6;&#xFF0C;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x90FD;&#x8981;&#x68C0;&#x67E5;&#x662F;&#x5426;&#x5DF2;&#x5728;&#x7B2C;&#x4E00;&#x4E2A;&#x94FE;&#x8868;&#x4E2D;&#x88AB;&#x8BBF;&#x95EE;&#x8FC7;&#xFF08;&#x5DF2;&#x88AB;&#x8BB0;&#x5F55;&#x5230;&#x96C6;&#x5408;&#x4E2D;&#xFF09;&#x3002;&#x7B2C;&#x4E8C;&#x4E2A;&#x94FE;&#x8868;&#x4E2D;&#x9047;&#x5230;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5728;&#x7B2C;&#x4E00;&#x4E2A;&#x94FE;&#x8868;&#x4E2D;&#x5DF2;&#x88AB;&#x8BBF;&#x95EE;&#x7684;&#x8282;&#x70B9;&#x5C31;&#x662F;&#x4E24;&#x4E2A;&#x94FE;&#x8868;&#x7684;&#x4EA4;&#x4F1A;&#x70B9;&#x3002;</p>
 <h3 id="&#x4EE3;&#x7801;">&#x4EE3;&#x7801;</h3>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;java&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">package io.github.rscai.leetcode.bytedance.linktree;
 
@@ -477,40 +479,17 @@ public class Solution1040A {
 
 
 
-<p>&#x4ECE;&#x5934;&#x5F00;&#x59CB;&#x904D;&#x5386;&#xFF0C;&#x9488;&#x5BF9;&#x6BCF;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x90FD;&#x5148;&#x68C0;&#x67E5;&#x662F;&#x5426;&#x5DF2;&#x88AB;&#x8BBF;&#x95EE;&#x8FC7;&#x3002;&#x82E5;&#x662F;&#xFF0C;&#x5219;&#x662F;&#x5165;&#x73AF;&#x70B9;&#x3002;</p>
-<p><img src="p1023.figure/debug-A1.png" alt="debug-A1"></p>
-<p>&#x82E5;&#x4E0D;&#x662F;&#xFF0C;&#x5219;&#x8BB0;&#x5F55;&#x5176;&#x8BBF;&#x95EE;&#x3002;</p>
-<p><img src="p1023.figure/debug-A2.png" alt="debug-A2"></p>
 <h3 id="&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;">&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;</h3>
 <h4 id="&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;">&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;</h4>
-<p>&#x5176;&#x53EA;&#x904D;&#x5386;&#x4E86;&#x4E00;&#x904D;&#x94FE;&#x8868;&#xFF0C;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A;<script type="math/tex; ">\mathcal{O}(n)</script>&#x3002;</p>
+<p>&#x5176;&#x5206;&#x522B;&#x904D;&#x5386;&#x4E86;&#x4E24;&#x4E2A;&#x94FE;&#x8868;&#x5404;&#x4E00;&#x6B21;&#xFF0C;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A;<script type="math/tex; ">\mathcal{O}(n)</script>&#x3002;</p>
 <h4 id="&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;">&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;</h4>
-<p>&#x5176;&#x8981;&#x8BB0;&#x5F55;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x8BBF;&#x95EE;&#x8BB0;&#x5F55;&#xFF0C;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A;<script type="math/tex; ">\mathcal{O}(n)</script>&#x3002;</p>
-<h2 id="floyds-tortoise-and-hare">Floyd&apos;s Tortoise and Hare</h2>
-<blockquote>
-<p>Floyd&#x7684;&#x5FAA;&#x73AF;&#x5BFB;&#x627E;&#x7B97;&#x6CD5;&#x662F;&#x4E00;&#x79CD;&#x6307;&#x9488;&#x7B97;&#x6CD5;&#xFF0C;&#x5B83;&#x53EA;&#x4F7F;&#x7528;&#x4E24;&#x4E2A;&#x6307;&#x9488;&#xFF0C;&#x5B83;&#x4EEC;&#x4EE5;&#x4E0D;&#x540C;&#x7684;&#x901F;&#x5EA6;&#x5728;&#x5E8F;&#x5217;&#x4E2D;&#x79FB;&#x52A8;&#x3002; &#x5B83;&#x4E5F;&#x88AB;&#x79F0;&#x4E3A;&#x201C;&#x4E4C;&#x9F9F;&#x548C;&#x91CE;&#x5154;&#x7B97;&#x6CD5;&#x201D;&#xFF0C;&#x6697;&#x6307;&#x4F0A;&#x7D22;&#x5BD3;&#x8A00;&#x4E2D;&#x7684;&#x4E4C;&#x9F9F;&#x548C;&#x91CE;&#x5154;&#x3002;</p>
-<p>&#x8BE5;&#x7B97;&#x6CD5;&#x7684;&#x5173;&#x952E;&#x89C1;&#x89E3;&#x5982;&#x4E0B;&#xFF1A;&#x5982;&#x679C;&#x5B58;&#x5728;&#x73AF;&#xFF0C;&#x5219;&#x5BF9;&#x4E8E;&#x4EFB;&#x4F55;&#x6574;&#x6570;<script type="math/tex; ">i≥μ</script>&#x4E14;<script type="math/tex; ">k≥0，x_i = x_{i +kλ}</script>&#xFF0C;&#x5176;&#x4E2D;<script type="math/tex; ">λ</script>&#x662F;&#x8981;&#x627E;&#x5230;&#x7684;&#x73AF;&#x7684;&#x957F;&#x5EA6;&#xFF0C;&#x3BC;&#x662F;&#x73AF;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x7D22;&#x5F15;&#x3002; &#x57FA;&#x4E8E;&#x6B64;&#xFF0C;&#x5F53;&#x4E14;&#x4EC5;&#x5F53;<script type="math/tex; ">x_i = x_{2i}</script>&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x8BC1;&#x660E;&#x5BF9;&#x4E8E;&#x67D0;&#x4E9B;<script type="math/tex; ">k，i = k \lambda ≥ \mu</script>&#x3002; &#x56E0;&#x6B64;&#xFF0C;&#x8BE5;&#x7B97;&#x6CD5;&#x4EC5;&#x9700;&#x8981;&#x68C0;&#x67E5;&#x8BE5;&#x7279;&#x6B8A;&#x5F62;&#x5F0F;&#x7684;&#x91CD;&#x590D;&#x503C;&#xFF0C;&#x5373;&#x4ECE;&#x5E8F;&#x5217;&#x7684;&#x5F00;&#x59CB;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x7684;&#x4E24;&#x500D;&#xFF0C;&#x4EE5;&#x627E;&#x5230;&#x4F5C;&#x4E3A;&#x3BB;&#x7684;&#x500D;&#x6570;&#x7684;&#x91CD;&#x590D;&#x7684;&#x5468;&#x671F;&#x3BD;&#x3002; &#x4E00;&#x65E6;&#x627E;&#x5230;&#x3BD;&#xFF0C;&#x7B97;&#x6CD5;&#x5C31;&#x4ECE;&#x5E8F;&#x5217;&#x5F00;&#x59CB;&#x56DE;&#x6EAF;&#x5E8F;&#x5217;&#xFF0C;&#x627E;&#x5230;&#x5E8F;&#x5217;&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x91CD;&#x590D;&#x503C;<script type="math/tex; ">x_μ</script>&#xFF0C;&#x4F7F;&#x7528;&#x3BB;&#x9664;&#x3BD;&#x7684;&#x4E8B;&#x5B9E;&#xFF0C;&#x56E0;&#x6B64; <script type="math/tex; ">x_{\mu}=x_{\mu+ v}</script>&#x3002;&#x6700;&#x540E;&#xFF0C;&#x4E00;&#x65E6;&#x3BC;&#x7684;&#x503C;&#x5DF2;&#x77E5;&#xFF0C;&#x5B83; &#x901A;&#x8FC7;&#x641C;&#x7D22;<script type="math/tex; ">x_{μ+λ}=x_μ</script>&#x7684;&#x7B2C;&#x4E00;&#x4F4D;&#x7F6E;<script type="math/tex; ">μ+λ</script>&#xFF0C;&#x627E;&#x5230;&#x6700;&#x77ED;&#x91CD;&#x590D;&#x9031;&#x671F;&#x7684;&#x957F;&#x5EA6;&#x3BB;&#x662F;&#x5FAE;&#x4E0D;&#x8DB3;&#x9053;&#x7684;&#x3002;</p>
-<p>&#x56E0;&#x6B64;&#xFF0C;&#x7B97;&#x6CD5;&#x4FDD;&#x6301;&#x4E24;&#x4E2A;&#x6307;&#x5411;&#x7ED9;&#x5B9A;&#x5E8F;&#x5217;&#x7684;&#x6307;&#x9488;&#xFF0C;&#x4E00;&#x4E2A;&#xFF08;&#x4E4C;&#x9F9F;&#xFF09;&#x5728;<script type="math/tex; ">x_i</script>&#xFF0C;&#x53E6;&#x4E00;&#x4E2A;&#xFF08;&#x91CE;&#x5154;&#xFF09;&#x5728;<script type="math/tex; ">x_{2i}</script>&#x3002; &#x5728;&#x7B97;&#x6CD5;&#x7684;&#x6BCF;&#x4E00;&#x6B65;&#xFF0C;&#x5B83;&#x5C06;i&#x589E;&#x52A0;1&#xFF0C;&#x5C06;&#x9F9F;&#x5411;&#x524D;&#x79FB;&#x52A8;&#x4E00;&#x6B65;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x5E8F;&#x5217;&#x4E2D;&#x5411;&#x524D;&#x79FB;&#x52A8;&#x4E24;&#x6B65;&#xFF0C;&#x7136;&#x540E;&#x6BD4;&#x8F83;&#x8FD9;&#x4E24;&#x4E2A;&#x6307;&#x9488;&#x7684;&#x5E8F;&#x5217;&#x503C;&#x3002; &#x4E4C;&#x9F9F;&#x548C;&#x91CE;&#x5154;&#x6307;&#x5411;&#x76F8;&#x7B49;&#x503C;&#x7684;<script type="math/tex; ">i> 0</script>&#x7684;&#x6700;&#x5C0F;&#x503C;&#x662F;&#x671F;&#x671B;&#x503C;&#x3BD;&#x3002;</p>
-</blockquote>
-<p>&#x7136;&#x540E;&#xFF0C;&#x5206;&#x522B;&#x4ECE;&#x5934;&#x548C;<script type="math/tex; ">v</script>&#x5F00;&#x59CB;&#x540C;&#x6B65;&#x957F;&#x79FB;&#x52A8;&#x3002;&#x7B2C;&#x4E00;&#x4E2A;&#x4EA4;&#x6ED9;&#x70B9;&#x5C31;&#x662F;&#x5165;&#x73AF;&#x70B9;&#x3002;</p>
-<p>&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x7ED9;&#x5B9A;&#x5982;&#x4E0B;&#x94FE;&#x8868;&#xFF1A;</p>
-<p><img src="../assets/images/uml/47c58ff355567f8d16bbfbf98e49cf1d19b00fc7.png"></p>
-<p>&#x5EFA;&#x7ACB;&#x4E24;&#x4E2A;&#x6307;&#x9488;<code>fast</code>&#x548C;<code>slow</code>&#xFF0C;&#x5F00;&#x59CB;&#x90FD;&#x6307;&#x5411;&#x5934;&#x3002;<code>fast</code>&#x4EE5;&#x6B65;&#x957F;2&#x5411;&#x524D;&#x79FB;&#x52A8;&#xFF0C;<code>slow</code>&#x4EE5;&#x6B65;&#x957F;1&#x5411;&#x524D;&#x79FB;&#x52A8;&#x3002;</p>
-<p><img src="../assets/images/uml/a15a135a2b617519fbc296b6472c9aded3170721.png"></p>
-<p><img src="../assets/images/uml/0963cef94f935f58877d8f039f00c6167aae8d63.png"></p>
-<p><img src="../assets/images/uml/0963cef94f935f58877d8f039f00c6167aae8d63.png"></p>
-<p>&#x6700;&#x7EC8;&#xFF0C;&#x5B83;&#x4EEC;&#x5728;<code>-4</code>&#x5904;&#x76F8;&#x9047;&#x3002;&#x6B64;&#x65F6;&#xFF1A;</p>
-<ul>
-<li>&#x6307;&#x9488;&#x79FB;&#x52A8;&#x4E86;3&#x6B21;&#xFF0C;<script type="math/tex; ">i = 3</script></li>
-<li><code>fast</code>&#x79FB;&#x52A8;&#x4E86;<script type="math/tex; ">2 \times 3 = 6</script>&#x6B65;</li>
-<li><code>slow</code>&#x79FB;&#x52A8;&#x4E86;<script type="math/tex; ">1 \times 3 = 3</script>&#x6B65;</li>
-<li>&#x73AF;&#x957F;<script type="math/tex; ">\lambda = 3</script></li>
-</ul>
-<p><img src="../assets/images/uml/a1655371b4de4cb2a8f885de820af8516889ac96.png"></p>
-<p>&#x7136;&#x540E;&#xFF0C;&#x521B;&#x5EFA;&#x4E24;&#x4E2A;&#x6307;&#x9488;<code>head</code>&#x548C;<code>v</code>&#x3002;&#x5206;&#x522B;&#x4EE5;&#x94FE;&#x8868;&#x5934;&#x548C;<code>-4</code>&#x4E3A;&#x8D77;&#x70B9;&#xFF0C;&#x4EE5;1&#x4E3A;&#x6B65;&#x957F;&#xFF0C;&#x5411;&#x540E;&#x79FB;&#x5230;&#x3002;</p>
-<p><img src="../assets/images/uml/d7dd22de7543208b441b18b1478e20f05be8d53a.png"></p>
-<p>&#x6700;&#x7EC8;&#xFF0C;&#x5B83;&#x4EEC;&#x76F8;&#x4F1A;&#x4E0E;<code>2</code>&#x3002;<code>2</code>&#x5373;&#x662F;&#x73AF;&#x7684;&#x5165;&#x53E3;&#x70B9;&#x3002;</p>
-<p><img src="../assets/images/uml/1fb793204bd4d3cc8ff3dd7490136012b7b631f3.png"></p>
+<p>&#x5176;&#x8BB0;&#x5F55;&#x4E86;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x94FE;&#x8868;&#x6240;&#x6709;&#x8282;&#x70B9;&#x7684;&#x8BBF;&#x95EE;&#x7EAA;&#x5F55;&#x3002;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A;<script type="math/tex; ">\mathcal{O}(n)</script>&#x3002;</p>
+<h2 id="&#x6307;&#x9488;&#x504F;&#x79FB;&#x6CD5;">&#x6307;&#x9488;&#x504F;&#x79FB;&#x6CD5;</h2>
+<p>&#x4ECE;&#x94FE;&#x8868;&#x5C3E;&#x90E8;&#x5F00;&#x59CB;&#x8BA1;&#x7B97;&#xFF0C;&#x76F8;&#x4EA4;&#x70B9;&#x5728;&#x4E24;&#x4E2A;&#x94FE;&#x8868;&#x4E2D;&#x7684;&#x4F4D;&#x7F6E;&#x662F;&#x76F8;&#x540C;&#x7684;&#x3002;&#x4ECE;&#x94FE;&#x8868;&#x5934;&#x5F00;&#x59CB;&#x8BA1;&#x7B97;&#x4F4D;&#x7F6E;&#xFF0C;&#x5219;&#x5F53;&#x4E24;&#x4E2A;&#x94FE;&#x8868;&#x957F;&#x5EA6;&#x76F8;&#x7B49;&#x65F6;&#xFF0C;&#x76F8;&#x4EA4;&#x70B9;&#x5728;&#x4E24;&#x4E2A;&#x94FE;&#x8868;&#x4E2D;&#x7684;&#x4F4D;&#x7F6E;&#x4E5F;&#x662F;&#x76F8;&#x540C;&#x7684;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x4E0D;&#x76F8;&#x540C;&#x7684;&#x4E24;&#x4E2A;&#x76F8;&#x4EA4;&#x94FE;&#x8868;&#xFF0C;&#x5982;&#x679C;&#x8F83;&#x957F;&#x7684;&#x4E00;&#x65B9;&#x5C06;&#x5934;&#x6307;&#x9488;&#x5411;&#x540E;&#x504F;&#x79FB;&#x4E24;&#x94FE;&#x8868;&#x957F;&#x5EA6;&#x5DEE;&#x503C;&#xFF0C;&#x5219;&#x5C31;&#x8F6C;&#x6362;&#x6210;&#x4E86;&#x4E24;&#x4E2A;&#x957F;&#x5EA6;&#x76F8;&#x7B49;&#x4E14;&#x76F8;&#x4EA4;&#x7684;&#x94FE;&#x8868;&#x4E86;&#x3002;</p>
+<p>&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x7ED9;&#x5B9A;&#x5982;&#x4E0B;&#x76F8;&#x4EA4;&#x94FE;&#x8868;&#x3002;A&#x94FE;&#x8868;&#x957F;&#x5EA6;5&#xFF0C;B&#x94FE;&#x8868;&#x957F;&#x5EA6;6&#x3002;&#x5982;&#x679C;&#x5C06;B&#x94FE;&#x8868;&#x7684;&#x5934;&#x6307;&#x9488;&#x5411;&#x540E;&#x79FB;&#x5230;1&#xFF08;&#x4E24;&#x94FE;&#x8868;&#x957F;&#x5EA6;&#x5DEE;&#x503C;&#x4E3A;1&#xFF09;&#xFF0C;&#x5219;&#x8F6C;&#x6362;&#x6210;&#x4E24;&#x4E2A;&#x957F;&#x5EA6;&#x76F8;&#x7B49;&#x4E14;&#x76F8;&#x4EA4;&#x7684;&#x94FE;&#x8868;&#x3002;</p>
+<p>&#x7136;&#x540E;&#xFF0C;&#x518D;&#x9010;&#x4F4D;&#x6BD4;&#x8F83;&#x4E24;&#x4E2A;&#x94FE;&#x8868;&#x4E2D;&#x7684;&#x8282;&#x70B9;&#x3002;&#x7B2C;&#x4E00;&#x4E2A;&#x76F8;&#x7B49;&#x7684;&#x8282;&#x70B9;&#x5373;&#x4E3A;&#x76F8;&#x4EA4;&#x70B9;&#x3002;</p>
+<p><img src="../assets/images/uml/15b4ac24b3d98cb84592f3fc193dada5e6a2c463.png"></p>
 <h3 id="&#x4EE3;&#x7801;">&#x4EE3;&#x7801;</h3>
 <div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;java&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">package io.github.rscai.leetcode.bytedance.linktree;
 
@@ -588,21 +567,17 @@ public class Solution1040B {
 
 
 
-<p>&#x9996;&#x5148;&#xFF0C;&#x4F7F;&#x7528;<code>fast</code>&#x548C;<code>slow</code>&#x4E24;&#x4E2A;&#x6B65;&#x957F;&#x5206;&#x522B;&#x4E3A;2&#x548C;1&#x7684;&#x6307;&#x9488;&#x627E;&#x51FA;&#x4F4D;&#x7F6E;v&#x3002;</p>
-<p><img src="p1023.figure/debug-B1.png" alt="debug-B1"></p>
-<p>&#x82E5;<code>fast</code>&#x548C;<code>slow</code>&#x6CA1;&#x6709;&#x4EA4;&#x4F1A;&#xFF0C;&#x5219;&#x8BF4;&#x660E;&#x94FE;&#x8868;&#x4E2D;&#x4E0D;&#x5B58;&#x5728;&#x73AF;&#x3002;</p>
-<p><img src="p1023.figure/debug-B2.png" alt="debug-B2"></p>
-<p>&#x82E5;<code>fast</code>&#x548C;<code>slow</code>&#x6700;&#x7EC8;&#x4EA4;&#x4F1A;&#xFF0C;&#x5219;&#x4ECE;&#x4EA4;&#x4F1A;&#x70B9;&#x548C;&#x5934;&#x5206;&#x522B;&#x51FA;&#x53D1;&#xFF0C;&#x4EE5;&#x6B65;&#x957F;1&#x5411;&#x540E;&#x904D;&#x5386;&#x94FE;&#x8868;&#x3002;&#x6700;&#x7EC8;&#x4EA4;&#x4F1A;&#x70B9;&#x5373;&#x662F;&#x73AF;&#x5165;&#x53E3;&#x70B9;&#x3002;</p>
-<p><img src="p1023.figure/debug-B3.png" alt="debug-B3"></p>
+<p>&#x9996;&#x5148;&#xFF0C;&#x5206;&#x522B;&#x6C42;&#x51FA;&#x4E24;&#x4E2A;&#x94FE;&#x8868;&#x7684;&#x957F;&#x5EA6;&#x3002;</p>
+<p><img src="p1024.figure/debug-B1.png" alt="debug-B1"></p>
+<p> &#x7136;&#x540E;&#xFF0C;&#x5C06;&#x8F83;&#x957F;&#x7684;&#x4E00;&#x4E2A;&#x94FE;&#x8868;&#x7684;&#x5934;&#x6307;&#x9488;&#x5411;&#x540E;&#x79FB;&#x52A8;&#x957F;&#x5EA6;&#x5DEE;&#x503C;&#x3002;</p>
+<p> <img src="p1024.figure/debug-B2.png" alt="debug-B2"></p>
+<p> &#x518D;&#x7136;&#x540E;&#xFF0C;&#x6BD4;&#x8F83;&#x4E24;&#x4E2A;&#x94FE;&#x8868;&#x76F8;&#x540C;&#x4F4D;&#x7F6E;&#x4E0A;&#x7684;&#x8282;&#x70B9;&#x3002;&#x7B2C;&#x4E00;&#x4E2A;&#x76F8;&#x540C;&#x7684;&#x8282;&#x70B9;&#x5373;&#x4E3A;&#x6240;&#x6C42;&#x76F8;&#x4F1A;&#x70B9;&#x3002;</p>
+<p> <img src="p1024.figure/debug-B3.png" alt="debug-B3"></p>
 <h3 id="&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;">&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;</h3>
 <h4 id="&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;">&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;</h4>
-<p>&#x5176;&#x4EC5;&#x904D;&#x5386;&#x4E86;&#x94FE;&#x8868;k&#x6B21;&#xFF08;k&#x662F;&#x5E38;&#x6570;&#xFF09;&#xFF0C;&#x6240;&#x4EE5;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A;<script type="math/tex; ">\mathcal{O}(n)</script>&#x3002;</p>
+<p> <code>length</code>&#x904D;&#x5386;&#x4E00;&#x904D;&#x94FE;&#x8868;&#x4EE5;&#x6C42;&#x51FA;&#x957F;&#x5EA6;&#xFF0C;&#x5176;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A;<script type="math/tex; ">\mathcal{O}(n)</script>&#x3002;&#x7136;&#x540E;&#xFF0C;&#x518D;&#x4F9D;&#x5E8F;&#x518D;&#x904D;&#x5386;&#x4E00;&#x6B21;&#x4E24;&#x4E2A;&#x94FE;&#x8868;&#xFF08;&#x6700;&#x574F;&#x60C5;&#x51B5;&#xFF0C;&#x76F8;&#x4F1A;&#x5728;&#x5C3E;&#x7AEF;&#xFF09;&#x3002;&#x6574;&#x4F53;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A;<script type="math/tex; ">\mathcal{O}(n)</script>&#x3002;</p>
 <h4 id="&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;">&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;</h4>
-<p>&#x4F7F;&#x7528;&#x4E86;&#x4E09;&#x4E2A;&#x53D8;&#x91CF;<code>fast</code>&#x3001;<code>slow</code>&#x548C;<code>v</code>&#x3002;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A;<script type="math/tex; ">\mathcal{O}(1)</script>&#x3002;</p>
-<h2 id="&#x53C2;&#x8003;">&#x53C2;&#x8003;</h2>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Cycle_detection#Floyd&apos;s_Tortoise_and_Hare" target="_blank">Floyd&apos;s Tortoise and Hare</a></li>
-</ul>
+<p> &#x4F7F;&#x7528;&#x4E86;&#x56DB;&#x4E2A;&#x53D8;&#x91CF;<code>lengthA</code>, <code>lengthB</code>, <code>currentA</code>&#x548C;<code>currentB</code>&#x3002;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A;<script type="math/tex; ">\mathcal{O}(1)</script>&#x3002;</p>
 
                                 
                                 </section>
@@ -630,12 +605,12 @@ public class Solution1040B {
 
             
                 
-                <a href="p1040.html" class="navigation navigation-prev " aria-label="Previous page: 排序链表">
+                <a href="p1023.html" class="navigation navigation-prev " aria-label="Previous page: 环形链表">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="p1024.html" class="navigation navigation-next " aria-label="Next page: 相交链表">
+                <a href="../dynamic.html" class="navigation navigation-next " aria-label="Next page: 动态规划">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -646,7 +621,7 @@ public class Solution1040B {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"环形链表","level":"1.2.5","depth":2,"next":{"title":"相交链表","level":"1.2.6","depth":2,"path":"linktree/p1024.md","ref":"linktree/p1024.md","articles":[]},"previous":{"title":"排序链表","level":"1.2.4","depth":2,"path":"linktree/p1040.md","ref":"linktree/p1040.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock","ace","uml","mathjax-update-cdn","collapsible-menu-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ace":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"uml":{"format":"png","nailgun":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"monokai","unindent":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"mathjax-update-cdn":{"forceSVG":false,"version":"2.7.1"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"collapsible-menu-ex":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh_CN","gitbook":"*"},"file":{"path":"linktree/p1023.md","mtime":"2019-05-11T09:35:19.971Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-11T09:35:21.261Z"},"basePath":"..","book":{"language":"zh_CN"}});
+            gitbook.page.hasChanged({"page":{"title":"相交链表","level":"1.2.6","depth":2,"next":{"title":"动态规划","level":"1.3","depth":1,"path":"dynamic.md","ref":"dynamic.md","articles":[{"title":"买卖股票的最佳时机","level":"1.3.1","depth":2,"path":"dynamic/p1042.md","ref":"dynamic/p1042.md","articles":[]},{"title":"买卖股票的最佳时机 II","level":"1.3.2","depth":2,"path":"dynamic/p1043.md","ref":"dynamic/p1043.md","articles":[]},{"title":"最大正方形","level":"1.3.3","depth":2,"path":"dynamic/p1028.md","ref":"dynamic/p1028.md","articles":[]},{"title":"最大子序和","level":"1.3.4","depth":2,"path":"dynamic/p1029.md","ref":"dynamic/p1029.md","articles":[]},{"title":"三⻆形最小路径和","level":"1.3.5","depth":2,"path":"dynamic/p1030.md","ref":"dynamic/p1030.md","articles":[]},{"title":"俄罗斯套娃信封问题","level":"1.3.6","depth":2,"path":"dynamic/p1031.md","ref":"dynamic/p1031.md","articles":[]}]},"previous":{"title":"环形链表","level":"1.2.5","depth":2,"path":"linktree/p1023.md","ref":"linktree/p1023.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock","ace","uml","mathjax-update-cdn","collapsible-menu-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ace":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"uml":{"format":"png","nailgun":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"monokai","unindent":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"mathjax-update-cdn":{"forceSVG":false,"version":"2.7.1"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"collapsible-menu-ex":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh_CN","gitbook":"*"},"file":{"path":"linktree/p1024.md","mtime":"2019-05-11T09:35:19.987Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-11T09:35:21.261Z"},"basePath":"..","book":{"language":"zh_CN"}});
         });
     </script>
 </div>
