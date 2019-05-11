@@ -1,6 +1,11 @@
 # Summary
 
 * [介紹](README.md)
+* [鏈表與樹](linktree.md)
+    * [合併兩個有序鏈表](linktree/p1048.md)
+    * [反轉鏈表](linktree/p1038.md)
+    * [兩數相加](linktree/p1022.md)
+    * [排序鏈表](linktree/p1040.md)
 * [動態規劃](dynamic.md)
     * [買賣股票的最佳時機](dynamic/p1042.md)
     * [買賣股票的最佳時機 II](dynamic/p1043.md)
@@ -8,7 +13,3 @@
     * [最大子序和](dynamic/p1029.md)
     * [三⻆形最小路徑和](dynamic/p1030.md)
     * [俄羅斯套娃信封問題](dynamic/p1031.md)
-* [鏈表與樹](linktree.md)
-    * [合併兩個有序鏈表](linktree/p1048.md)
-    * [反轉鏈表](linktree/p1038.md)
-    * [兩數相加](linktree/p1022.md)
