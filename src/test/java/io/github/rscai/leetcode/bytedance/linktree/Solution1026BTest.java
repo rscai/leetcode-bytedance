@@ -1,6 +1,5 @@
 package io.github.rscai.leetcode.bytedance.linktree;
 
-
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
