@@ -1,0 +1,660 @@
+
+<!DOCTYPE HTML>
+<html lang="zh_TR" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>二叉樹的最近公共祖先 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="p1027.html" />
+    
+    
+    <link rel="prev" href="p1025.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介紹
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../linktree.html">
+            
+                <a href="../linktree.html">
+            
+                    
+                    鏈表與樹
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="p1048.html">
+            
+                <a href="p1048.html">
+            
+                    
+                    合併兩個有序鏈表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="p1038.html">
+            
+                <a href="p1038.html">
+            
+                    
+                    反轉鏈表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="p1022.html">
+            
+                <a href="p1022.html">
+            
+                    
+                    兩數相加
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="p1040.html">
+            
+                <a href="p1040.html">
+            
+                    
+                    排序鏈表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="p1023.html">
+            
+                <a href="p1023.html">
+            
+                    
+                    環形鏈表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="p1024.html">
+            
+                <a href="p1024.html">
+            
+                    
+                    相交鏈表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="p1025.html">
+            
+                <a href="p1025.html">
+            
+                    
+                    合併K個排序鏈表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.8" data-path="p1026.html">
+            
+                <a href="p1026.html">
+            
+                    
+                    二叉樹的最近公共祖先
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="p1027.html">
+            
+                <a href="p1027.html">
+            
+                    
+                    二叉樹的鋸齒形層次遍歷
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../dynamic.html">
+            
+                <a href="../dynamic.html">
+            
+                    
+                    動態規劃
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../dynamic/p1042.html">
+            
+                <a href="../dynamic/p1042.html">
+            
+                    
+                    買賣股票的最佳時機
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../dynamic/p1043.html">
+            
+                <a href="../dynamic/p1043.html">
+            
+                    
+                    買賣股票的最佳時機 II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../dynamic/p1028.html">
+            
+                <a href="../dynamic/p1028.html">
+            
+                    
+                    最大正方形
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../dynamic/p1029.html">
+            
+                <a href="../dynamic/p1029.html">
+            
+                    
+                    最大子序和
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../dynamic/p1030.html">
+            
+                <a href="../dynamic/p1030.html">
+            
+                    
+                    三⻆形最小路徑和
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../dynamic/p1031.html">
+            
+                <a href="../dynamic/p1031.html">
+            
+                    
+                    俄羅斯套娃信封問題
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >二叉樹的最近公共祖先</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x4E8C;&#x53C9;&#x6A39;&#x7684;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;">&#x4E8C;&#x53C9;&#x6A39;&#x7684;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;</h1>
+<h2 id="&#x984C;&#x76EE;">&#x984C;&#x76EE;</h2>
+<blockquote>
+<p>&#x7D66;&#x5B9A;&#x4E00;&#x500B;&#x4E8C;&#x53C9;&#x6A39;, &#x627E;&#x5230;&#x8A72;&#x6A39;&#x4E2D;&#x5169;&#x500B;&#x6307;&#x5B9A;&#x7BC0;&#x9EDE;&#x7684;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;&#x3002;</p>
+<p>&#x767E;&#x5EA6;&#x767E;&#x79D1;&#x4E2D;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;&#x7684;&#x5B9A;&#x7FA9;&#x70BA;&#xFF1A;&#x201C;&#x5C0D;&#x65BC;&#x6709;&#x6839;&#x6A39;T &#x7684;&#x5169;&#x500B;&#x7D50;&#x9EDE;p&#x3001;q&#xFF0C;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;&#x8868;&#x793A;&#x70BA;&#x4E00;&#x500B;&#x7D50;&#x9EDE;x&#xFF0C;&#x6EFF;&#x8DB3;x &#x662F;p&#x3001;q &#x7684;&#x7956;&#x5148;&#x4E14;x &#x7684;&#x6DF1;&#x5EA6;&#x76E1;&#x53EF;&#x80FD;&#x5927;&#xFF08;&#x4E00;&#x500B;&#x7BC0;&#x9EDE;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x5B83;&#x81EA;&#x5DF1;&#x7684;&#x7956;&#x5148;&#xFF09;&#x3002;&#x201D;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x7D66;&#x5B9A;&#x5982;&#x4E0B;&#x4E8C;&#x53C9;&#x6A39;: root = [3,5,1,6,2,0,8,null,null,7,4]</p>
+<p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/15/binarytree.png" alt=""></p>
+<p><strong>&#x793A;&#x4F8B;1&#xFF1A;</strong></p>
+<pre><code>&#x8F38;&#x5165;: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1
+&#x8F38;&#x51FA;: 3
+&#x89E3;&#x91CB;: &#x7BC0;&#x9EDE; 5 &#x548C;&#x7BC0;&#x9EDE; 1 &#x7684;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;&#x662F;&#x7BC0;&#x9EDE; 3&#x3002;
+</code></pre><p><strong>&#x793A;&#x4F8B;2&#xFF1A;</strong></p>
+<pre><code>&#x8F38;&#x5165;: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 4
+&#x8F38;&#x51FA;: 5
+&#x89E3;&#x91CB;: &#x7BC0;&#x9EDE; 5 &#x548C;&#x7BC0;&#x9EDE; 4 &#x7684;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;&#x662F;&#x7BC0;&#x9EDE; 5&#x3002;&#x56E0;&#x70BA;&#x6839;&#x64DA;&#x5B9A;&#x7FA9;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;&#x7BC0;&#x9EDE;&#x53EF;&#x4EE5;&#x70BA;&#x7BC0;&#x9EDE;&#x672C;&#x8EAB;&#x3002;
+</code></pre><p><strong>&#x8AAA;&#x660E;:</strong></p>
+<p>&#x6240;&#x6709;&#x7BC0;&#x9EDE;&#x7684;&#x503C;&#x90FD;&#x662F;&#x552F;&#x4E00;&#x7684;&#x3002;
+p&#x3001;q &#x70BA;&#x4E0D;&#x540C;&#x7BC0;&#x9EDE;&#x4E14;&#x5747;&#x5B58;&#x5728;&#x65BC;&#x7D66;&#x5B9A;&#x7684;&#x4E8C;&#x53C9;&#x6A39;&#x4E2D;&#x3002;</p>
+</blockquote>
+<h2 id="&#x4E8C;&#x53C9;&#x6A39;&#x5F8C;&#x5E8F;&#x904D;&#x6B77;&#x6CD5;">&#x4E8C;&#x53C9;&#x6A39;&#x5F8C;&#x5E8F;&#x904D;&#x6B77;&#x6CD5;</h2>
+<p>&#x7D66;&#x5B9A;&#x4E00;&#x68F5;&#x4E8C;&#x53C9;&#x6A39;&#x548C;&#x5169;&#x500B;&#x7BC0;&#x9EDE;&#x3002;&#x5169;&#x500B;&#x7BC0;&#x9EDE;&#x7684;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;&#x53EA;&#x6709;&#x4E09;&#x7A2E;&#x53EF;&#x80FD;&#xFF1A;</p>
+<ol>
+<li>&#x5728;&#x5DE6;&#x5B50;&#x6A39;&#x4E2D;</li>
+<li>&#x5728;&#x53F3;&#x5B50;&#x6A39;&#x4E2D;</li>
+<li>&#x662F;&#x6839;&#x7BC0;&#x9EDE;</li>
+</ol>
+<p>&#x5F8C;&#x5E8F;&#x904D;&#x6B77;&#x4E8C;&#x53C9;&#x6A39;&#xFF0C;&#x81EA;&#x4E0B;&#x800C;&#x4E0A;&#x6AA2;&#x6E2C;&#x6BCF;&#x500B;&#x7BC0;&#x9EDE;&#x662F;&#x5426;&#x70BA;&#x516C;&#x5171;&#x7956;&#x5148;&#x3002;&#x56E0;&#x70BA;&#x662F;&#x81EA;&#x4E0B;&#x800C;&#x4E0A;&#xFF0C;&#x6240;&#x4EE5;&#x7B2C;&#x4E00;&#x500B;&#x9047;&#x5230;&#x7684;&#x516C;&#x5171;&#x7956;&#x5148;&#x5C31;&#x662F;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;&#x3002;</p>
+<p>&#x8209;&#x500B;&#x4F8B;&#x5B50;&#xFF0C;&#x7D66;&#x5B9A;&#x5982;&#x4E0B;&#x4E8C;&#x53C9;&#x6A39;&#xFF0C;&#x6C42;&#x7BC0;&#x9EDE;<code>5</code>&#x548C;<code>1</code>&#x7684;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;&#x3002;</p>
+<p><img src="../assets/images/uml/c4645ea3ca01bc368b45a073b601d427dda58f68.png"></p>
+<p>&#x9996;&#x5148;&#xFF0C;&#x81EA;&#x4E0A;&#x800C;&#x4E0B;&#x63A2;&#x7D22;&#x5230;&#x8449;&#x5B50;&#x7BC0;&#x9EDE;&#x3002;&#x518D;&#x81EA;&#x4E0B;&#x800C;&#x4E0A;&#x6AA2;&#x6E2C;&#x662F;&#x5426;&#x70BA;&#x516C;&#x5171;&#x7956;&#x5148;&#x3002;&#x6700;&#x5E95;&#x5C64;&#x7684;<code>7</code>&#x548C;<code>4</code>&#x90FD;&#x4E0D;&#x662F;&#x516C;&#x5171;&#x7956;&#x5148;&#x3002;</p>
+<p><img src="../assets/images/uml/e6a5bd64b50b296d5a4ef699e2610bd062951b28.png"></p>
+<p>&#x5411;&#x4E0A;&#x6AA2;&#x6E2C;&#xFF0C;<code>6, 2, 0, 8</code>&#x90FD;&#x4E0D;&#x662F;&#x516C;&#x5171;&#x7956;&#x5148;&#x3002;</p>
+<p><img src="../assets/images/uml/7c723f5b1ebec5b02713886324763201566c3f86.png"></p>
+<p>&#x518D;&#x5411;&#x4E0A;&#x6AA2;&#x6E2C;&#xFF0C;<code>5, 1</code>&#x90FD;&#x4E0D;&#x662F;&#x516C;&#x5171;&#x7956;&#x5148;&#x3002;</p>
+<p><img src="../assets/images/uml/22577ceb1e28bd62fa8cde1e7ec60b135135129e.png"></p>
+<p>&#x6700;&#x5F8C;&#xFF0C;&#x6AA2;&#x6E2C;&#x6839;&#x7BC0;&#x9EDE;&#xFF0C;&#x5176;&#x662F;&#x516C;&#x5171;&#x7956;&#x5148;&#x3002;&#x4E14;&#x662F;&#x7B2C;&#x4E00;&#x500B;&#x767C;&#x73FE;&#x7684;&#x516C;&#x5171;&#x7956;&#x5148;&#xFF0C;&#x6240;&#x4EE5;&#x5373;&#x662F;&#x6700;&#x8FD1;&#x7684;&#x516C;&#x5171;&#x7956;&#x5148;&#x3002;</p>
+<p><img src="../assets/images/uml/c7d7e74ed5ab48ca8da1f0dbccdc1cf0047aeef1.png"></p>
+<h3 id="&#x4EE3;&#x78BC;">&#x4EE3;&#x78BC;</h3>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;java&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">package io.github.rscai.leetcode.bytedance.linktree;
+
+public class Solution1026A {
+
+  public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+    if (root == null) {
+      return null;
+    }
+
+    TreeNode ancestorNodeOnLeft = lowestCommonAncestor(root.left, p, q);
+    if (ancestorNodeOnLeft != null) {
+      return ancestorNodeOnLeft;
+    }
+    TreeNode ancestorNodeOnRight = lowestCommonAncestor(root.right, p, q);
+    if (ancestorNodeOnRight != null) {
+      return ancestorNodeOnRight;
+    }
+
+    if (isAncestorOf(root, p) &amp;&amp; isAncestorOf(root, q)) {
+      return root;
+    }
+    return null;
+  }
+
+  private boolean isAncestorOf(TreeNode node, TreeNode another) {
+    if (node == null) {
+      return false;
+    }
+    if (node.val == another.val) {
+      return true;
+    }
+    if (isAncestorOf(node.left, another) || isAncestorOf(node.right, another)) {
+      return true;
+    }
+    return false;
+  }
+}<br></div></div>
+
+
+
+<p>&#x9996;&#x5148;&#xFF0C;&#x5F9E;&#x5DE6;&#x5B50;&#x6A39;&#x4E2D;&#x5C0B;&#x627E;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;&#x3002;</p>
+<p><img src="p1026.figure/debug-A1.png" alt="debug-A1"></p>
+<p>&#x7136;&#x5F8C;&#xFF0C;&#x5F9E;&#x53F3;&#x5B50;&#x6A39;&#x4E2D;&#x5C0B;&#x627E;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;&#x3002;</p>
+<p><img src="p1026.figure/debug-A2.png" alt="debug-A2"></p>
+<p>&#x6700;&#x5F8C;&#xFF0C;&#x6AA2;&#x6E2C;&#x6839;&#x7BC0;&#x9EDE;&#x662F;&#x5426;&#x70BA;&#x516C;&#x5171;&#x7956;&#x5148;&#x3002;</p>
+<p><img src="p1026.figure/debug-A3.png" alt="debug-A3"></p>
+<p>&#x5176;&#x4E2D;&#xFF0C;&#x7956;&#x5148;&#x6AA2;&#x6E2C;<code>isAncestorOf</code>&#x4E5F;&#x662F;&#x4EE5;&#x905E;&#x6B78;&#x5BE6;&#x73FE;&#x7684;&#x3002;&#x5148;&#x6AA2;&#x6E2C;&#x5176;&#x662F;&#x5426;&#x70BA;&#x81EA;&#x8EAB;&#x3002;</p>
+<p><img src="p1026.figure/debug-A4.png" alt="debug-A4"></p>
+<p>&#x518D;&#x6AA2;&#x6E2C;&#x5DE6;&#x53F3;&#x5B50;&#x7BC0;&#x9EDE;&#x662F;&#x5426;&#x70BA;&#x5176;&#x7956;&#x5148;&#x3002;</p>
+<p><img src="p1026.figure/debug-A5.png" alt="debug-A5"></p>
+<h3 id="&#x8907;&#x96DC;&#x5EA6;&#x5206;&#x6790;">&#x8907;&#x96DC;&#x5EA6;&#x5206;&#x6790;</h3>
+<h4 id="&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;">&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;</h4>
+<p>&#x672C;&#x6F14;&#x7B97;&#x6CD5;&#x5148;&#x81EA;&#x4E0A;&#x800C;&#x4E0B;&#x904D;&#x6B77;&#x4E8C;&#x53C9;&#x6A39;&#xFF0C;&#x518D;&#x81EA;&#x4E0B;&#x800C;&#x4E0A;&#x6AA2;&#x6E2C;&#x6BCF;&#x500B;&#x7BC0;&#x9EDE;&#x3002;&#x6700;&#x58DE;&#x60C5;&#x6CC1;&#x4E0B;&#xFF0C;&#x8981;&#x6AA2;&#x6E2C;&#x6240;&#x6709;&#x7BC0;&#x9EDE;&#x3002;&#x6BCF;&#x6B21;&#x6AA2;&#x6E2C;&#x662F;&#x5426;&#x70BA;&#x7956;&#x5148;&#x90FD;&#x8981;&#x518D;&#x6B21;&#x904D;&#x6B77;&#x4EE5;&#x5176;&#x70BA;&#x6839;&#x7BC0;&#x9EDE;&#x7684;&#x5B50;&#x6A39;&#x3002;&#x5047;&#x8A2D;&#x6574;&#x68F5;&#x4E8C;&#x53C9;&#x6A39;&#x7684;&#x7BC0;&#x9EDE;&#x6578;&#x70BA;<script type="math/tex; ">n</script>&#xFF0C;&#x5247;&#x5DE6;&#x53F3;&#x5B50;&#x6A39;&#x7684;&#x7BC0;&#x9EDE;&#x6578;&#x548C;&#x70BA;<script type="math/tex; ">\frac{n-1}{2} \times 2 = n - 1</script>&#x3002;</p>
+<p><script type="math/tex; mode=display">
+\begin{aligned}
+C_{time} &= \sum_{i=1}^{\log{n}}(n-i) \\
+&= \frac{(n-1) + (n- \log{n})}{2} \times \log{n} \\
+&= \mathcal{O}(n \log{n})
+\end{aligned}
+</script></p>
+<h4 id="&#x7A7A;&#x9593;&#x8907;&#x96DC;&#x5EA6;">&#x7A7A;&#x9593;&#x8907;&#x96DC;&#x5EA6;</h4>
+<p>&#x7A7A;&#x9593;&#x8907;&#x96DC;&#x5EA6;&#x70BA;<script type="math/tex; ">\mathcal{O}(1)</script>&#x3002;</p>
+<h2 id="&#x91CD;&#x7528;&#x8A08;&#x7B97;&#x7D50;&#x679C;">&#x91CD;&#x7528;&#x8A08;&#x7B97;&#x7D50;&#x679C;</h2>
+<p>&#x5728;&#x4E0A;&#x4E00;&#x500B;&#x6F14;&#x7B97;&#x6CD5;&#x4E2D;&#xFF0C;&#x91CD;&#x5FA9;&#x904D;&#x6B77;&#x5B50;&#x6A39;&#x4EE5;&#x6AA2;&#x6E2C;&#x67D0;&#x7BC0;&#x9EDE;&#x662F;&#x5426;&#x70BA;&#x5176;&#x5B83;&#x7BC0;&#x9EDE;&#x7684;&#x7956;&#x5148;&#x7BC0;&#x9EDE;&#x3002;&#x91CD;&#x7528;&#x9019;&#x6A39;&#x5B50;&#x6A39;&#x6AA2;&#x6E2C;&#x7D50;&#x679C;&#x53EF;&#x4EE5;&#x5927;&#x5E45;&#x6E1B;&#x5C11;&#x8A08;&#x7B97;&#x91CF;&#x3002;</p>
+<p>&#x7576;&#x81EA;&#x4E0B;&#x800C;&#x4E0A;&#x6AA2;&#x6E2C;&#x7BC0;&#x9EDE;&#x6642;&#xFF0C;&#x6709;&#x56DB;&#x7A2E;&#x53EF;&#x80FD;&#xFF1A;</p>
+<ol>
+<li>&#x5176;&#x50C5;&#x662F;p&#x7684;&#x7956;&#x5148;</li>
+<li>&#x5176;&#x50C5;&#x662F;q&#x7684;&#x7956;&#x5148;</li>
+<li>&#x5176;&#x662F;p&#x548C;q&#x7684;&#x516C;&#x5171;</li>
+<li>&#x5176;&#x5373;&#x4E0D;&#x662F;p&#x7684;&#x7956;&#x5148;&#xFF0C;&#x4E5F;&#x4E0D;&#x662F;q&#x7684;&#x7956;&#x5148;</li>
+</ol>
+<p>&#x6211;&#x5011;&#x5206;&#x5225;&#x7528;p, q, &#x7BC0;&#x9EDE;&#x81EA;&#x8EAB;&#x548C;null&#x8868;&#x793A;&#x4E0A;&#x8FF0;&#x56DB;&#x7A2E;&#x72C0;&#x614B;&#x3002;&#x7136;&#x5F8C;&#xFF0C;&#x7528;&#x9019;&#x56DB;&#x7A2E;&#x72C0;&#x614B;&#x53BB;&#x66FF;&#x63DB;&#x6574;&#x6839;&#x5B50;&#x6A39;&#x3002;</p>
+<p>&#x8209;&#x500B;&#x4F8B;&#x5B50;&#xFF0C;&#x7D66;&#x5B9A;&#x5982;&#x4E0B;&#x4E8C;&#x53C9;&#x6A39;&#x548C;&#x7BC0;&#x9EDE;<code>5, 8</code>&#xFF1A;</p>
+<p><img src="../assets/images/uml/c4645ea3ca01bc368b45a073b601d427dda58f68.png"></p>
+<p>&#x81EA;&#x4E0B;&#x800C;&#x4E0A;&#x6AA2;&#x6E2C;&#x3002;<code>7</code>&#x548C;<code>4</code>&#x5373;&#x4E0D;&#x662F;<code>5</code>&#x7684;&#x7956;&#x5148;&#xFF0C;&#x4E5F;&#x4E0D;&#x662F;<code>8</code>&#x7684;&#x7956;&#x5148;&#x3002;&#x6240;&#x4EE5;&#x66FF;&#x63DB;&#x70BA;null&#xFF08;&#x76F4;&#x63A5;&#x6D88;&#x6389;&#xFF09;&#x3002;</p>
+<p><img src="../assets/images/uml/74c0630855ab82d63d52878cff37d1e1e6dfcddd.png"></p>
+<p>&#x7136;&#x5F8C;&#xFF0C;&#x6AA2;&#x6E2C;<code>6, 2, 0, 8</code>&#x3002;<code>8</code>&#x662F;<code>8</code>&#x7684;&#x7956;&#x5148;&#x3002;</p>
+<p><img src="../assets/images/uml/626b54931152d4317a43c0e7e554fafae387c1e3.png"></p>
+<p>&#x518D;&#x7136;&#x5F8C;&#xFF0C;&#x6AA2;&#x6E2C;<code>5, 1</code>&#x3002;<code>5</code>&#x662F;<code>5</code>&#x7684;&#x7956;&#x5148;&#xFF0C;&#x4FDD;&#x7559;&#x70BA;&#x539F;&#x503C;&#xFF1B;<code>1</code>&#x662F;<code>8</code>&#x7684;&#x7956;&#x5148;&#xFF0C;&#x5C07;&#x6574;&#x68F5;&#x5B50;&#x6A39;&#x66FF;&#x63DB;&#x70BA;<code>8</code>&#x3002;</p>
+<p><img src="../assets/images/uml/eb41f64490eba9bd3d256b30aaf85064c0a345b8.png"></p>
+<p>&#x6700;&#x5F8C;&#xFF0C;&#x6AA2;&#x6E2C;<code>3</code>&#x3002;&#x5176;&#x662F;<code>5, 8</code>&#x7684;&#x516C;&#x5171;&#x7956;&#x5148;&#xFF0C;&#x5C07;&#x6574;&#x68F5;&#x5B50;&#x6A39;&#x66FF;&#x63DB;&#x70BA;&#x516C;&#x5171;&#x7956;&#x5148;<code>3</code>&#x3002;</p>
+<p><img src="../assets/images/uml/a7a1247f7cc12954485e355984914fe07da6c9e7.png"></p>
+<h3 id="&#x4EE3;&#x78BC;">&#x4EE3;&#x78BC;</h3>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;java&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">package io.github.rscai.leetcode.bytedance.linktree;
+
+public class Solution1026B {
+
+  public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+    if (root == null) {
+      return null;
+    }
+    if (root.val == p.val) {
+      return p;
+    }
+    if (root.val == q.val) {
+      return q;
+    }
+
+    TreeNode ancestorNodeOnLeft = lowestCommonAncestor(root.left, p, q);
+    if (ancestorNodeOnLeft != null &amp;&amp; ancestorNodeOnLeft.val != p.val
+        &amp;&amp; ancestorNodeOnLeft.val != q.val) {
+      return ancestorNodeOnLeft;
+    }
+    TreeNode ancestorNodeOnRight = lowestCommonAncestor(root.right, p, q);
+    if (ancestorNodeOnRight != null &amp;&amp; ancestorNodeOnRight.val != p.val
+        &amp;&amp; ancestorNodeOnRight.val != q.val) {
+      return ancestorNodeOnRight;
+    }
+    if (ancestorNodeOnLeft != null &amp;&amp; ancestorNodeOnRight != null) {
+      return root;
+    }
+    if (ancestorNodeOnLeft != null) {
+      return ancestorNodeOnLeft;
+    }
+    if (ancestorNodeOnRight != null) {
+      return ancestorNodeOnRight;
+    }
+    return null;
+  }
+}<br></div></div>
+
+
+
+<p>&#x5148;&#x6AA2;&#x6E2C;&#x662F;&#x5426;&#x662F;p&#x6216;q&#x3002;&#x662F;&#x5247;&#x505C;&#x6B62;&#x5411;&#x4E0B;&#x904D;&#x6B77;&#xFF0C;&#x6539;&#x70BA;&#x5411;&#x4E0A;&#x6B78;&#x4F75;&#x3002;</p>
+<p><img src="p1026.figure/debug-B1.png" alt="debug-B1"></p>
+<p>&#x518D;&#x5728;&#x5DE6;&#x5B50;&#x6A39;&#x4E2D;&#x641C;&#x5C0B;&#xFF0C;&#x82E5;&#x627E;&#x5230;&#x516C;&#x5171;&#x7956;&#x5148;&#x5247;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x3002;</p>
+<p><img src="p1026.figure/debug-B2.png" alt="debug-B2"></p>
+<p>&#x518D;&#x5728;&#x53F3;&#x5B50;&#x6A39;&#x4E2D;&#x641C;&#x5C0B;&#xFF0C;&#x82E5;&#x627E;&#x5230;&#x516C;&#x5171;&#x7956;&#x5148;&#x5247;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x3002;</p>
+<p><img src="p1026.figure/debug-B3.png" alt="debug-B3"></p>
+<p>&#x518D;&#x7136;&#x5F8C;&#xFF0C;&#x6AA2;&#x6E2C;&#x7576;&#x524D;&#x7BC0;&#x9EDE;&#x662F;&#x5426;&#x70BA;&#x516C;&#x5171;&#x7956;&#x5148;&#x3002;</p>
+<p><img src="p1026.figure/debug-B4.png" alt="debug-B4"></p>
+<h3 id="&#x8907;&#x96DC;&#x5EA6;&#x5206;&#x6790;">&#x8907;&#x96DC;&#x5EA6;&#x5206;&#x6790;</h3>
+<h4 id="&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;">&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;</h4>
+<p>&#x672C;&#x6F14;&#x7B97;&#x6CD5;&#x53EA;&#x904D;&#x6B77;&#x4E86;&#x4E00;&#x6B21;&#x4E8C;&#x53C9;&#x6A39;&#xFF0C;&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;&#x70BA;<script type="math/tex; ">\mathcal{O}(n)</script>&#x3002;</p>
+<h4 id="&#x7A7A;&#x9593;&#x8907;&#x96DC;&#x5EA6;">&#x7A7A;&#x9593;&#x8907;&#x96DC;&#x5EA6;</h4>
+<p>&#x7A7A;&#x9593;&#x8907;&#x96DC;&#x5EA6;&#x70BA;<script type="math/tex; ">\mathcal{O}(1)</script>&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="p1025.html" class="navigation navigation-prev " aria-label="Previous page: 合併K個排序鏈表">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="p1027.html" class="navigation navigation-next " aria-label="Next page: 二叉樹的鋸齒形層次遍歷">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"二叉樹的最近公共祖先","level":"1.2.8","depth":2,"next":{"title":"二叉樹的鋸齒形層次遍歷","level":"1.2.9","depth":2,"path":"linktree/p1027.md","ref":"linktree/p1027.md","articles":[]},"previous":{"title":"合併K個排序鏈表","level":"1.2.7","depth":2,"path":"linktree/p1025.md","ref":"linktree/p1025.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock","ace","uml","mathjax-update-cdn","collapsible-menu-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ace":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"uml":{"format":"png","nailgun":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"monokai","unindent":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"mathjax-update-cdn":{"forceSVG":false,"version":"2.7.1"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"collapsible-menu-ex":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh_TR","gitbook":"*"},"file":{"path":"linktree/p1026.md","mtime":"2019-05-12T08:55:59.453Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-12T08:57:43.301Z"},"basePath":"..","book":{"language":"zh_TR"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mathjax-update-cdn/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-collapsible-menu-ex/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
