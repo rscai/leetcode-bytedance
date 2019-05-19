@@ -1,6 +1,8 @@
 # Summary
 
 * [介紹](README.md)
+* [數組與排序](array.md)
+    * [三數之和](array/p1020.md)
 * [鏈表與樹](linktree.md)
     * [合併兩個有序鏈表](linktree/p1048.md)
     * [反轉鏈表](linktree/p1038.md)
