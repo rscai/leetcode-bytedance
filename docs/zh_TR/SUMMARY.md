@@ -5,6 +5,7 @@
     * [三數之和](array/p1020.md)
     * [島嶼的最大面積](array/p1034.md)
     * [搜索旋轉排序數組](array/p1017.md)
+    * [最長連續遞增序列](array/p1035.md)
 * [鏈表與樹](linktree.md)
     * [合併兩個有序鏈表](linktree/p1048.md)
     * [反轉鏈表](linktree/p1038.md)
