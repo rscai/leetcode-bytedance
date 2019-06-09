@@ -8,6 +8,7 @@
     * [最長連續遞增序列](array/p1035.md)
     * [數組中的第K個最大元素](array/p1018.md)
     * [最長連續序列](array/p1019.md)
+    * [第k個排列](array/p1021.md)
 * [鏈表與樹](linktree.md)
     * [合併兩個有序鏈表](linktree/p1048.md)
     * [反轉鏈表](linktree/p1038.md)
