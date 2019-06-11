@@ -16,7 +16,8 @@ public class Solution1021ATest {
   @Parameters(name = "{index}: {1}-th permutation in {0} elements is {2}")
   public static Iterable<Object[]> data() {
     return Arrays.asList(new Object[][]{
-        {3, 5, "312"}
+        {3, 3, "213"},
+        {4, 9, "2314"}
     });
   }
 

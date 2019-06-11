@@ -11,7 +11,7 @@ public class Solution1021C {
     int factN = 1;
     int factNMinusOne = 1;
     for (int i = indexes.length - 1; i >= 0; i--) {
-
+      factNMinusOne = factN;
       factN = (n - i) * factNMinusOne;
       indexes[i] = ((k - 1) % factN) / factNMinusOne;
     }
