@@ -10,6 +10,7 @@
     * [最長連續序列](array/p1019.md)
     * [第k個排列](array/p1021.md)
     * [朋友圈](array/p1036.md)
+    * [合併區間](array/p1046.md)
 * [鏈表與樹](linktree.md)
     * [合併兩個有序鏈表](linktree/p1048.md)
     * [反轉鏈表](linktree/p1038.md)
