@@ -1,6 +1,8 @@
 # Summary
 
 * [介紹](README.md)
+* [排戰字符串](string.md)
+    * [無重復字符的最大子串]
 * [數組與排序](array.md)
     * [三數之和](array/p1020.md)
     * [島嶼的最大面積](array/p1034.md)
@@ -11,6 +13,7 @@
     * [第k個排列](array/p1021.md)
     * [朋友圈](array/p1036.md)
     * [合併區間](array/p1046.md)
+    * [接雨水](array/p1047.md)
 * [鏈表與樹](linktree.md)
     * [合併兩個有序鏈表](linktree/p1048.md)
     * [反轉鏈表](linktree/p1038.md)
