@@ -4,6 +4,7 @@
 * [排戰字符串](string.md)
     * [無重復字符的最大子串](string/p1012.md)
     * [最長公共前綴](string/p1014.md)
+    * [字符串的排列](string/p1016.md)
 * [數組與排序](array.md)
     * [三數之和](array/p1020.md)
     * [島嶼的最大面積](array/p1034.md)
