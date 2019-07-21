@@ -8,6 +8,7 @@
     * [字符串相乘](string/p1015.md)
     * [翻轉字符串裡的單詞](string/p1011.md)
     * [簡化路徑](string/p1013.md)
+    * [復原IP地址](string/p1044.md)
 * [數組與排序](array.md)
     * [三數之和](array/p1020.md)
     * [島嶼的最大面積](array/p1034.md)
