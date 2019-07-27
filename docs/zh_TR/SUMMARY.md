@@ -40,3 +40,4 @@
 * [數據結構](datastructure.md)
     * [最小棧](datastructure/p1049.md)
     * [LRU緩存機制](datastructure/p1032.md)
+    * [全O(1)的數據結構](datastructure/p1033.md)
