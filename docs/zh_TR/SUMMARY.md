@@ -39,4 +39,4 @@
     * [俄羅斯套娃信封問題](dynamic/p1031.md)
 * [數據結構](datastructure.md)
     * [最小棧](datastructure/p1049.md)
-    
+    * [LRU緩存機制](datastructure/p1032.md)
