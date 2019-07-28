@@ -43,3 +43,4 @@
     * [全O(1)的數據結構](datastructure/p1033.md)
 * [拓展練習](bonus.md)
     * [x的平方根](bonus/p1045.md)
+    * [UTF-8 編碼驗證](bonus/p1037.md)
