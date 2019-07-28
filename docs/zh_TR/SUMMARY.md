@@ -41,3 +41,5 @@
     * [最小棧](datastructure/p1049.md)
     * [LRU緩存機制](datastructure/p1032.md)
     * [全O(1)的數據結構](datastructure/p1033.md)
+* [拓展練習](bonus.md)
+    * [x的平方根](bonus/p1045.md)
