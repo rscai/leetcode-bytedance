@@ -1,0 +1,1055 @@
+
+<!DOCTYPE HTML>
+<html lang="zh_TR" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>最長連續序列 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="p1021.html" />
+    
+    
+    <link rel="prev" href="p1018.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介紹
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../string.html">
+            
+                <a href="../string.html">
+            
+                    
+                    排戰字符串
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../string/p1012.html">
+            
+                <a href="../string/p1012.html">
+            
+                    
+                    無重復字符的最大子串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../string/p1014.html">
+            
+                <a href="../string/p1014.html">
+            
+                    
+                    最長公共前綴
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../string/p1016.html">
+            
+                <a href="../string/p1016.html">
+            
+                    
+                    字符串的排列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../string/p1015.html">
+            
+                <a href="../string/p1015.html">
+            
+                    
+                    字符串相乘
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../string/p1011.html">
+            
+                <a href="../string/p1011.html">
+            
+                    
+                    翻轉字符串裡的單詞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../string/p1013.html">
+            
+                <a href="../string/p1013.html">
+            
+                    
+                    簡化路徑
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../string/p1044.html">
+            
+                <a href="../string/p1044.html">
+            
+                    
+                    復原IP地址
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../array.html">
+            
+                <a href="../array.html">
+            
+                    
+                    數組與排序
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="p1020.html">
+            
+                <a href="p1020.html">
+            
+                    
+                    三數之和
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="p1034.html">
+            
+                <a href="p1034.html">
+            
+                    
+                    島嶼的最大面積
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="p1017.html">
+            
+                <a href="p1017.html">
+            
+                    
+                    搜索旋轉排序數組
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="p1035.html">
+            
+                <a href="p1035.html">
+            
+                    
+                    最長連續遞增序列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="p1018.html">
+            
+                <a href="p1018.html">
+            
+                    
+                    數組中的第K個最大元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.6" data-path="p1019.html">
+            
+                <a href="p1019.html">
+            
+                    
+                    最長連續序列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="p1021.html">
+            
+                <a href="p1021.html">
+            
+                    
+                    第k個排列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="p1036.html">
+            
+                <a href="p1036.html">
+            
+                    
+                    朋友圈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="p1046.html">
+            
+                <a href="p1046.html">
+            
+                    
+                    合併區間
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="p1047.html">
+            
+                <a href="p1047.html">
+            
+                    
+                    接雨水
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../linktree.html">
+            
+                <a href="../linktree.html">
+            
+                    
+                    鏈表與樹
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../linktree/p1048.html">
+            
+                <a href="../linktree/p1048.html">
+            
+                    
+                    合併兩個有序鏈表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../linktree/p1038.html">
+            
+                <a href="../linktree/p1038.html">
+            
+                    
+                    反轉鏈表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../linktree/p1022.html">
+            
+                <a href="../linktree/p1022.html">
+            
+                    
+                    兩數相加
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../linktree/p1040.html">
+            
+                <a href="../linktree/p1040.html">
+            
+                    
+                    排序鏈表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../linktree/p1023.html">
+            
+                <a href="../linktree/p1023.html">
+            
+                    
+                    環形鏈表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../linktree/p1024.html">
+            
+                <a href="../linktree/p1024.html">
+            
+                    
+                    相交鏈表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../linktree/p1025.html">
+            
+                <a href="../linktree/p1025.html">
+            
+                    
+                    合併K個排序鏈表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../linktree/p1026.html">
+            
+                <a href="../linktree/p1026.html">
+            
+                    
+                    二叉樹的最近公共祖先
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../linktree/p1027.html">
+            
+                <a href="../linktree/p1027.html">
+            
+                    
+                    二叉樹的鋸齒形層次遍歷
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../dynamic.html">
+            
+                <a href="../dynamic.html">
+            
+                    
+                    動態或貪心
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../dynamic/p1042.html">
+            
+                <a href="../dynamic/p1042.html">
+            
+                    
+                    買賣股票的最佳時機
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../dynamic/p1043.html">
+            
+                <a href="../dynamic/p1043.html">
+            
+                    
+                    買賣股票的最佳時機 II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../dynamic/p1028.html">
+            
+                <a href="../dynamic/p1028.html">
+            
+                    
+                    最大正方形
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../dynamic/p1029.html">
+            
+                <a href="../dynamic/p1029.html">
+            
+                    
+                    最大子序和
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../dynamic/p1030.html">
+            
+                <a href="../dynamic/p1030.html">
+            
+                    
+                    三⻆形最小路徑和
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../dynamic/p1031.html">
+            
+                <a href="../dynamic/p1031.html">
+            
+                    
+                    俄羅斯套娃信封問題
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../datastructure.html">
+            
+                <a href="../datastructure.html">
+            
+                    
+                    數據結構
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../datastructure/p1049.html">
+            
+                <a href="../datastructure/p1049.html">
+            
+                    
+                    最小棧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../datastructure/p1032.html">
+            
+                <a href="../datastructure/p1032.html">
+            
+                    
+                    LRU緩存機制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../datastructure/p1033.html">
+            
+                <a href="../datastructure/p1033.html">
+            
+                    
+                    全O(1)的數據結構
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../bonus.html">
+            
+                <a href="../bonus.html">
+            
+                    
+                    拓展練習
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../bonus/p1045.html">
+            
+                <a href="../bonus/p1045.html">
+            
+                    
+                    x的平方根
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../bonus/p1037.html">
+            
+                <a href="../bonus/p1037.html">
+            
+                    
+                    UTF-8 編碼驗證
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../bonus/p1039.html">
+            
+                <a href="../bonus/p1039.html">
+            
+                    
+                    第二高的薪水
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >最長連續序列</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6700;&#x9577;&#x9023;&#x7E8C;&#x5E8F;&#x5217;">&#x6700;&#x9577;&#x9023;&#x7E8C;&#x5E8F;&#x5217;</h1>
+<h2 id="&#x984C;&#x76EE;">&#x984C;&#x76EE;</h2>
+<blockquote>
+<p>&#x7D66;&#x5B9A;&#x4E00;&#x500B;&#x672A;&#x6392;&#x5E8F;&#x7684;&#x6574;&#x6578;&#x6578;&#x7D44;&#xFF0C;&#x627E;&#x51FA;&#x6700;&#x9577;&#x9023;&#x7E8C;&#x5E8F;&#x5217;&#x7684;&#x9577;&#x5EA6;&#x3002;</p>
+<p>&#x8981;&#x6C42;&#x7B97;&#x6CD5;&#x7684;&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;&#x70BA; O(n)&#x3002;</p>
+<p><strong>&#x793A;&#x4F8B;:</strong></p>
+<pre><code>&#x8F38;&#x5165;: [100, 4, 200, 1, 3, 2]
+&#x8F38;&#x51FA;: 4
+&#x89E3;&#x91CB;: &#x6700;&#x9577;&#x9023;&#x7E8C;&#x5E8F;&#x5217;&#x662F; [1, 2, 3, 4]&#x3002;&#x5B83;&#x7684;&#x9577;&#x5EA6;&#x70BA; 4&#x3002;
+</code></pre></blockquote>
+<h2 id="&#x5FEB;&#x901F;&#x6392;&#x5E8F;&#x6CD5;">&#x5FEB;&#x901F;&#x6392;&#x5E8F;&#x6CD5;</h2>
+<p>&#x5148;&#x4F7F;&#x7528;&#x300C;&#x5FEB;&#x901F;&#x6392;&#x5E8F;&#x300D;&#x5C07;&#x7121;&#x5E8F;&#x6578;&#x7D44;&#x8F49;&#x63DB;&#x70BA;&#x6709;&#x5E8F;&#x905E;&#x589E;&#x6578;&#x7D44;&#xFF0C;&#x518D;&#x4E00;&#x6B21;&#x904D;&#x6B77;&#x627E;&#x51FA;&#x6700;&#x9577;&#x9023;&#x7E8C;&#x5E8F;&#x5217;&#x3002;</p>
+<blockquote>
+<h3 id="&#x5FEB;&#x901F;&#x6392;&#x5E8F;">&#x5FEB;&#x901F;&#x6392;&#x5E8F;</h3>
+<p>&#x5FEB;&#x901F;&#x6392;&#x5E8F;&#xFF08;&#x82F1;&#x8A9E;&#xFF1A;Quicksort&#xFF09;&#xFF0C;&#x53C8;&#x7A31;&#x5283;&#x5206;&#x4EA4;&#x63DB;&#x6392;&#x5E8F;&#xFF08;partition-exchange sort&#xFF09;&#xFF0C;&#x7C21;&#x7A31;&#x5FEB;&#x6392;&#xFF0C;&#x4E00;&#x7A2E;&#x6392;&#x5E8F;&#x6F14;&#x7B97;&#x6CD5;&#xFF0C;&#x6700;&#x65E9;&#x7531;&#x6771;&#x5C3C;&#xB7;&#x970D;&#x723E;&#x63D0;&#x51FA;&#x3002;&#x5728;&#x5E73;&#x5747;&#x72C0;&#x6CC1;&#x4E0B;&#xFF0C;&#x6392;&#x5E8F;<script type="math/tex; ">n</script>&#x500B;&#x9805;&#x76EE;&#x8981;<script type="math/tex; ">{\displaystyle \ O(n\log n)}</script>&#xFF08;&#x5927;O&#x7B26;&#x865F;&#xFF09;&#x6B21;&#x6BD4;&#x8F03;&#x3002;&#x5728;&#x6700;&#x58DE;&#x72C0;&#x6CC1;&#x4E0B;&#x5247;&#x9700;&#x8981;<script type="math/tex; ">{\displaystyle O(n^{2})}</script>&#x6B21;&#x6BD4;&#x8F03;&#xFF0C;&#x4F46;&#x9019;&#x7A2E;&#x72C0;&#x6CC1;&#x4E26;&#x4E0D;&#x5E38;&#x898B;&#x3002;&#x4E8B;&#x5BE6;&#x4E0A;&#xFF0C;&#x5FEB;&#x901F;&#x6392;&#x5E8F;<script type="math/tex; ">{\displaystyle \Theta (n\log n)}</script>&#x901A;&#x5E38;&#x660E;&#x986F;&#x6BD4;&#x5176;&#x4ED6;&#x6F14;&#x7B97;&#x6CD5;&#x66F4;&#x5FEB;&#xFF0C;&#x56E0;&#x70BA;&#x5B83;&#x7684;&#x5167;&#x90E8;&#x8FF4;&#x5708;&#xFF08;inner loop&#xFF09;&#x53EF;&#x4EE5;&#x5728;&#x5927;&#x90E8;&#x5206;&#x7684;&#x67B6;&#x69CB;&#x4E0A;&#x5F88;&#x6709;&#x6548;&#x7387;&#x5730;&#x9054;&#x6210;&#x3002;</p>
+</blockquote>
+<h3 id="&#x4EE3;&#x78BC;">&#x4EE3;&#x78BC;</h3>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;java&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">package io.github.rscai.leetcode.bytedance.array;
+
+import java.util.Arrays;
+
+public class Solution1019A {
+
+  public int longestConsecutive(int[] nums) {
+    if (nums.length == 0) {
+      return 0;
+    }
+    Arrays.sort(nums);
+    int max = 1;
+    int length = 1;
+    for (int index = 1; index &lt; nums.length; index++) {
+      if (nums[index] == nums[index - 1]) {
+        continue;
+      } else if (nums[index] - nums[index - 1] == 1) {
+        length++;
+      } else {
+        if (length &gt; max) {
+          max = length;
+        }
+        length = 1;
+      }
+    }
+    if (length &gt; max) {
+      max = length;
+    }
+    return max;
+  }
+}<br></div></div>
+
+
+
+<p><code>Arrays.sort</code>&#x5BE6;&#x73FE;&#x4E86;Dual-Pivot&#x5FEB;&#x901F;&#x6392;&#x5E8F;&#x3002;</p>
+<pre><code class="lang-java">    <span class="hljs-comment">/*
+     * Sorting methods. Note that all public &quot;sort&quot; methods take the
+     * same form: Performing argument checks if necessary, and then
+     * expanding arguments into those required for the internal
+     * implementation methods residing in other package-private
+     * classes (except for legacyMergeSort, included in this class).
+     */</span>
+
+    <span class="hljs-comment">/**
+     * Sorts the specified array into ascending numerical order.
+     *
+     * &lt;p&gt;Implementation note: The sorting algorithm is a Dual-Pivot Quicksort
+     * by Vladimir Yaroslavskiy, Jon Bentley, and Joshua Bloch. This algorithm
+     * offers O(n log(n)) performance on many data sets that cause other
+     * quicksorts to degrade to quadratic performance, and is typically
+     * faster than traditional (one-pivot) Quicksort implementations.
+     *
+     * <span class="hljs-doctag">@param</span> a the array to be sorted
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sort</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] a)</span> </span>{
+        DualPivotQuicksort.sort(a, <span class="hljs-number">0</span>, a.length - <span class="hljs-number">1</span>, <span class="hljs-keyword">null</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
+    }
+</code></pre>
+<h3 id="&#x8907;&#x96DC;&#x5EA6;&#x5206;&#x6790;">&#x8907;&#x96DC;&#x5EA6;&#x5206;&#x6790;</h3>
+<h4 id="&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;">&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;</h4>
+<p><code>Arrays.sort</code>&#x5BE6;&#x73FE;&#x7684;Dual-Pivot&#x5FEB;&#x901F;&#x6392;&#x5E8F;&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;&#x70BA;<script type="math/tex; ">\mathcal{O}(n \log{n})</script>&#xFF0C;&#x4E00;&#x6B21;&#x904D;&#x6B77;&#x6578;&#x7D44;&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;&#x70BA;<script type="math/tex; ">\mathcal{O}(n)</script>&#x3002;&#x7E3D;&#x9AD4;&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;&#x70BA;&#xFF1A;</p>
+<p><script type="math/tex; mode=display">
+\begin{aligned}
+C_{time} &= \mathcal{O}(n \log{n}) + \mathcal{O}(n) \\
+&= \mathcal{O}(n \log{n})
+\end{aligned}
+</script></p>
+<h4 id="&#x7A7A;&#x9593;&#x8907;&#x96DC;&#x5EA6;">&#x7A7A;&#x9593;&#x8907;&#x96DC;&#x5EA6;</h4>
+<p><code>Arrays.sort</code>&#x5275;&#x5EFA;&#x4E00;&#x500B;&#x81E8;&#x6642;&#x6578;&#x7D44;&#x7528;&#x65BC;&#x6392;&#x5E8F;&#x3002;&#x6240;&#x4EE5;&#x7A7A;&#x9593;&#x8907;&#x96DC;&#x5EA6;&#x70BA;<script type="math/tex; ">\mathcal{O}(n)</script>&#x3002;</p>
+<pre><code class="lang-java">        <span class="hljs-comment">// Use or create temporary array b for merging</span>
+        <span class="hljs-keyword">int</span>[] b;                 <span class="hljs-comment">// temp array; alternates with a</span>
+        <span class="hljs-keyword">int</span> ao, bo;              <span class="hljs-comment">// array offsets from &apos;left&apos;</span>
+        <span class="hljs-keyword">int</span> blen = right - left; <span class="hljs-comment">// space needed for b</span>
+        <span class="hljs-keyword">if</span> (work == <span class="hljs-keyword">null</span> || workLen &lt; blen || workBase + blen &gt; work.length) {
+            work = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[blen];
+            workBase = <span class="hljs-number">0</span>;
+        }
+        <span class="hljs-keyword">if</span> (odd == <span class="hljs-number">0</span>) {
+            System.arraycopy(a, left, work, workBase, blen);
+            b = a;
+            bo = <span class="hljs-number">0</span>;
+            a = work;
+            ao = workBase - left;
+        } <span class="hljs-keyword">else</span> {
+            b = work;
+            ao = <span class="hljs-number">0</span>;
+            bo = workBase - left;
+        }
+</code></pre>
+<h2 id="&#x52D5;&#x614B;&#x898F;&#x5283;&#x6CD5;">&#x52D5;&#x614B;&#x898F;&#x5283;&#x6CD5;</h2>
+<blockquote>
+<h3 id="&#x52D5;&#x614B;&#x898F;&#x5283;">&#x52D5;&#x614B;&#x898F;&#x5283;</h3>
+<p>&#x52D5;&#x614B;&#x898F;&#x5283;&#xFF08;&#x82F1;&#x8A9E;&#xFF1A;Dynamic programming&#xFF0C;&#x7C21;&#x7A31;DP&#xFF09;&#x662F;&#x4E00;&#x7A2E;&#x5728;&#x6578;&#x5B78;&#x3001;&#x7BA1;&#x7406;&#x79D1;&#x5B78;&#x3001;&#x96FB;&#x8166;&#x79D1;&#x5B78;&#x3001;&#x7D93;&#x6FDF;&#x5B78;&#x548C;&#x751F;&#x7269;&#x8CC7;&#x8A0A;&#x5B78;&#x4E2D;&#x4F7F;&#x7528;&#x7684;&#xFF0C;&#x901A;&#x904E;&#x628A;&#x539F;&#x554F;&#x984C;&#x5206;&#x89E3;&#x70BA;&#x76F8;&#x5C0D;&#x7C21;&#x55AE;&#x7684;&#x5B50;&#x554F;&#x984C;&#x7684;&#x65B9;&#x5F0F;&#x6C42;&#x89E3;&#x8907;&#x96DC;&#x554F;&#x984C;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x52D5;&#x614B;&#x898F;&#x5283;&#x5E38;&#x5E38;&#x9069;&#x7528;&#x65BC;&#x6709;&#x91CD;&#x758A;&#x5B50;&#x554F;&#x984C;&#x548C;&#x6700;&#x4F73;&#x5B50;&#x7D50;&#x69CB;&#x6027;&#x8CEA;&#x7684;&#x554F;&#x984C;&#xFF0C;&#x52D5;&#x614B;&#x898F;&#x5283;&#x65B9;&#x6CD5;&#x6240;&#x8017;&#x6642;&#x9593;&#x5F80;&#x5F80;&#x9060;&#x5C11;&#x65BC;&#x6A38;&#x7D20;&#x89E3;&#x6CD5;&#x3002;</p>
+<p>&#x52D5;&#x614B;&#x898F;&#x5283;&#x80CC;&#x5F8C;&#x7684;&#x57FA;&#x672C;&#x601D;&#x60F3;&#x975E;&#x5E38;&#x7C21;&#x55AE;&#x3002;&#x5927;&#x81F4;&#x4E0A;&#xFF0C;&#x82E5;&#x8981;&#x89E3;&#x4E00;&#x500B;&#x7D66;&#x5B9A;&#x554F;&#x984C;&#xFF0C;&#x6211;&#x5011;&#x9700;&#x8981;&#x89E3;&#x5176;&#x4E0D;&#x540C;&#x90E8;&#x5206;&#xFF08;&#x5373;&#x5B50;&#x554F;&#x984C;&#xFF09;&#xFF0C;&#x518D;&#x6839;&#x64DA;&#x5B50;&#x554F;&#x984C;&#x7684;&#x89E3;&#x4EE5;&#x5F97;&#x51FA;&#x539F;&#x554F;&#x984C;&#x7684;&#x89E3;&#x3002;</p>
+<p>&#x901A;&#x5E38;&#x8A31;&#x591A;&#x5B50;&#x554F;&#x984C;&#x975E;&#x5E38;&#x76F8;&#x4F3C;&#xFF0C;&#x70BA;&#x6B64;&#x52D5;&#x614B;&#x898F;&#x5283;&#x6CD5;&#x8A66;&#x5716;&#x50C5;&#x50C5;&#x89E3;&#x6C7A;&#x6BCF;&#x500B;&#x5B50;&#x554F;&#x984C;&#x4E00;&#x6B21;&#xFF0C;&#x5F9E;&#x800C;&#x6E1B;&#x5C11;&#x8A08;&#x7B97;&#x91CF;&#xFF1A;&#x4E00;&#x65E6;&#x67D0;&#x500B;&#x7D66;&#x5B9A;&#x5B50;&#x554F;&#x984C;&#x7684;&#x89E3;&#x5DF2;&#x7D93;&#x7B97;&#x51FA;&#xFF0C;&#x5247;&#x5C07;&#x5176;&#x8A18;&#x61B6;&#x5316;&#x5132;&#x5B58;&#xFF0C;&#x4EE5;&#x4FBF;&#x4E0B;&#x6B21;&#x9700;&#x8981;&#x540C;&#x4E00;&#x500B;&#x5B50;&#x554F;&#x984C;&#x89E3;&#x4E4B;&#x6642;&#x76F4;&#x63A5;&#x67E5;&#x8868;&#x3002;&#x9019;&#x7A2E;&#x505A;&#x6CD5;&#x5728;&#x91CD;&#x8907;&#x5B50;&#x554F;&#x984C;&#x7684;&#x6578;&#x76EE;&#x95DC;&#x65BC;&#x8F38;&#x5165;&#x7684;&#x898F;&#x6A21;&#x5448;&#x6307;&#x6578;&#x589E;&#x9577;&#x6642;&#x7279;&#x5225;&#x6709;&#x7528;&#x3002;</p>
+<h4 id="&#x6982;&#x8FF0;">&#x6982;&#x8FF0;</h4>
+<p>&#x52D5;&#x614B;&#x898F;&#x5283;&#x5728;&#x5C0B;&#x627E;&#x6709;&#x5F88;&#x591A;&#x91CD;&#x758A;&#x5B50;&#x554F;&#x984C;&#x7684;&#x60C5;&#x6CC1;&#x7684;&#x6700;&#x4F73;&#x89E3;&#x6642;&#x6709;&#x6548;&#x3002;&#x5B83;&#x5C07;&#x554F;&#x984C;&#x91CD;&#x65B0;&#x7D44;&#x5408;&#x6210;&#x5B50;&#x554F;&#x984C;&#x3002;&#x70BA;&#x4E86;&#x907F;&#x514D;&#x591A;&#x6B21;&#x89E3;&#x6C7A;&#x9019;&#x4E9B;&#x5B50;&#x554F;&#x984C;&#xFF0C;&#x5B83;&#x5011;&#x7684;&#x7D50;&#x679C;&#x90FD;&#x9010;&#x6F38;&#x88AB;&#x8A08;&#x7B97;&#x4E26;&#x88AB;&#x5132;&#x5B58;&#xFF0C;&#x5F9E;&#x7C21;&#x55AE;&#x7684;&#x554F;&#x984C;&#x76F4;&#x5230;&#x6574;&#x500B;&#x554F;&#x984C;&#x90FD;&#x88AB;&#x89E3;&#x6C7A;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x52D5;&#x614B;&#x898F;&#x5283;&#x5132;&#x5B58;&#x905E;&#x8FF4;&#x6642;&#x7684;&#x7D50;&#x679C;&#xFF0C;&#x56E0;&#x800C;&#x4E0D;&#x6703;&#x5728;&#x89E3;&#x6C7A;&#x540C;&#x6A23;&#x7684;&#x554F;&#x984C;&#x6642;&#x82B1;&#x8CBB;&#x6642;&#x9593;&#x3002;</p>
+<p>&#x52D5;&#x614B;&#x898F;&#x5283;&#x53EA;&#x80FD;&#x61C9;&#x7528;&#x65BC;&#x6709;&#x6700;&#x4F73;&#x5B50;&#x7D50;&#x69CB;&#x7684;&#x554F;&#x984C;&#x3002;&#x6700;&#x4F73;&#x5B50;&#x7D50;&#x69CB;&#x7684;&#x610F;&#x601D;&#x662F;&#x5C40;&#x90E8;&#x6700;&#x4F73;&#x89E3;&#x80FD;&#x6C7A;&#x5B9A;&#x5168;&#x57DF;&#x6700;&#x4F73;&#x89E3;&#xFF08;&#x5C0D;&#x6709;&#x4E9B;&#x554F;&#x984C;&#x9019;&#x500B;&#x8981;&#x6C42;&#x4E26;&#x4E0D;&#x80FD;&#x5B8C;&#x5168;&#x6EFF;&#x8DB3;&#xFF0C;&#x6545;&#x6709;&#x6642;&#x9700;&#x8981;&#x5F15;&#x5165;&#x4E00;&#x5B9A;&#x7684;&#x8FD1;&#x4F3C;&#xFF09;&#x3002;&#x7C21;&#x55AE;&#x5730;&#x8AAA;&#xFF0C;&#x554F;&#x984C;&#x80FD;&#x5920;&#x5206;&#x89E3;&#x6210;&#x5B50;&#x554F;&#x984C;&#x4F86;&#x89E3;&#x6C7A;&#x3002;</p>
+<h4 id="&#x9069;&#x7528;&#x60C5;&#x6CC1;">&#x9069;&#x7528;&#x60C5;&#x6CC1;</h4>
+<ol>
+<li>&#x6700;&#x4F73;&#x5B50;&#x7D50;&#x69CB;&#x6027;&#x8CEA;&#x3002;&#x5982;&#x679C;&#x554F;&#x984C;&#x7684;&#x6700;&#x4F73;&#x89E3;&#x6240;&#x5305;&#x542B;&#x7684;&#x5B50;&#x554F;&#x984C;&#x7684;&#x89E3;&#x4E5F;&#x662F;&#x6700;&#x4F73;&#x7684;&#xFF0C;&#x6211;&#x5011;&#x5C31;&#x7A31;&#x8A72;&#x554F;&#x984C;&#x5177;&#x6709;&#x6700;&#x4F73;&#x5B50;&#x7D50;&#x69CB;&#x6027;&#x8CEA;&#xFF08;&#x5373;&#x6EFF;&#x8DB3;&#x6700;&#x4F73;&#x5316;&#x539F;&#x7406;&#xFF09;&#x3002;&#x6700;&#x4F73;&#x5B50;&#x7D50;&#x69CB;&#x6027;&#x8CEA;&#x70BA;&#x52D5;&#x614B;&#x898F;&#x5283;&#x6F14;&#x7B97;&#x6CD5;&#x89E3;&#x6C7A;&#x554F;&#x984C;&#x63D0;&#x4F9B;&#x4E86;&#x91CD;&#x8981;&#x7DDA;&#x7D22;&#x3002;</li>
+<li>&#x7121;&#x5F8C;&#x6548;&#x6027;&#x3002;&#x5373;&#x5B50;&#x554F;&#x984C;&#x7684;&#x89E3;&#x4E00;&#x65E6;&#x78BA;&#x5B9A;&#xFF0C;&#x5C31;&#x4E0D;&#x518D;&#x6539;&#x8B8A;&#xFF0C;&#x4E0D;&#x53D7;&#x5728;&#x9019;&#x4E4B;&#x5F8C;&#x3001;&#x5305;&#x542B;&#x5B83;&#x7684;&#x66F4;&#x5927;&#x7684;&#x554F;&#x984C;&#x7684;&#x6C42;&#x89E3;&#x6C7A;&#x7B56;&#x5F71;&#x97FF;&#x3002;</li>
+<li>&#x5B50;&#x554F;&#x984C;&#x91CD;&#x758A;&#x6027;&#x8CEA;&#x3002;&#x5B50;&#x554F;&#x984C;&#x91CD;&#x758A;&#x6027;&#x8CEA;&#x662F;&#x6307;&#x5728;&#x7528;&#x905E;&#x8FF4;&#x6F14;&#x7B97;&#x6CD5;&#x81EA;&#x9802;&#x5411;&#x4E0B;&#x5C0D;&#x554F;&#x984C;&#x9032;&#x884C;&#x6C42;&#x89E3;&#x6642;&#xFF0C;&#x6BCF;&#x6B21;&#x7522;&#x751F;&#x7684;&#x5B50;&#x554F;&#x984C;&#x4E26;&#x4E0D;&#x7E3D;&#x662F;&#x65B0;&#x554F;&#x984C;&#xFF0C;&#x6709;&#x4E9B;&#x5B50;&#x554F;&#x984C;&#x6703;&#x88AB;&#x91CD;&#x8907;&#x8A08;&#x7B97;&#x591A;&#x6B21;&#x3002;&#x52D5;&#x614B;&#x898F;&#x5283;&#x6F14;&#x7B97;&#x6CD5;&#x6B63;&#x662F;&#x5229;&#x7528;&#x4E86;&#x9019;&#x7A2E;&#x5B50;&#x554F;&#x984C;&#x7684;&#x91CD;&#x758A;&#x6027;&#x8CEA;&#xFF0C;&#x5C0D;&#x6BCF;&#x4E00;&#x500B;&#x5B50;&#x554F;&#x984C;&#x53EA;&#x8A08;&#x7B97;&#x4E00;&#x6B21;&#xFF0C;&#x7136;&#x5F8C;&#x5C07;&#x5176;&#x8A08;&#x7B97;&#x7D50;&#x679C;&#x5132;&#x5B58;&#x5728;&#x4E00;&#x500B;&#x8868;&#x683C;&#x4E2D;&#xFF0C;&#x7576;&#x518D;&#x6B21;&#x9700;&#x8981;&#x8A08;&#x7B97;&#x5DF2;&#x7D93;&#x8A08;&#x7B97;&#x904E;&#x7684;&#x5B50;&#x554F;&#x984C;&#x6642;&#xFF0C;&#x53EA;&#x662F;&#x5728;&#x8868;&#x683C;&#x4E2D;&#x7C21;&#x55AE;&#x5730;&#x6AA2;&#x8996;&#x4E00;&#x4E0B;&#x7D50;&#x679C;&#xFF0C;&#x5F9E;&#x800C;&#x7372;&#x5F97;&#x8F03;&#x9AD8;&#x7684;&#x6548;&#x7387;&#x3002;</li>
+</ol>
+<h4 id="&#x53C3;&#x8003;">&#x53C3;&#x8003;</h4>
+<ul>
+<li><a href="https://zh.wikipedia.org/wiki/&#x52D5;&#x614B;&#x898F;&#x5283;" target="_blank">&#x52D5;&#x614B;&#x898F;&#x5283;</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Dynamic_programming" target="_blank">Dynamic Programming</a></li>
+</ul>
+</blockquote>
+<p>&#x4E00;&#x500B;&#x6574;&#x6578;&#x6240;&#x8655;&#x65BC;&#x7684;&#x9023;&#x7E8C;&#x5B50;&#x5E8F;&#x5217;&#x7B49;&#x65BC;&#x4EE5;&#x5176;&#x524D;&#x7E7C;&#x503C;&#x70BA;&#x908A;&#x7684;&#x9023;&#x7E8C;&#x5E8F;&#x5217;&#x52A0;&#x5176;&#x81EA;&#x8EAB;&#x518D;&#x52A0;&#x4EE5;&#x751A;&#x5F8C;&#x7E7C;&#x503C;&#x70BA;&#x908A;&#x7DE3;&#x9EDE;&#x7684;&#x9023;&#x7E8C;&#x5E8F;&#x5217;&#x3002;&#x905E;&#x63A8;&#x516C;&#x5F0F;&#x70BA;&#xFF1A;</p>
+<p><script type="math/tex; mode=display">
+f(n) = f(n-1) + 1 + f(n+1)
+</script></p>
+<p>&#x8209;&#x500B;&#x4F8B;&#x5B50;&#xFF0C;&#x7D66;&#x5B9A;&#x6578;&#x7D44;<code>[100, 4, 200, 1, 3, 2]</code>&#x3002;<code>100</code>&#x6240;&#x8655;&#x7684;&#x9023;&#x7E8C;&#x5E8F;&#x5217;&#x9577;&#x5EA6;&#x7B49;&#x65BC;&#x4EE5;<code>99</code>&#x70BA;&#x53F3;&#x908A;&#x7AEF;&#x9EDE;&#x7684;&#x9023;&#x7E8C;&#x5E8F;&#x5217;&#x9577;&#x5EA6;&#x52A0;<code>100</code>&#x81EA;&#x8EAB;&#x9577;&#x5EA6;1&#x518D;&#x52A0;&#x4EE5;<code>101</code>&#x70BA;&#x5DE6;&#x908A;&#x7AEF;&#x9EDE;&#x7684;&#x9023;&#x7E8C;&#x5E8F;&#x5217;&#x9577;&#x5EA6;&#x3002;&#x4F9D;&#x6B64;&#x985E;&#x63A8;&#xFF0C;<code>4</code>&#x6240;&#x8655;&#x7684;&#x9023;&#x7E8C;&#x5E8F;&#x5217;&#x9577;&#x5EA6;&#x7B49;&#x65BC;&#x4EE5;<code>3</code>&#x70BA;&#x53F3;&#x908A;&#x7AEF;&#x9EDE;&#x9023;&#x7E8C;&#x5E8F;&#x5217;&#x9577;&#x5EA6;&#x52A0;&#x81EA;&#x8EAB;&#x9577;&#x5EA6;1&#x518D;&#x52A0;&#x4EE5;<code>5</code>&#x70BA;&#x5DE6;&#x908A;&#x7AEF;&#x9EDE;&#x7684;&#x9023;&#x7E8C;&#x5E8F;&#x5217;&#x9577;&#x5EA6;&#x3002;</p>
+<p>&#x5C07;&#x5B50;&#x554F;&#x984C;&#x4E4B;&#x9593;&#x7684;&#x95DC;&#x4FC2;&#x4EE5;&#x6A39;&#x7684;&#x5F62;&#x5F0F;&#x5C55;&#x73FE;&#xFF0C;&#x53EF;&#x4EE5;&#x767C;&#x73FE;&#x6709;&#x5F88;&#x591A;&#x5B50;&#x6A39;&#x662F;&#x91CD;&#x5FA9;&#x7684;&#xFF0C;&#x5373;&#x9019;&#x4E9B;&#x5B50;&#x554F;&#x984C;&#x7684;&#x89E3;&#x88AB;&#x4F9D;&#x8CF4;&#x591A;&#x6B21;&#x3002;&#x5B58;&#x5132;&#x4E9B;&#x5B50;&#x554F;&#x984C;&#x7684;&#x89E3;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x91CD;&#x5FA9;&#x8A08;&#x7B97;&#x3002;</p>
+<p><img src="../assets/images/uml/10fc692d7ad1094ca6c73bf7a487af4717df0a61.png"></p>
+<h3 id="&#x4EE3;&#x78BC;">&#x4EE3;&#x78BC;</h3>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;java&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">package io.github.rscai.leetcode.bytedance.array;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Solution1019B {
+
+  public int longestConsecutive(int[] nums) {
+    if (nums.length == 0) {
+      return 0;
+    }
+    Map&lt;Integer, Integer&gt; lengths = new HashMap&lt;&gt;(nums.length);
+    int max = 1;
+    for (int num : nums) {
+      if (lengths.containsKey(num)) {
+        continue;
+      }
+      int leftLength = lengths.getOrDefault(num - 1, 0);
+      int rightLength = lengths.getOrDefault(num + 1, 0);
+      int length = leftLength + rightLength + 1;
+      if (length &gt; max) {
+        max = length;
+      }
+      lengths.put(num, length);
+      lengths.put(num - leftLength, length);
+      lengths.put(num + rightLength, length);
+    }
+    return max;
+  }
+}<br></div></div>
+
+
+
+<p>&#x9996;&#x5148;&#xFF0C;&#x5275;&#x5EFA;&#x4E00;&#x500B;HashMap&#x7528;&#x4EE5;&#x5B58;&#x5132;&#x5B50;&#x554F;&#x984C;&#x7684;&#x89E3;&#x3002;</p>
+<p><img src="p1019.figure/debug-B1.png" alt="debug-B1"></p>
+<p>&#x7136;&#x5F8C;&#xFF0C;&#x904D;&#x6B77;&#x6578;&#x7D44;&#xFF0C;&#x9010;&#x4E00;&#x8A08;&#x7B97;&#x5B50;&#x554F;&#x984C;--&#x5305;&#x542B;&#x67D0;&#x500B;&#x5143;&#x7D20;&#x7684;&#x6700;&#x9577;&#x9023;&#x7E8C;&#x5E8F;&#x5217;&#x9577;&#x5EA6;&#x53CA;&#x908A;&#x7DE3;&#x7AEF;&#x9EDE;&#x3002;&#x82E5;&#x8A72;&#x5B50;&#x554F;&#x984C;&#x5DF2;&#x88AB;&#x8A08;&#x7B97;&#x904E;&#xFF08;HashMap&#x4E2D;&#x5DF2;&#x5305;&#x542B;&#x8A72;&#x554F;&#x984C;&#x7684;&#x89E3;&#xFF09;&#x5247;&#x7565;&#x904E;&#xFF1B;</p>
+<p><img src="p1019.figure/debug-B2.png" alt="debug-B2"></p>
+<p>&#x5426;&#x5247;&#xFF0C;&#x8A08;&#x7B97;&#x8A72;&#x5B50;&#x554F;&#x984C;&#x3002;&#x8A08;&#x7B97;&#x65B9;&#x6CD5;&#x70BA;&#xFF1A;&#x4EE5;&#x5176;&#x524D;&#x7E7C;&#x70BA;&#x908A;&#x7DE3;&#x7AEF;&#x9EDE;&#x7684;&#x9023;&#x7E8C;&#x5E8F;&#x5217;&#x9577;&#x5EA6;&#x52A0;&#x4E0A;&#x4EE5;&#x5176;&#x5F8C;&#x7E7C;&#x70BA;&#x908A;&#x7DE3;&#x7AEF;&#x9EDE;&#x7684;&#x9023;&#x7E8C;&#x5E8F;&#x5217;&#x9577;&#x5EA6;&#x518D;&#x52A0;&#x4E0A;&#x81EA;&#x8EAB;&#x9577;&#x5EA6;1&#x3002;</p>
+<p><img src="p1019.figure/debug-B3.png" alt="debug-B3"></p>
+<p>&#x5C07;&#x5B50;&#x554F;&#x984C;&#x89E3;&#x5B58;&#x5132;&#x8D77;&#x4F86;&#x3002;&#x540C;&#x6642;&#x5F97;&#x5230;&#x4E86;&#x8A72;&#x9EDE;&#x6240;&#x8655;&#x6700;&#x9577;&#x9023;&#x7E8C;&#x5E8F;&#x5217;&#x7684;&#x5DE6;&#x53F3;&#x908A;&#x7DE3;&#x9EDE;&#x7684;&#x89E3;&#xFF0C;&#x540C;&#x6642;&#x4E5F;&#x5B58;&#x5132;&#x8D77;&#x4F86;&#x3002;&#x9023;&#x7E8C;&#x5E8F;&#x5217;&#x4E4B;&#x9593;&#x5B58;&#x5728;&#x4E92;&#x76F8;&#x5305;&#x542B;&#x95DC;&#x4FC2;&#xFF0C;&#x5982;<code>[1, 2, 3]</code>&#x5305;&#x542B;<code>[1, 2]</code>&#x3002;</p>
+<p><img src="p1019.figure/debug-B5.png" alt="debug-B5"></p>
+<p>&#x5728;&#x8A08;&#x7B97;&#x5B50;&#x554F;&#x984C;&#x7684;&#x540C;&#x6642;&#xFF0C;&#x5C0B;&#x627E;&#x6700;&#x9577;&#x9023;&#x7E8C;&#x5B50;&#x5E8F;&#x5217;&#x3002;</p>
+<p><img src="p1019.figure/debug-B4.png" alt="debug-B4"></p>
+<h3 id="&#x8907;&#x96DC;&#x5EA6;&#x5206;&#x6790;">&#x8907;&#x96DC;&#x5EA6;&#x5206;&#x6790;</h3>
+<h4 id="&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;">&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;</h4>
+<p>&#x672C;&#x6F14;&#x7B97;&#x6CD5;&#x7947;&#x904D;&#x6B77;&#x4E86;&#x4E00;&#x6B21;&#x6578;&#x7D44;&#xFF0C;HashMap&#x7684;&#x8B80;&#x5BEB;&#x64CD;&#x4F5C;&#x90FD;&#x662F;&#x5E38;&#x6578;&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;&#x3002;&#x6240;&#x4EE5;&#xFF1A;</p>
+<p><script type="math/tex; mode=display">
+\begin{aligned}
+C_{time} &= \mathcal{O}(n) + \mathcal{O}(1) \\
+&= \mathcal{O}(n)
+\end{aligned}
+</script></p>
+<h4 id="&#x7A7A;&#x9593;&#x8907;&#x96DC;&#x5EA6;">&#x7A7A;&#x9593;&#x8907;&#x96DC;&#x5EA6;</h4>
+<p>&#x5047;&#x8A2D;&#x6578;&#x7D44;&#x9577;&#x5EA6;&#x70BA;<script type="math/tex; ">n</script>&#xFF0C;HashMap&#x6700;&#x591A;&#x4FDD;&#x5B58;<script type="math/tex; ">n</script>&#x500B;&#x9375;&#x503C;&#x5C0D;&#x3002;&#x7A7A;&#x9593;&#x8907;&#x96DC;&#x5EA6;&#x70BA;<script type="math/tex; ">\mathcal{O}(n)</script>&#x3002;</p>
+<h2 id="&#x53C3;&#x8003;">&#x53C3;&#x8003;</h2>
+<ul>
+<li><a href="https://zh.wikipedia.org/wiki/&#x5FEB;&#x901F;&#x6392;&#x5E8F;" target="_blank">&#x5FEB;&#x901F;&#x6392;&#x5E8F;</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="p1018.html" class="navigation navigation-prev " aria-label="Previous page: 數組中的第K個最大元素">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="p1021.html" class="navigation navigation-next " aria-label="Next page: 第k個排列">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"最長連續序列","level":"1.3.6","depth":2,"next":{"title":"第k個排列","level":"1.3.7","depth":2,"path":"array/p1021.md","ref":"array/p1021.md","articles":[]},"previous":{"title":"數組中的第K個最大元素","level":"1.3.5","depth":2,"path":"array/p1018.md","ref":"array/p1018.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock","ace","uml","mathjax-update-cdn","collapsible-menu-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ace":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"uml":{"format":"png","nailgun":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"monokai","unindent":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"mathjax-update-cdn":{"forceSVG":false,"version":"2.7.1"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"collapsible-menu-ex":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh_TR","gitbook":"*"},"file":{"path":"array/p1019.md","mtime":"2019-08-03T06:39:11.464Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-03T06:45:08.417Z"},"basePath":"..","book":{"language":"zh_TR"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mathjax-update-cdn/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-collapsible-menu-ex/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

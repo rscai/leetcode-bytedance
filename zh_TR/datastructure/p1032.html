@@ -1,0 +1,1112 @@
+
+<!DOCTYPE HTML>
+<html lang="zh_TR" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>LRU緩存機制 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="p1033.html" />
+    
+    
+    <link rel="prev" href="p1049.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介紹
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../string.html">
+            
+                <a href="../string.html">
+            
+                    
+                    排戰字符串
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../string/p1012.html">
+            
+                <a href="../string/p1012.html">
+            
+                    
+                    無重復字符的最大子串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../string/p1014.html">
+            
+                <a href="../string/p1014.html">
+            
+                    
+                    最長公共前綴
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../string/p1016.html">
+            
+                <a href="../string/p1016.html">
+            
+                    
+                    字符串的排列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../string/p1015.html">
+            
+                <a href="../string/p1015.html">
+            
+                    
+                    字符串相乘
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../string/p1011.html">
+            
+                <a href="../string/p1011.html">
+            
+                    
+                    翻轉字符串裡的單詞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../string/p1013.html">
+            
+                <a href="../string/p1013.html">
+            
+                    
+                    簡化路徑
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../string/p1044.html">
+            
+                <a href="../string/p1044.html">
+            
+                    
+                    復原IP地址
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../array.html">
+            
+                <a href="../array.html">
+            
+                    
+                    數組與排序
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../array/p1020.html">
+            
+                <a href="../array/p1020.html">
+            
+                    
+                    三數之和
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../array/p1034.html">
+            
+                <a href="../array/p1034.html">
+            
+                    
+                    島嶼的最大面積
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../array/p1017.html">
+            
+                <a href="../array/p1017.html">
+            
+                    
+                    搜索旋轉排序數組
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../array/p1035.html">
+            
+                <a href="../array/p1035.html">
+            
+                    
+                    最長連續遞增序列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../array/p1018.html">
+            
+                <a href="../array/p1018.html">
+            
+                    
+                    數組中的第K個最大元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../array/p1019.html">
+            
+                <a href="../array/p1019.html">
+            
+                    
+                    最長連續序列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../array/p1021.html">
+            
+                <a href="../array/p1021.html">
+            
+                    
+                    第k個排列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../array/p1036.html">
+            
+                <a href="../array/p1036.html">
+            
+                    
+                    朋友圈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../array/p1046.html">
+            
+                <a href="../array/p1046.html">
+            
+                    
+                    合併區間
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../array/p1047.html">
+            
+                <a href="../array/p1047.html">
+            
+                    
+                    接雨水
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../linktree.html">
+            
+                <a href="../linktree.html">
+            
+                    
+                    鏈表與樹
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../linktree/p1048.html">
+            
+                <a href="../linktree/p1048.html">
+            
+                    
+                    合併兩個有序鏈表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../linktree/p1038.html">
+            
+                <a href="../linktree/p1038.html">
+            
+                    
+                    反轉鏈表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../linktree/p1022.html">
+            
+                <a href="../linktree/p1022.html">
+            
+                    
+                    兩數相加
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../linktree/p1040.html">
+            
+                <a href="../linktree/p1040.html">
+            
+                    
+                    排序鏈表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../linktree/p1023.html">
+            
+                <a href="../linktree/p1023.html">
+            
+                    
+                    環形鏈表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../linktree/p1024.html">
+            
+                <a href="../linktree/p1024.html">
+            
+                    
+                    相交鏈表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../linktree/p1025.html">
+            
+                <a href="../linktree/p1025.html">
+            
+                    
+                    合併K個排序鏈表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../linktree/p1026.html">
+            
+                <a href="../linktree/p1026.html">
+            
+                    
+                    二叉樹的最近公共祖先
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../linktree/p1027.html">
+            
+                <a href="../linktree/p1027.html">
+            
+                    
+                    二叉樹的鋸齒形層次遍歷
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../dynamic.html">
+            
+                <a href="../dynamic.html">
+            
+                    
+                    動態或貪心
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../dynamic/p1042.html">
+            
+                <a href="../dynamic/p1042.html">
+            
+                    
+                    買賣股票的最佳時機
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../dynamic/p1043.html">
+            
+                <a href="../dynamic/p1043.html">
+            
+                    
+                    買賣股票的最佳時機 II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../dynamic/p1028.html">
+            
+                <a href="../dynamic/p1028.html">
+            
+                    
+                    最大正方形
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../dynamic/p1029.html">
+            
+                <a href="../dynamic/p1029.html">
+            
+                    
+                    最大子序和
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../dynamic/p1030.html">
+            
+                <a href="../dynamic/p1030.html">
+            
+                    
+                    三⻆形最小路徑和
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../dynamic/p1031.html">
+            
+                <a href="../dynamic/p1031.html">
+            
+                    
+                    俄羅斯套娃信封問題
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../datastructure.html">
+            
+                <a href="../datastructure.html">
+            
+                    
+                    數據結構
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="p1049.html">
+            
+                <a href="p1049.html">
+            
+                    
+                    最小棧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.2" data-path="p1032.html">
+            
+                <a href="p1032.html">
+            
+                    
+                    LRU緩存機制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="p1033.html">
+            
+                <a href="p1033.html">
+            
+                    
+                    全O(1)的數據結構
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../bonus.html">
+            
+                <a href="../bonus.html">
+            
+                    
+                    拓展練習
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../bonus/p1045.html">
+            
+                <a href="../bonus/p1045.html">
+            
+                    
+                    x的平方根
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../bonus/p1037.html">
+            
+                <a href="../bonus/p1037.html">
+            
+                    
+                    UTF-8 編碼驗證
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../bonus/p1039.html">
+            
+                <a href="../bonus/p1039.html">
+            
+                    
+                    第二高的薪水
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >LRU緩存機制</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="lru-&#x7DE9;&#x5B58;&#x6A5F;&#x5236;">LRU &#x7DE9;&#x5B58;&#x6A5F;&#x5236;</h1>
+<h2 id="&#x984C;&#x76EE;">&#x984C;&#x76EE;</h2>
+<blockquote>
+<p>&#x904B;&#x7528;&#x4F60;&#x6240;&#x638C;&#x63E1;&#x7684;&#x6578;&#x64DA;&#x7D50;&#x69CB;&#xFF0C;&#x8A2D;&#x8A08;&#x548C;&#x5BE6;&#x73FE;&#x4E00;&#x500B; LRU (&#x6700;&#x8FD1;&#x6700;&#x5C11;&#x4F7F;&#x7528;) &#x7DE9;&#x5B58;&#x6A5F;&#x5236;&#x3002;&#x5B83;&#x61C9;&#x8A72;&#x652F;&#x6301;&#x4EE5;&#x4E0B;&#x64CD;&#x4F5C;&#xFF1A; &#x7372;&#x53D6;&#x6578;&#x64DA; <code>get</code> &#x548C; &#x5BEB;&#x5165;&#x6578;&#x64DA; <code>put</code> &#x3002;</p>
+<p>&#x7372;&#x53D6;&#x6578;&#x64DA; <code>get(key)</code> - &#x5982;&#x679C;&#x5BC6;&#x9470; (key) &#x5B58;&#x5728;&#x65BC;&#x7DE9;&#x5B58;&#x4E2D;&#xFF0C;&#x5247;&#x7372;&#x53D6;&#x5BC6;&#x9470;&#x7684;&#x503C;&#xFF08;&#x7E3D;&#x662F;&#x6B63;&#x6578;&#xFF09;&#xFF0C;&#x5426;&#x5247;&#x8FD4;&#x56DE; -1&#x3002;
+&#x5BEB;&#x5165;&#x6578;&#x64DA; <code>put(key, value)</code> - &#x5982;&#x679C;&#x5BC6;&#x9470;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x5247;&#x5BEB;&#x5165;&#x5176;&#x6578;&#x64DA;&#x503C;&#x3002;&#x7576;&#x7DE9;&#x5B58;&#x5BB9;&#x91CF;&#x9054;&#x5230;&#x4E0A;&#x9650;&#x6642;&#xFF0C;&#x5B83;&#x61C9;&#x8A72;&#x5728;&#x5BEB;&#x5165;&#x65B0;&#x6578;&#x64DA;&#x4E4B;&#x524D;&#x522A;&#x9664;&#x6700;&#x8FD1;&#x6700;&#x5C11;&#x4F7F;&#x7528;&#x7684;&#x6578;&#x64DA;&#x503C;&#xFF0C;&#x5F9E;&#x800C;&#x70BA;&#x65B0;&#x7684;&#x6578;&#x64DA;&#x503C;&#x7559;&#x51FA;&#x7A7A;&#x9593;&#x3002;</p>
+<p><strong>&#x9032;&#x968E;:</strong></p>
+<p>&#x4F60;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x5728; O(1) &#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;&#x5167;&#x5B8C;&#x6210;&#x9019;&#x5169;&#x7A2E;&#x64CD;&#x4F5C;&#xFF1F;</p>
+<p><strong>&#x793A;&#x4F8B;:</strong></p>
+<pre><code>LRUCache cache = new LRUCache( 2 /* &#x7DE9;&#x5B58;&#x5BB9;&#x91CF; */ );
+
+cache.put(1, 1);
+cache.put(2, 2);
+cache.get(1); // &#x8FD4;&#x56DE; 1
+cache.put(3, 3); // &#x8A72;&#x64CD;&#x4F5C;&#x6703;&#x4F7F;&#x5F97;&#x5BC6;&#x9470; 2 &#x4F5C;&#x5EE2;
+cache.get(2); // &#x8FD4;&#x56DE; -1 (&#x672A;&#x627E;&#x5230;)
+cache.put(4, 4); // &#x8A72;&#x64CD;&#x4F5C;&#x6703;&#x4F7F;&#x5F97;&#x5BC6;&#x9470; 1 &#x4F5C;&#x5EE2;
+cache.get(1); // &#x8FD4;&#x56DE; -1 (&#x672A;&#x627E;&#x5230;)
+cache.get(3); // &#x8FD4;&#x56DE; 3
+cache.get(4); // &#x8FD4;&#x56DE; 4
+</code></pre></blockquote>
+<h2 id="&#x6563;&#x5217;&#x8868;&#x548C;&#x96D9;&#x5411;&#x93C8;&#x8868;&#x7D44;&#x5408;">&#x6563;&#x5217;&#x8868;&#x548C;&#x96D9;&#x5411;&#x93C8;&#x8868;&#x7D44;&#x5408;</h2>
+<p>&#x4E00;&#x500B;LRU&#x7DE9;&#x5B58;&#x9700;&#x5BE6;&#x73FE;&#x5169;&#x500B;&#x7279;&#x6027;&#xFF0C;&#x4E00;&#x662F;&#x5FEB;&#x901F;&#x6309;&#x9375;&#x67E5;&#x627E;&#x503C;&#xFF0C;&#x4E8C;&#x662F;&#x5C07;&#x503C;&#x6216;&#x9375;&#x6309;&#x6700;&#x8FD1;&#x4F7F;&#x7528;&#x60C5;&#x6CC1;&#x6392;&#x5E8F;&#x4EE5;&#x4FBF;&#x5FEB;&#x901F;&#x83B7;&#x53D6;&#x6700;&#x8FD1;&#x6700;&#x5C11;&#x4F7F;&#x7528;&#x7684;&#x503C;&#x6216;&#x9375;&#x3002;</p>
+<p>&#x5E38;&#x7528;&#x7684;&#x6578;&#x64DA;&#x7D50;&#x69CB;&#x4E2D;&#xFF0C;&#x6563;&#x5217;&#x8868;&#x53EF;&#x4EE5;&#x975E;&#x5E38;&#x9AD8;&#x6548;&#x5730;&#x5BE6;&#x73FE;&#x300C;&#x6309;&#x9375;&#x67E5;&#x627E;&#x503C;&#x300D;&#xFF1B;&#x96D9;&#x5411;&#x93C8;&#x8868;&#x53EF;&#x4EE5;&#x9AD8;&#x6548;&#x5730;&#x5BE6;&#x73FE;&#x6709;&#x5E8F;&#x5E8F;&#x5217;&#xFF0C;&#x540C;&#x6642;&#x9AD8;&#x6548;&#x5730;&#x63D2;&#x5165;&#x3001;&#x79FB;&#x9664;&#x5143;&#x7D20;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x6211;&#x5011;&#x53EF;&#x4EE5;&#x7D44;&#x5408;&#x6563;&#x5217;&#x8868;&#x548C;&#x96D9;&#x5411;&#x93C8;&#x8868;&#x5BE6;&#x73FE;LRU&#x7DE9;&#x5B58;&#x3002;</p>
+<p>&#x8209;&#x500B;&#x5217;&#x5B50;&#xFF0C;&#x5275;&#x5EFA;&#x4E00;&#x500B;&#x6563;&#x5217;&#x8868;&#x548C;&#x96D9;&#x5411;&#x93C8;&#x8868;&#x3002;&#x6563;&#x5217;&#x8868;&#x521D;&#x59CB;&#x6642;&#x70BA;&#x7A7A;&#x3002;&#x96D9;&#x5411;&#x93C8;&#x8868;&#x521D;&#x59CB;&#x6642;&#x4E5F;&#x70BA;&#x7A7A;&#xFF0C;&#x540C;&#x6642;&#x7DAD;&#x8B77;&#x5206;&#x5225;&#x6307;&#x5411;&#x93C8;&#x8868;&#x982D;&#x5C3E;&#x7684;&#x5169;&#x500B;&#x5F15;&#x7528;&#x3002;</p>
+<p><img src="../assets/images/uml/965594507a9f4541654b338655ed51295e278283.png"></p>
+<p>&#x5C07;&#x9375;&#x503C;&#x5C0D;<code>(1,1)</code>&#x5B58;&#x5165;&#x7DE9;&#x5B58;&#x6642;&#xFF0C;&#x5148;&#x5C07;&#x5176;&#x5B58;&#x5165;&#x6563;&#x5217;&#x8868;&#x5C0D;&#x61C9;&#x7684;&#x6876;&#x4E2D;&#xFF0C;&#x518D;&#x5C07;&#x9375;<code>1</code>&#x52A0;&#x5230;&#x93C8;&#x8868;&#x7684;&#x982D;&#x7AEF;&#x3002;</p>
+<p><img src="../assets/images/uml/e060a14422c591fb931bfa315fd17a7652cea6d8.png"></p>
+<p>&#x5C07;&#x9375;&#x503C;&#x5C0D;<code>(2,2)</code>&#x5B58;&#x5165;&#x7DE9;&#x5B58;&#x6642;&#xFF0C;&#x5148;&#x5C07;&#x5176;&#x5B58;&#x5165;&#x6563;&#x5217;&#x8868;&#x5C0D;&#x61C9;&#x7684;&#x6876;&#x4E2D;&#xFF0C;&#x518D;&#x5C07;&#x9375;<code>2</code>&#x52A0;&#x5230;&#x93C8;&#x8868;&#x7684;&#x982D;&#x7AEF;&#x3002;</p>
+<p><img src="../assets/images/uml/4526dfa464ea49fb1484bd1d0cacc1e635338591.png"></p>
+<p>&#x5C07;&#x9375;&#x503C;&#x5C0D;<code>(3,3)</code>&#x5B58;&#x5165;&#x7DE9;&#x5B58;&#x6642;&#xFF0C;&#x5148;&#x5C07;&#x5176;&#x5B58;&#x5165;&#x6563;&#x5217;&#x8868;&#x5C0D;&#x61C9;&#x7684;&#x6876;&#x4E2D;&#xFF0C;&#x518D;&#x5C07;&#x9375;<code>3</code>&#x52A0;&#x5230;&#x93C8;&#x8868;&#x7684;&#x982D;&#x7AEF;&#x3002;&#x82E5;&#x7DE9;&#x5B58;&#x7684;&#x5BB9;&#x91CF;&#x70BA;<code>2</code>&#xFF0C;&#x5247;&#x6B64;&#x6642;&#x7DE9;&#x5B58;&#x4E2D;&#x7684;&#x6578;&#x64DA;&#x5DF2;&#x8D85;&#x904E;&#x4E86;&#x5BB9;&#x91CF;&#x9650;&#x5236;&#x3002;&#x93C8;&#x8868;&#x5C3E;&#x7AEF;&#x5143;&#x7D20;&#x5373;&#x6700;&#x8FD1;&#x6700;&#x5C11;&#x4F7F;&#x7528;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x5C07;&#x5176;&#x5F9E;&#x93C8;&#x8868;&#x4E2D;&#x79FB;&#x9664;&#xFF0C;&#x540C;&#x6642;&#x5F9E;&#x6563;&#x5217;&#x8868;&#x4E2D;&#x79FB;&#x9664;&#x76F8;&#x61C9;&#x7684;&#x5143;&#x7D20;&#x3002;</p>
+<p><img src="../assets/images/uml/4df8c85279a24a646de24883e84af2ce98ef5f50.png"></p>
+<p><img src="../assets/images/uml/73c4761ae95a77516315a7e78f936bb440e0ac69.png"></p>
+<h3 id="&#x4EE3;&#x78BC;&#x5BE6;&#x73FE;">&#x4EE3;&#x78BC;&#x5BE6;&#x73FE;</h3>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;java&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">package io.github.rscai.leetcode.bytedance.datastructure;
+
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+
+public class Solution1032A {
+
+  public static final int NOT_FOUND = -1;
+  private int capacity;
+  private int usedCapacity;
+  private Map&lt;Integer, Integer&gt; data;
+  private List&lt;Integer&gt; recentUsed;
+
+  public Solution1032A(int capacity) {
+    this.capacity = capacity;
+    data = new HashMap&lt;&gt;();
+    recentUsed = new LinkedList&lt;&gt;();
+  }
+
+  public int get(int key) {
+    if (data.containsKey(key)) {
+      moveToRecentUsedHead(key);
+      return data.get(key);
+    } else {
+      return NOT_FOUND;
+    }
+  }
+
+  public void put(int key, int value) {
+    if (null == data.put(key, value)) {
+      usedCapacity++;
+    }
+    moveToRecentUsedHead(key);
+    dropIfNeed();
+  }
+
+  private void moveToRecentUsedHead(int key) {
+    recentUsed.remove(Integer.valueOf(key));
+    recentUsed.add(0, key);
+  }
+
+  private void dropIfNeed() {
+    if (usedCapacity &gt; capacity) {
+      int droppedKey = recentUsed.remove(recentUsed.size() - 1);
+      data.remove(droppedKey);
+      usedCapacity--;
+    }
+  }
+}<br></div></div>
+
+
+
+<p>&#x4F7F;&#x7528;JDK&#x63D0;&#x4F9B;&#x7684;<code>HashMap</code>&#x5BE6;&#x73FE;&#x6563;&#x5217;&#x8868;&#xFF0C;&#x518D;&#x4F7F;&#x7528;JDK&#x63D0;&#x4F9B;&#x7684;<code>LinkedList</code>&#x5BE6;&#x73FE;&#x96D9;&#x5411;&#x93C8;&#x8868;&#x3002;</p>
+<p><img src="p1032.figure/debug-A1.png" alt="debug-A1"></p>
+<p><code>get</code>&#x76F4;&#x63A5;&#x4EE5;<code>HashMap</code>&#x7684;<code>get</code>&#x5BE6;&#x73FE;&#xFF0C;&#x540C;&#x6642;&#x5C07;&#x8A2A;&#x554F;&#x7684;&#x9375;&#x79FB;&#x5230;&#x93C8;&#x8868;&#x7684;&#x982D;&#x7AEF;&#x3002;</p>
+<p><img src="p1032.figure/debug-A2.png" alt="debug-A2"></p>
+<p><code>put</code>&#x76F4;&#x63A5;&#x8ABF;&#x7528;<code>HashMap</code>&#x7684;<code>put</code>&#xFF0C;&#x540C;&#x6642;&#x5C07;&#x51FA;&#x73FE;&#x7684;&#x9375;&#x79FB;&#x5230;&#x93C8;&#x8868;&#x7684;&#x982D;&#x7AEF;&#xFF0C;&#x82E5;&#x5B58;&#x5132;&#x7684;&#x5143;&#x7D20;&#x8D85;&#x904E;&#x4E86;&#x5BB9;&#x91CF;&#x5247;&#x5C07;&#x93C8;&#x8868;&#x5C3E;&#x7AEF;&#x7684;&#x5143;&#x7D20;&#x53CA;&#x6240;&#x5C0D;&#x61C9;&#x7684;&#x503C;&#x79FB;&#x9664;&#x3002;</p>
+<p><img src="p1032.figure/debug-A3.png" alt="debug-A3"></p>
+<p>&#x5C07;&#x67D0;&#x500B;&#x503C;&#x79FB;&#x81F3;&#x93C8;&#x8868;&#x982D;&#x7AEF;&#x5206;&#x70BA;&#x5169;&#x6B65;&#xFF0C;&#x5148;&#x5C07;&#x5176;&#x5F9E;&#x539F;&#x4F4D;&#x7F6E;&#x79FB;&#x9664;&#xFF0C;&#x518D;&#x5C07;&#x5176;&#x63D2;&#x5165;&#x81F3;&#x982D;&#x7AEF;&#x3002;&#x9019;&#x5169;&#x6B65;&#x5206;&#x5225;&#x4F7F;&#x7528;<code>LinkedList</code>&#x7684;<code>remove(Object obj)</code>&#x548C;<code>add(int index, E element)</code>&#x5BE6;&#x73FE;&#x3002;</p>
+<p><img src="p1032.figure/debug-A4.png" alt="debug-A4"></p>
+<p>&#x82E5;&#x6240;&#x5B58;&#x5143;&#x7D20;&#x8D85;&#x904E;&#x4E86;&#x5BB9;&#x91CF;&#x9650;&#x5236;&#xFF0C;&#x5247;&#x9700;&#x79FB;&#x9664;&#x5143;&#x7D20;&#x3002;&#x93C8;&#x8868;&#x5C3E;&#x7AEF;&#x5143;&#x7D20;&#x5373;&#x6700;&#x8FD1;&#x6700;&#x5C11;&#x4F7F;&#x7528;&#x5143;&#x7D20;&#xFF0C;&#x5C07;&#x5176;&#x79FB;&#x9664;&#xFF0C;&#x540C;&#x6642;&#x5F9E;&#x6563;&#x5217;&#x8868;&#x4E2D;&#x79FB;&#x9664;&#x5176;&#x6240;&#x5C0D;&#x61C9;&#x7684;&#x503C;&#x3002;</p>
+<p><img src="p1032.figure/debug-A5.png" alt="debug-A5"></p>
+<h3 id="&#x8907;&#x96DC;&#x5EA6;&#x5206;&#x6790;">&#x8907;&#x96DC;&#x5EA6;&#x5206;&#x6790;</h3>
+<h4 id="&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;">&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;</h4>
+<p><code>get</code>&#x64CD;&#x4F5C;&#x5206;&#x5225;&#x8ABF;&#x7528;&#x4E86;&#x4E00;&#x6B21;<code>HashMap.containsKey, HashMap.get</code>&#x548C;<code>moveToRecentUsedHead</code>&#x3002;<code>HashMap.containsKey</code>&#x548C;<code>HashMap.get</code>&#x90FD;&#x662F;&#x5E38;&#x6578;&#x8907;&#x96DC;&#x5EA6;&#x64CD;&#x4F5C;&#x3002;<code>moveToRecentUsedHead</code>&#x9700;&#x8981;&#x904D;&#x6B77;&#x96D9;&#x5411;&#x93C8;&#x8868;&#x4EE5;&#x627E;&#x5230;&#x76EE;&#x6A19;&#x5143;&#x7D20;&#x518D;&#x5C07;&#x5176;&#x63D2;&#x81F3;&#x982D;&#x7AEF;&#xFF0C;&#x5176;&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;&#x70BA;<script type="math/tex; ">\mathcal{O}(n)</script>&#x3002;<code>get</code>&#x6574;&#x9AD4;&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;&#x70BA;<script type="math/tex; ">\mathcal{O}(n)</script>&#x3002;</p>
+<p><code>put</code>&#x64CD;&#x4F5C;&#x5206;&#x5225;&#x8ABF;&#x7528;&#x4E86;&#x4E00;&#x6B21;<code>HashMap.put, moveToRecentUsedHead</code>&#x548C;<code>dropIfNeed</code>&#x3002;<code>HashMap.put</code>&#x662F;&#x5E38;&#x6578;&#x8907;&#x96DC;&#x5EA6;&#x64CD;&#x4F5C;&#x3002;<code>moveToRecentUsedHead</code>&#x7D93;&#x4E0A;&#x8FF0;&#x5206;&#x6790;&#x5176;&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;&#x70BA;<script type="math/tex; ">\mathcal{O}(n)</script>&#x3002;<code>dropIfNeed</code>&#x5206;&#x5225;&#x8ABF;&#x7528;&#x4E86;&#x4E00;&#x6B21;<code>LinkedList.remove(int index)</code>&#x548C;<code>HashMap.remove(K key)</code>&#xFF0C;&#x5B83;&#x5011;&#x90FD;&#x662F;&#x5E38;&#x6578;&#x8907;&#x96DC;&#x5EA6;&#x64CD;&#x4F5C;&#x3002;&#x6240;&#x4EE5;<code>put</code>&#x64CD;&#x4F5C;&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;&#x70BA;<script type="math/tex; ">\mathcal{O}(n)</script>&#x3002;</p>
+<h4 id="&#x7A7A;&#x9593;&#x8907;&#x96DC;&#x5EA6;">&#x7A7A;&#x9593;&#x8907;&#x96DC;&#x5EA6;</h4>
+<p>&#x672C;&#x5BE6;&#x73FE;&#x4F7F;&#x7528;&#x4E86;&#x4E00;&#x500B;<code>HashMap</code>&#x548C;&#x4E00;&#x500B;<code>LinkedList</code>&#x3002;&#x5047;&#x8A2D;&#x6578;&#x64DA;&#x91CF;&#xFF08;&#x5373;&#x7DE9;&#x5B58;&#x5BB9;&#x91CF;&#xFF09;&#x70BA;<script type="math/tex; ">n</script>&#xFF0C;&#x5247;&#x7A7A;&#x9593;&#x8907;&#x96DC;&#x5EA6;&#x70BA;<script type="math/tex; ">\mathcal{O}(n)</script>&#x3002;</p>
+<h2 id="&#x591A;&#x91CD;&#x5F15;&#x7528;">&#x591A;&#x91CD;&#x5F15;&#x7528;</h2>
+<p>&#x4E0A;&#x9762;&#x7684;&#x6578;&#x64DA;&#x7D50;&#x69CB;&#x7531;&#x5169;&#x500B;&#x7368;&#x7ACB;&#x7684;&#x6563;&#x5217;&#x8868;&#x548C;&#x96D9;&#x5411;&#x93C8;&#x8981;&#x7D44;&#x6210;&#xFF0C;&#x66F4;&#x65B0;&#x93C8;&#x8868;&#x6642;&#x9700;&#x8981;&#x904D;&#x6B77;&#x6574;&#x500B;&#x93C8;&#x8868;&#x627E;&#x5230;&#x76EE;&#x6A19;&#x5143;&#x7D20;&#x518D;&#x5C07;&#x5176;&#x79FB;&#x81F3;&#x982D;&#x90E8;&#x3002;&#x82E5;&#x53EA;&#x4FDD;&#x5B58;&#x4E00;&#x4EFD;&#x5143;&#x7D20;&#x7D20;&#xFF0C;&#x524D;&#x5217;&#x8868;&#x548C;&#x96D9;&#x5411;&#x93C8;&#x8868;&#x90FD;&#x50C5;&#x4FDD;&#x5B58;&#x6307;&#x5411;&#x540C;&#x4E00;&#x4EFD;&#x5143;&#x7D20;&#x7684;&#x5F15;&#x7528;&#xFE55;&#x5247;&#x5F9E;&#x6563;&#x5217;&#x8868;&#x4E2D;&#x8B80;&#x53D6;&#x5143;&#x7D20;&#x6642;&#xFF0C;&#x5373;&#x540C;&#x6642;&#x83B7;&#x5F97;&#x4E86;&#x5176;&#x5728;&#x96D9;&#x5411;&#x93C8;&#x8868;&#x4E2D;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</p>
+<p>&#x8209;&#x500B;&#x4F8B;&#x5B50;&#xFF0C;&#x6309;&#x9806;&#x5E8F;&#x5BEB;&#x5165;&#x4E09;&#x500B;&#x9375;&#x503C;&#x5C0D;<code>1:1, 2:2, 3:3</code>&#x3002;&#x4E09;&#x500B;&#x9375;&#x503C;&#x5206;&#x5225;&#x5B58;&#x65BC;&#x6563;&#x5217;&#x8868;&#x5C0D;&#x61C9;&#x4F4D;&#x7F6E;&#xFF0C;&#x540C;&#x6642;&#x6BCF;&#x500B;&#x9375;&#x503C;&#x5C0D;&#x7BC0;&#x9EDE;&#x6301;&#x6709;&#x524D;&#x5411;&#x3001;&#x5F8C;&#x5411;&#x5F15;&#x7528;&#xFF0C;&#x5206;&#x5225;&#x6307;&#x5411;&#x96D9;&#x5411;&#x93C8;&#x8868;&#x4E2D;&#x7684;&#x524D;&#x5411;&#x548C;&#x5F8C;&#x5411;&#x7BC0;&#x9EDE;&#x3002;</p>
+<p><img src="../assets/images/uml/d12dad807a629da0be81d9641b6d987a2cf8a048.png"></p>
+<p>&#x6B64;&#x6642;&#x82E5;<code>get(2)</code>&#xFF0C;&#x5247;&#x5148;&#x5F9E;&#x6563;&#x5217;&#x8868;&#x4E2D;&#x76F4;&#x63A5;&#x8A2A;&#x554F;&#x9375;&#x503C;&#x5C0D;<code>2:2</code>&#xFF0C;&#x7136;&#x5F8C;&#x5C07;&#x5176;&#x79FB;&#x5230;&#x96D9;&#x5411;&#x93C8;&#x8868;&#x7684;&#x982D;&#x90E8;&#x3002;&#x56E0;&#x70BA;&#x6563;&#x5217;&#x8868;&#x548C;&#x96D9;&#x5411;&#x93C8;&#x8868;&#x5F15;&#x7528;&#x7684;&#x662F;&#x540C;&#x4E00;&#x500B;&#x7BC0;&#x9EDE;&#xFF0C;&#x6240;&#x4EE5;&#x7121;&#x9700;&#x904D;&#x6B77;&#x93C8;&#x8868;&#x5C31;&#x53EF;&#x4EE5;&#x83B7;&#x5F97;&#x5176;&#x5728;&#x96D9;&#x5411;&#x93C8;&#x8868;&#x4E2D;&#x7684;&#x7BC0;&#x9EDE;&#x3002;&#x800C;&#x5C07;&#x96D9;&#x5411;&#x93C8;&#x8868;&#x4E2D;&#x5DF2;&#x77E5;&#x7BC0;&#x9EDE;&#x79FB;&#x5230;&#x982D;&#x90E8;&#x50C5;&#x800C;&#x5DF2;&#x8B8A;&#x81EA;&#x8EAB;&#x5176;&#x524D;&#x5F8C;&#x7BC0;&#x9EDE;&#x7684;&#x524D;&#x5411;&#x3001;&#x5F8C;&#x5411;&#x5F15;&#x7528;&#x3002;</p>
+<p><img src="../assets/images/uml/4214cb37070843ac125a0dbc81965a7b81d77d87.png"></p>
+<h3 id="&#x4EE3;&#x78BC;&#x5BE6;&#x73FE;">&#x4EE3;&#x78BC;&#x5BE6;&#x73FE;</h3>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:false,&quot;lang&quot;:&quot;java&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">package io.github.rscai.leetcode.bytedance.datastructure;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Solution1032B {
+
+  private class Node {
+
+    int key;
+    int value;
+    Node previous;
+    Node next;
+
+    public Node() {
+
+    }
+
+    public Node(int key, int value) {
+      this.key = key;
+      this.value = value;
+    }
+
+  }
+
+  public static final int NOT_FOUND = -1;
+  private int capacity;
+  private int usedCapacity;
+  private Map&lt;Integer, Node&gt; data;
+  private Node head;
+  private Node tail;
+
+  public Solution1032B(int capacity) {
+    this.capacity = capacity;
+    data = new HashMap&lt;&gt;();
+  }
+
+  public int get(int key) {
+    if (data.containsKey(key)) {
+      Node dataNode = data.get(key);
+      moveToRecentUsedHead(dataNode);
+      return dataNode.value;
+    } else {
+      return NOT_FOUND;
+    }
+  }
+
+  public void put(int key, int value) {
+    if (data.containsKey(key)) {
+      Node dataNode = data.get(key);
+      dataNode.value = value;
+      moveToRecentUsedHead(dataNode);
+    } else {
+      Node dataNode = new Node(key, value);
+      data.put(key, dataNode);
+      usedCapacity++;
+      moveToRecentUsedHead(dataNode);
+      dropIfNeed();
+    }
+  }
+
+  private void moveToRecentUsedHead(Node node) {
+    if (head == node) {
+      return;
+    }
+    // remove node from link
+    removeFromLink(node);
+    // add node to head
+    if (head == null) {
+      head = node;
+      tail = node;
+    } else {
+      head.previous = node;
+      node.next = head;
+      head = node;
+    }
+  }
+
+  private void dropIfNeed() {
+    if (usedCapacity &gt; capacity) {
+      int droppedKey = tail.key;
+      data.remove(droppedKey);
+      // remove node from link
+      removeFromLink(tail);
+      usedCapacity--;
+    }
+  }
+
+  private void removeFromLink(Node node) {
+    Node previousNode = node.previous;
+    Node nextNode = node.next;
+    if (previousNode != null) {
+      previousNode.next = node.next;
+    }
+    if (nextNode != null) {
+      nextNode.previous = previousNode;
+    }
+    if (tail == node) {
+      tail = previousNode;
+    }
+    if (head == node) {
+      head = nextNode;
+    }
+  }
+}<br></div></div>
+
+
+
+<p>&#x5B9A;&#x7FA9;&#x96D9;&#x5411;&#x93C8;&#x8868;&#x7BC0;&#x9EDE;&#xFF0C;&#x8A72;&#x7BC0;&#x9EDE;&#x9664;&#x4E86;&#x4FDD;&#x5B58;&#x503C;&#x5916;&#xFF0C;&#x800C;&#x4FDD;&#x5B58;&#x4E86;&#x524D;&#x5F8C;&#x3001;&#x5F8C;&#x5411;&#x5F15;&#x7528;&#x3002;&#x6563;&#x5217;&#x8868;<code>data</code>&#x662F;&#x4EE5;&#x6574;&#x6578;&#x70BA;&#x9375;&#xFF0C;&#x96D9;&#x5411;&#x93C8;&#x8868;&#x7BC0;&#x9EDE;&#x70BA;&#x503C;&#x7684;&#x6563;&#x5217;&#x8868;&#xFF0C;&#x9019;&#x25683;&#x4F7F;&#x7528;JDK&#x63D0;&#x4F9B;&#x7684;HashMap&#x5BE6;&#x73FE;&#x3002;&#x540C;&#x6642;&#xFF0C;&#x5275;&#x5EFA;&#x96D9;&#x5411;&#x93C8;&#x8868;&#x7684;&#x982D;&#x3001;&#x5C3E;&#x5F15;&#x7528;&#x3002;</p>
+<p><img src="p1032.figure/debug-B2.png" alt="debug-B1"></p>
+<p><code>get</code>&#x5148;&#x5F9E;&#x6563;&#x5217;&#x8868;&#x4E2D;&#x6309;&#x503C;&#x83B7;&#x53D6;&#x7BC0;&#x9EDE;&#x53CA;&#x5F9E;&#x7BC0;&#x9EDE;&#x4E2D;&#x8B80;&#x53D6;&#x503C;&#xFF0C;&#x518D;&#x5C07;&#x8A72;&#x7BC0;&#x9EDE;&#x79FB;&#x5230;&#x6700;&#x8FD1;&#x6700;&#x5C11;&#x4F7F;&#x7528;&#x96D9;&#x5411;&#x93C8;&#x8868;&#x7684;&#x982D;&#x90E8;&#x3002;</p>
+<p><img src="p1032.figure/debug-B2.png" alt="debug-B2"></p>
+<p><code>put</code>&#x8207;<code>get</code>&#x985E;&#x4F3C;&#xFF0C;&#x82E5;&#x6563;&#x5217;&#x8868;&#x5DF2;&#x6301;&#x6709;&#x8A72;&#x9375;&#xFF0C;&#x5247;<code>put</code>&#x70BA;&#x66F4;&#x65B0;&#x3002;&#x5148;&#x5F9E;&#x6563;&#x5217;&#x8868;&#x4E2D;&#x6309;&#x9375;&#x8B80;&#x53D6;&#x7BC0;&#x9EDE;&#xFF0C;&#x518D;&#x5C07;&#x65B0;&#x503C;&#x66F4;&#x65B0;&#x9032;&#x7BC0;&#x9EDE;&#xFF0C;&#x518D;&#x5C07;&#x8A72;&#x7BC0;&#x9EDE;&#x79FB;&#x5230;&#x6700;&#x8FD1;&#x6700;&#x5C11;&#x4F7F;&#x7528;&#x96D9;&#x5411;&#x93C8;&#x8868;&#x982D;&#x90E8;&#x3002;</p>
+<p>&#x82E5;&#x524D;&#x5217;&#x8868;&#x672A;&#x6301;&#x6709;&#x8A64;&#x9375;&#xFF0C;&#x5247;<code>put</code>&#x70BA;&#x63D2;&#x5165;&#x3002;&#x5148;&#x4EE5;&#x9375;&#x503C;&#x5C0D;&#x69CB;&#x9020;&#x4E00;&#x500B;&#x65B0;&#x7684;&#x7BC0;&#x9EDE;&#xFF0C;&#x518D;&#x5C07;&#x65B0;&#x7BC0;&#x9EDE;&#x63D2;&#x5165;&#x6563;&#x5217;&#x8868;&#xFF0C;&#x518D;&#x4E00;&#x5973;&#x6708;&#x6728;&#x6208;&#x65B0;&#x7BC0;&#x9EDE;&#x63D2;&#x5165;&#x81F3;&#x6700;&#x8FD1;&#x6700;&#x5C11;&#x4F7F;&#x7528;&#x96D9;&#x5411;&#x93C8;&#x8868;&#x982D;&#x90E8;&#x3002;</p>
+<p><img src="p1/32.figure/debug-B3.png" alt="debug-B3"></p>
+<p>&#x5C07;&#x4E00;&#x500B;&#x7BC0;&#x9EDE;&#x79FB;&#x81F3;&#x96D9;&#x5411;&#x93C8;&#x8868;&#x982D;&#x90E8;&#x5206;&#x5169;&#x6B65;&#xFF0C;&#x5148;&#x5C07;&#x5176;&#x5F9E;&#x539F;&#x4F4D;&#x7F6E;&#x79FB;&#x9664;&#xFF0C;&#x518D;&#x5C07;&#x5176;&#x63D2;&#x5165;&#x982D;&#x90E8;&#x3002;</p>
+<p><img src="p1032.figure/debug-B4.png" alt="debug-B4"></p>
+<p>&#x5C07;&#x4E00;&#x500B;&#x7BC0;&#x9EDE;&#x5F9E;&#x96D9;&#x5411;&#x93C8;&#x8868;&#x4E2D;&#x79FB;&#x9664;&#xFF1A;</p>
+<ul>
+<li>&#x5C07;&#x524D;&#x5411;&#x7BC0;&#x9EDE;&#x7684;&#x5F8C;&#x5411;&#x5F15;&#x7528;&#x6307;&#x5411;&#x81EA;&#x8EAB;&#x7684;&#x5F8C;&#x5411;&#x7BC0;&#x9EDE;</li>
+<li>&#x5C07;&#x5F8C;&#x5411;&#x7BC0;&#x9EDE;&#x7684;&#x524D;&#x5411;&#x5F15;&#x7528;&#x6307;&#x5411;&#x81EA;&#x8EAB;&#x7684;&#x524D;&#x5411;&#x7BC0;&#x9EDE;</li>
+<li>&#x82E5;&#x81EA;&#x8EAB;&#x662F;&#x982D;&#x90E8;&#x7BC0;&#x9EDE;&#xFF0C;&#x5247;&#x5C07;&#x982D;&#x90E8;&#x7BC0;&#x9EDE;&#x6307;&#x5411;&#x81EA;&#x8EAB;&#x5F8C;&#x5411;&#x7BC0;&#x9EDE;</li>
+<li>&#x82E5;&#x81EA;&#x8EAB;&#x662F;&#x5C3E;&#x90E8;&#x7BC0;&#x9EDE;&#xFF0C;&#x5247;&#x5C07;&#x5C3E;&#x90E8;&#x7BC0;&#x9EDE;&#x6307;&#x5411;&#x81EA;&#x8EAB;&#x524D;&#x5411;&#x7BC0;&#x9EDE;</li>
+</ul>
+<p><img src="p1032.figure/debug-B5.png" alt="debug-B5"></p>
+<p>&#x7576;LRU&#x5B58;&#x5132;&#x7684;&#x6578;&#x64DA;&#x8D85;&#x904E;&#x5BB9;&#x91CF;&#x6642;&#xFF0C;&#x8981;&#x79FB;&#x9664;&#x6700;&#x8FD1;&#x6700;&#x5C11;&#x4F7F;&#x7528;&#x7684;&#x5143;&#x7D20;&#x3002;&#x6700;&#x8FD1;&#x6700;&#x5C11;&#x4F7F;&#x7528;&#x96D9;&#x5411;&#x93C8;&#x8868;&#x7684;&#x5C3E;&#x90E8;&#x7BC0;&#x9EDE;&#x5373;&#x662F;&#x6700;&#x8FD1;&#x6700;&#x5C11;&#x4F7F;&#x7528;&#x5143;&#x7D20;&#x3002;&#x5148;&#x5C07;&#x524D;&#x5F9E;&#x6563;&#x5217;&#x8868;&#x4E2D;&#x79FB;&#x9664;&#xFF0C;&#x518D;&#x5F9E;&#x6700;&#x8FD1;&#x6700;&#x5C11;&#x4F7F;&#x7528;&#x96D9;&#x5411;&#x93C8;&#x8868;&#x4E2D;&#x79FB;&#x9664;&#x3002;</p>
+<p><img src="p1032.figure/debug-B6.png" alt="debug-B6"></p>
+<h3 id="&#x8907;&#x96DC;&#x5EA6;&#x5206;&#x6790;">&#x8907;&#x96DC;&#x5EA6;&#x5206;&#x6790;</h3>
+<h4 id="&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;">&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;</h4>
+<p><code>get</code>&#x8ABF;&#x7528;&#x4E86;<code>HashMap.containsKey, HashMap.get(K k)</code>&#x548C;<code>moveToRecentUsedHead</code>&#x3002;<code>HashMap.containsKey</code>&#x548C;<code>HashMap.get(K k)</code>&#x90FD;&#x662F;&#x5E38;&#x6578;&#x8907;&#x96DC;&#x5EA6;&#x64CD;&#x4F5C;&#xFF0C;<code>moveToRecentUsedHead</code>&#x6700;&#x591A;&#x66F4;&#x6539;7&#x500B;&#x7BC0;&#x9EDE;&#x5F15;&#x7528;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x6574;&#x9AD4;&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;&#x70BA;<script type="math/tex; ">\mathcal{O}(1)</script>&#x3002;</p>
+<p><code>put</code>&#x8ABF;&#x7528;&#x4E86;<code>HashMap.containsKey, HashMap.put, moveToRecentUsedHead</code>&#x548C;<code>dropIfNeed</code>&#x3002;<code>HashMap.containsKey</code>&#x548C;<code>HashMap.put</code>&#x90FD;&#x662F;&#x5E38;&#x6578;&#x8907;&#x96DC;&#x5EA6;&#x64CD;&#x4F5C;&#x3002;<code>moveToRecentUsedHead</code>&#x4E5F;&#x662F;&#x5E38;&#x6578;&#x8907;&#x96DC;&#x5EA6;&#x64CD;&#x4F5C;&#x3002;<code>dropIfNeed</code>&#x8ABF;&#x7528;&#x4E86;<code>HashMap.remove</code>&#x548C;<code>removeFromLink</code>&#xFF0C;<code>HashMap.remove</code>&#x662F;&#x5E38;&#x6578;&#x8907;&#x96DC;&#x5EA6;&#x64CD;&#x4F5C;&#xFF0C;&#x800C;<code>removeFromLink</code>&#x6700;&#x591A;&#x66F4;&#x6539;&#x56DB;&#x500B;&#x7BC0;&#x9EDE;&#x5F15;&#x7528;&#x503C;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x6574;&#x9AD4;&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;&#x70BA;<script type="math/tex; ">\mathcal{O}(1)</script>&#x3002;</p>
+<h4 id="&#x7A7A;&#x9593;&#x8907;&#x96DC;&#x5EA6;">&#x7A7A;&#x9593;&#x8907;&#x96DC;&#x5EA6;</h4>
+<p>&#x5047;&#x8A2D;&#x9375;&#x503C;&#x5C0D;&#x6578;&#x64DA;&#x91CF;&#x70BA;<script type="math/tex; ">n</script>&#xFF0C;&#x5247;<code>data</code>&#x6301;&#x6709;<script type="math/tex; ">n</script>&#x500B;&#x7BC0;&#x9EDE;&#xFF0C;&#x6BCF;&#x500B;&#x7BC0;&#x9EDE;&#x6301;&#x6709;&#x4E00;&#x500B;&#x5143;&#x7D20;&#x548C;&#x5169;&#x500B;&#x7BC0;&#x9EDE;&#x5F15;&#x7528;&#x3002;&#x7A7A;&#x9593;&#x8907;&#x8907;&#x96DC;&#x5EA6;&#x70BA;&#xFF1A;</p>
+<p><script type="math/tex; mode=display">
+\begin{aligned}
+C_{space} &= C_{space}(capacity) + C_{space}(usedCapacity) + C_{space}(data) + C_{space}(head) + C_{space}(tail) \\
+&=\mathcal{O}(1) + \mathcal{O}(1) + \mathcal{O}(n) + \mathcal{O}(1) + \mathcal{O}(1) \\
+&= \mathcal{O}(n)
+\end{aligned}
+</script></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="p1049.html" class="navigation navigation-prev " aria-label="Previous page: 最小棧">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="p1033.html" class="navigation navigation-next " aria-label="Next page: 全O(1)的數據結構">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"LRU緩存機制","level":"1.6.2","depth":2,"next":{"title":"全O(1)的數據結構","level":"1.6.3","depth":2,"path":"datastructure/p1033.md","ref":"datastructure/p1033.md","articles":[]},"previous":{"title":"最小棧","level":"1.6.1","depth":2,"path":"datastructure/p1049.md","ref":"datastructure/p1049.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock","ace","uml","mathjax-update-cdn","collapsible-menu-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ace":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"uml":{"format":"png","nailgun":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"monokai","unindent":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"mathjax-update-cdn":{"forceSVG":false,"version":"2.7.1"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"collapsible-menu-ex":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh_TR","gitbook":"*"},"file":{"path":"datastructure/p1032.md","mtime":"2019-08-03T06:39:11.496Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-03T06:45:08.417Z"},"basePath":"..","book":{"language":"zh_TR"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mathjax-update-cdn/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-collapsible-menu-ex/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
