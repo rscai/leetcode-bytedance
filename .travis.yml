@@ -4,7 +4,8 @@ jdk:
 node_js: "7"
 dist: xenial
 before_install:
-  - pyenv global 3.7
+  - sudo apt-get update
+  - sudo apt-get install python3
 install:
   - sudo apt-get install graphviz
   - pip install hanziconv
