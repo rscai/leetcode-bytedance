@@ -23,7 +23,7 @@ jobs:
       script:
       - cp -R docs docs-target
       - cp -r docs-target/zh_TR/* docs-target/zh_CN/
-      - pyenv global system 3.7.1
+      - pyenv global 3.7.1
       - pip install hanziconv
       - python .travis/generate-zh_CN.py -o docs-target/zh_CN -s docs-target/zh_TR
       - cd docs-target
