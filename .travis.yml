@@ -8,7 +8,7 @@ before_install:
   - sudo apt-get install python3
 install:
   - sudo apt-get install graphviz
-  - pip install hanziconv
+  - pip3 install hanziconv
   - npm install gitbook-cli -g
 before_cache:
 - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
@@ -26,7 +26,7 @@ jobs:
       script:
       - cp -R docs docs-target
       - cp -r docs-target/zh_TR/* docs-target/zh_CN/
-      - python .travis/generate-zh_CN.py -o docs-target/zh_CN -s docs-target/zh_TR
+      - python3 .travis/generate-zh_CN.py -o docs-target/zh_CN -s docs-target/zh_TR
       - cd docs-target
       - npm install safe-buffer
       - cd ..
