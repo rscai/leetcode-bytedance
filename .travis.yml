@@ -2,10 +2,8 @@ language: java
 jdk:
   - openjdk8
 node_js: "7"
-dist: xenial
+dist: bionic
 before_install:
-  - pyenv install 3.7
-  - pyenv global system 3.7
 install:
   - sudo apt-get install graphviz
   - pip3 install hanziconv
